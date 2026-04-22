@@ -1,0 +1,32 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { WorkSection } from './components/WorkSection';
+import { WhoWeHelpSection } from './components/WhoWeHelpSection';
+import { LogosSection } from './components/LogosSection';
+import { ServicesSection } from './components/ServicesSection';
+import { TestimonialsSection } from './components/TestimonialsSection';
+import { FounderSection } from './components/FounderSection';
+import { FaqSection } from './components/FaqSection';
+import { Footer } from './components/Footer';
+
+export default function App() {
+  return (
+    <div className="relative w-full min-h-screen bg-black flex flex-col font-sans selection:bg-white/30 text-white">
+      <Navbar />
+      <Hero />
+      <WorkSection />
+      <WhoWeHelpSection />
+      <LogosSection />
+      <ServicesSection />
+      <TestimonialsSection />
+      <FounderSection />
+      <FaqSection />
+      <Footer />
+    </div>
+  );
+}
