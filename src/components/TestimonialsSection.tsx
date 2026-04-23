@@ -15,7 +15,7 @@ export function TestimonialsSection() {
   return (
     <section id="testimonials" className="py-24 px-6 md:px-12 lg:px-16 bg-zinc-950">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-normal tracking-tight mb-16">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight mb-16">
           Client Feedback
         </h2>
 

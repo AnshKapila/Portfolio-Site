@@ -20,7 +20,7 @@ export function FounderSection() {
               Led by Intent
             </p>
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight mb-8 text-white leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight mb-8 text-white leading-[0.9]">
               Ready to start <br className="hidden md:block" />
               your next project?
             </h2>

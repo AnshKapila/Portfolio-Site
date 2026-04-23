@@ -76,7 +76,7 @@ export function ServicesSection() {
                   onClick={() => setActiveIndex(i)}
                 >
                   <h2 className={cn(
-                    "text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight transition-colors duration-300", 
+                    "text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight transition-colors duration-300", 
                     isActive ? "text-white" : "text-white/40 group-hover:text-white/70"
                   )}>
                     {service.title}

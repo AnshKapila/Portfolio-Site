@@ -11,6 +11,7 @@ import { WhoWeHelpSection } from './components/WhoWeHelpSection';
 import { LogosSection } from './components/LogosSection';
 import { ServicesSection } from './components/ServicesSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
+import { DreamShipSection } from './components/DreamShipSection';
 import { FounderSection } from './components/FounderSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
@@ -27,6 +28,7 @@ export default function App() {
       <LogosSection />
       <ServicesSection />
       <TestimonialsSection />
+      <DreamShipSection />
       <FounderSection />
       <FaqSection />
       <Footer />

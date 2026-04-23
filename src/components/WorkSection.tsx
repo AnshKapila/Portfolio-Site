@@ -1,3 +1,5 @@
+import { motion } from 'motion/react';
+
 export function WorkSection() {
   const projects = [
     {
@@ -23,13 +25,26 @@ export function WorkSection() {
   return (
     <section id="work" className="py-24 px-6 md:px-12 lg:px-16 pb-32">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-normal mb-16 tracking-tight">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight mb-16"
+        >
           Selected Work
-        </h2>
+        </motion.h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, i) => (
-            <div key={i} className="group cursor-pointer">
+            <motion.div 
+              key={i} 
+              className="group cursor-pointer"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: i * 0.15, ease: "easeOut" }}
+            >
               {/* Image Placeholder */}
               <div className={`w-full aspect-[4/3] rounded-xl ${project.imageColor} mb-6 overflow-hidden relative`}>
                  <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -51,7 +66,7 @@ export function WorkSection() {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

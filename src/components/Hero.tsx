@@ -81,7 +81,7 @@ export function Hero({ onBrightnessChange }: HeroProps) {
             <div className="flex flex-col">
               <AnimatedHeading 
                 text={"Clarity, direction,\nand execution."} 
-                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal mb-4"
+                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading italic tracking-tight mb-4"
               />
               
               <FadeIn delayMs={800} durationMs={1000} className="mb-5">

@@ -19,7 +19,7 @@ export function WhoWeHelpSection() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
         
         <div className="lg:w-1/3">
-          <h2 className="text-3xl md:text-5xl font-normal tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight">
             Who we help
           </h2>
           <p className="mt-6 text-gray-400">
