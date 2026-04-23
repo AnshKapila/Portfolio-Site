@@ -15,7 +15,7 @@ const Cursor = () => (
   <motion.span
     animate={{ opacity: [1, 0, 1] }}
     transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
-    className="inline-block w-[3px] h-[0.8em] bg-white ml-2 mb-[0.1em]"
+    className="inline-block w-[3px] h-[0.8em] bg-current ml-2 mb-[0.1em]"
   />
 );
 
