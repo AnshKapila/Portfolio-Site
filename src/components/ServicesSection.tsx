@@ -1,44 +1,48 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 export function ServicesSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const services = [
     {
       title: "UX & Product Design",
-      titlePrefix: "Your UX & Product Partner",
-      description: "End-to-end interface design focusing on clarity, reducing friction, and driving conversion. We design systems, not just screens.",
+      heading: "Interfaces that reduce friction and drive conversion.",
+      description: "We don’t just design screens. We architect systems that guide user behavior, clarify complex workflows, and accelerate growth.",
+      subItems: ["User Research", "Prototyping", "Design Systems", "Conversion Optimization"],
       // Minimalist architecture/geometry
       imageSrc: "https://images.unsplash.com/photo-1604871000636-074fa5117945?q=80&w=1200&auto=format&fit=crop"
     },
     {
       title: "Website Design",
-      titlePrefix: "Your Web Engineering Partner",
-      description: "Scalable, high-performance websites built on modern stacks. We bridge the gap between stunning visuals and robust engineering.",
+      heading: "Websites built to convert, not just exist.",
+      description: "From landing pages to SaaS platforms, we design experiences that guide users and drive action.",
+      subItems: ["Landing Pages", "SaaS Platforms", "E-commerce", "Marketing Sites"],
       // Clean abstract texture
       imageSrc: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop"
     },
     {
       title: "Content & AI Creation",
-      titlePrefix: "Your Content & AI Partner",
-      description: "Systematized asset creation and copywriting that aligns perfectly with your brand voice and accelerates your go-to-market.",
+      heading: "Systematized messaging that scales your voice.",
+      description: "Asset creation and copywriting that aligns perfectly with your brand voice, engaging your audience and accelerating your go-to-market.",
+      subItems: ["Brand Voice", "Conversion Copy", "AI Systems", "Sales Assets"],
       // Abstract light/shadow
       imageSrc: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1200&auto=format&fit=crop"
     },
     {
       title: "Brand Strategy",
-      titlePrefix: "Your Brand Design Partner",
-      description: "Defining your core narrative and visual identity so that every touchpoint communicates exact intent. We amplify your story and identity.",
+      heading: "Narratives that position you as the premium choice.",
+      description: "Defining your core narrative and visual identity so that every touchpoint communicates exact intent.",
+      subItems: ["Visual Identity", "Positioning", "Brand Guidelines", "Messaging Framework"],
       // Abstract sleek 3D shape
       imageSrc: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=1200&auto=format&fit=crop"
     }
   ];
 
   return (
-    <section id="services" className="py-24 px-6 md:px-12 lg:px-16 bg-[#111111] overflow-hidden rounded-t-[2.5rem]">
+    <section id="services" className="min-h-screen flex items-center py-24 px-6 md:px-12 lg:px-16 bg-[#111111] overflow-hidden rounded-t-[2.5rem]">
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         
         {/* LEFT IMAGE CONTAINER */}
@@ -51,7 +55,7 @@ export function ServicesSection() {
               initial={{ opacity: 0, scale: 1.05 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} // smooth ease-out variant
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="absolute inset-0 w-full h-full object-cover grayscale-[0.2]"
             />
           </AnimatePresence>
@@ -67,13 +71,14 @@ export function ServicesSection() {
           <div className="flex flex-col mb-16">
             {services.map((service, i) => {
               const isActive = activeIndex === i;
+              const isExpanded = expandedIndex === i;
               
               return (
                 <div 
                   key={i} 
                   className="relative cursor-pointer group py-6"
                   onMouseEnter={() => setActiveIndex(i)}
-                  onClick={() => setActiveIndex(i)}
+                  onClick={() => setExpandedIndex(isExpanded ? null : i)}
                 >
                   <h2 className={cn(
                     "text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight transition-colors duration-300", 
@@ -81,6 +86,29 @@ export function ServicesSection() {
                   )}>
                     {service.title}
                   </h2>
+                  
+                  <AnimatePresence>
+                    {isExpanded && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pt-5 pb-3">
+                          <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-300 font-light">
+                            {service.subItems.map((sub, idx) => (
+                              <li key={idx} className="flex items-center gap-2">
+                                <span className="w-1 h-1 rounded-full bg-white/20" />
+                                {sub}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                   
                   {/* Base separator line */}
                   <div className="absolute bottom-0 left-0 w-full h-[1px] bg-white/10" />
@@ -101,7 +129,7 @@ export function ServicesSection() {
           </div>
 
           {/* Bottom Dynamic Section */}
-          <div className="min-h-[180px]">
+          <div className="min-h-[140px]">
             <AnimatePresence mode="wait">
               <motion.div 
                 key={activeIndex}
@@ -111,19 +139,12 @@ export function ServicesSection() {
                 transition={{ duration: 0.3 }}
                 className="flex flex-col"
               >
-                <h4 className="text-white font-semibold text-base mb-3 tracking-wide">
-                  {services[activeIndex].titlePrefix}
+                <h4 className="text-white font-medium text-xl md:text-2xl mb-3 tracking-tight">
+                  {services[activeIndex].heading}
                 </h4>
-                <p className="text-gray-400 font-normal leading-relaxed text-sm mb-8 pr-4">
+                <p className="text-gray-400 font-light leading-relaxed text-sm md:text-base max-w-lg">
                   {services[activeIndex].description}
                 </p>
-                
-                <div>
-                  <button className="bg-white text-black px-6 py-3 rounded-full text-xs font-semibold tracking-wide hover:bg-gray-200 transition-colors uppercase inline-flex items-center gap-2">
-                    Book a 30 Min Free Call
-                    <ArrowUpRight className="w-4 h-4" />
-                  </button>
-                </div>
               </motion.div>
             </AnimatePresence>
           </div>

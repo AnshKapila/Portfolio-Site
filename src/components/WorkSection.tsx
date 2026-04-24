@@ -74,7 +74,7 @@ export function WorkSection() {
                         </div>
 
                         {/* Card Gradient Background */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#2D0F05]/95 to-[#0A0301]/95 lg:from-[#2D0F05] lg:to-[#0A0301] z-0 blur-xl lg:blur-none opacity-80 lg:opacity-100" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#1F100B]/95 to-[#080504]/95 lg:from-[#1F100B] lg:to-[#080504] z-0 blur-xl lg:blur-none opacity-80 lg:opacity-100" />
 
                         {/* Card Content */}
                         <div className="relative z-10 p-8 md:p-10 lg:p-12">
