@@ -10,7 +10,7 @@ export function WorkSection() {
     {
       stage: "Project 1",
       title: "Apex Fin Dashboard",
-      icon: <FolderKanban className="w-5 h-5 text-white" />,
+      icon: <FolderKanban className="w-5 h-5 text-[#F24E1E]" />,
       description: "A complete structural overhaul of an enterprise fintech platform, increasing daily active users by 45% through streamlined navigation.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
       tags: ["Comprehensive Audit", "UX Overhaul", "Design System"]
@@ -18,7 +18,7 @@ export function WorkSection() {
     {
       stage: "Project 2",
       title: "Luminary E-Commerce",
-      icon: <ShoppingCart className="w-5 h-5 text-white" />,
+      icon: <ShoppingCart className="w-5 h-5 text-[#F24E1E]" />,
       description: "Optimized checkout flows and applied real-time AI personalization, boosting the platform's conversion rate by 2.1x in six weeks.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop",
       tags: ["AI Integration", "Conversion Optimization"]
@@ -26,7 +26,7 @@ export function WorkSection() {
     {
       stage: "Project 3",
       title: "ShiftTech Enterprise",
-      icon: <MonitorSmartphone className="w-5 h-5 text-white" />,
+      icon: <MonitorSmartphone className="w-5 h-5 text-[#F24E1E]" />,
       description: "A deeply considered B2B software redesign that reduced user onboarding time from 3 weeks to 48 hours.",
       image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1600&auto=format&fit=crop",
       tags: ["SaaS Redesign", "User Onboarding"]
@@ -74,30 +74,30 @@ export function WorkSection() {
                         </div>
 
                         {/* Card Gradient Background */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#0B1226]/95 to-[#01030B]/95 lg:from-[#0B1226] lg:to-[#01030B] z-0 blur-xl lg:blur-none opacity-80 lg:opacity-100" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#2D0F05]/95 to-[#0A0301]/95 lg:from-[#2D0F05] lg:to-[#0A0301] z-0 blur-xl lg:blur-none opacity-80 lg:opacity-100" />
 
                         {/* Card Content */}
                         <div className="relative z-10 p-8 md:p-10 lg:p-12">
                            <div className="flex justify-between items-start mb-10">
-                              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white shadow-inner">
+                              <div className="w-12 h-12 rounded-xl bg-[#F24E1E]/10 border border-[#F24E1E]/20 flex items-center justify-center text-[#F24E1E] shadow-inner backdrop-blur-md">
                                  {project.icon}
                               </div>
-                              <div className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] font-medium text-gray-300 tracking-wider">
+                              <div className="px-4 py-1.5 rounded-full bg-[#F24E1E]/10 border border-[#F24E1E]/20 text-[11px] font-semibold text-[#FFD1C2]/90 tracking-wider">
                                  {project.stage}
                               </div>
                            </div>
                            
-                           <h3 className="text-3xl font-heading tracking-tight text-white mb-4">
+                           <h3 className="text-3xl font-heading tracking-tight text-white mb-4 drop-shadow-md">
                               {project.title}
                            </h3>
                            
-                           <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-10 font-light pr-4">
+                           <p className="text-[#FFD1C2]/70 text-sm md:text-base leading-relaxed mb-10 font-light pr-4">
                               {project.description}
                            </p>
                            
                            <div className="flex flex-wrap gap-3">
                               {project.tags.map(tag => (
-                                 <span key={tag} className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold tracking-wide text-gray-300 shadow-sm backdrop-blur-sm">
+                                 <span key={tag} className="px-4 py-2 rounded-lg bg-[#F24E1E]/10 border border-[#F24E1E]/20 text-xs font-semibold tracking-wide text-[#FFD1C2]/90 shadow-sm backdrop-blur-sm">
                                     {tag}
                                  </span>
                               ))}
