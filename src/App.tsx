@@ -27,9 +27,9 @@ export default function App() {
       <WhoWeHelpSection />
       <LogosSection />
       <ServicesSection />
+      <FounderSection />
       <TestimonialsSection />
       <DreamShipSection />
-      <FounderSection />
       <FaqSection />
       <Footer />
     </div>

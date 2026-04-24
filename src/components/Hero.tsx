@@ -75,7 +75,7 @@ export function Hero({ onBrightnessChange }: HeroProps) {
         
         {/* Hero Content Wrapper */}
         <div className={cn("px-6 md:px-12 lg:px-16 pt-32 pb-12 lg:pb-16 flex-1 flex flex-col justify-end relative transition-colors duration-1000", isBright ? "text-black" : "text-white")}>
-          <div className="lg:grid lg:grid-cols-2 lg:items-end w-full gap-8">
+          <div className="max-w-7xl mx-auto w-full lg:grid lg:grid-cols-2 lg:items-end gap-8">
             
             {/* Left Column */}
             <div className="flex flex-col">

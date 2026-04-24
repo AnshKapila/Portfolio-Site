@@ -10,14 +10,14 @@ export function DreamShipSection() {
     <section className="relative w-full py-40 md:py-64 flex flex-col items-center justify-center overflow-hidden">
       {/* Background Video */}
       <HlsVideo 
-        src="https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+        src="https://stream.mux.com/9JXDljEVWYwWu01PUkAemafDugK89o01BR6zqJ3aS9u00A.m3u8"
         className="absolute inset-0 w-full h-full object-cover z-0"
         autoPlay
       />
       
       {/* Top and Bottom Gradients */}
-      <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-black to-transparent z-10" />
-      <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-black to-transparent z-10" />
+      <div className="absolute top-0 left-0 w-full h-[200px] bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-[200px] bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
       
       {/* Dark Overlay for Readability */}
       <div className="absolute inset-0 bg-black/40 z-10" />

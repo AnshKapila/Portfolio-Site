@@ -25,16 +25,16 @@ export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 px-6 md:px-12 lg:px-16 bg-zinc-950">
-      <div className="max-w-4xl mx-auto">
+    <section id="faq" className="py-24 px-6 md:px-12 lg:px-16 bg-zinc-950 border-t border-white/5">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-24">
         
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-heading italic tracking-tight">
-            Common Questions
+        <div className="lg:w-1/3">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight sticky top-32 text-white">
+            Common<br /><span className="text-[#F24E1E] not-italic font-sans font-medium">Questions</span>
           </h2>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 lg:w-2/3">
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (

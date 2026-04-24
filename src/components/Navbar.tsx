@@ -25,7 +25,7 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
         isScrolled ? "bg-black/80 backdrop-blur-md" : "bg-transparent"
       )}
     >
-      <div className="w-full px-6 md:px-12 lg:px-16 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-16 py-4 flex items-center justify-between">
         <div 
           className={cn("cursor-pointer transition-colors duration-500", textColor)}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
