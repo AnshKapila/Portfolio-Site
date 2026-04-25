@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { cn } from '../lib/utils';
 import { HlsVideo } from './HlsVideo';
+import { Link } from 'react-router-dom';
 
 export function DreamShipSection() {
   const headingText = "You dream it. We ship it.";
@@ -66,15 +67,22 @@ export function DreamShipSection() {
           Transforming visions into high-performance digital reality. Elite engineering combined with meticulous design.
         </motion.p>
 
-        <motion.button
+        <motion.div
           initial={{ opacity: 0, filter: "blur(10px)", y: 30 }}
           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-          className="liquid-glass-strong rounded-lg w-full sm:w-[240px] px-8 py-4 font-medium text-base text-white transition-opacity hover:bg-white/10"
+          className="w-full sm:w-auto"
         >
-          Start Your Project
-        </motion.button>
+          <a
+            href="https://wa.me/919821687437"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center liquid-glass-strong rounded-lg w-full sm:w-[240px] px-8 py-4 font-medium text-base text-white transition-opacity hover:bg-white/10"
+          >
+            Start Your Project
+          </a>
+        </motion.div>
 
       </div>
     </section>

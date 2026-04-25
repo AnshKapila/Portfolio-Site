@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export function Footer() {
   return (
     <footer className="bg-black pt-32 pb-12 px-6 md:px-12 lg:px-16 border-t border-white/10">
@@ -10,9 +12,9 @@ export function Footer() {
           <p className="text-lg font-light leading-relaxed text-gray-400 mb-10">
             Stop waiting for perfect design. Start building systems that scale and convert.
           </p>
-          <button className="bg-white text-black w-full sm:w-[240px] px-8 py-4 rounded-lg font-medium text-base hover:bg-gray-200 transition-colors flex items-center justify-center">
+          <a href="https://wa.me/919821687437" target="_blank" rel="noopener noreferrer" className="bg-white text-black w-full sm:w-[240px] px-8 py-4 rounded-lg font-medium text-base hover:bg-gray-200 transition-colors flex items-center justify-center">
             Book a Call
-          </button>
+          </a>
         </div>
 
         {/* Footer Bottom Strip */}

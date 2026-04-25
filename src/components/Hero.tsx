@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import { AnimatedHeading } from './AnimatedHeading';
 import { FadeIn } from './FadeIn';
 import { cn } from '../lib/utils';
+import { Link } from 'react-router-dom';
 
 interface HeroProps {
   onBrightnessChange?: (isBright: boolean) => void;
@@ -81,10 +82,10 @@ export function Hero({ onBrightnessChange }: HeroProps) {
             <div className="flex flex-col">
               <AnimatedHeading 
                 text={"Clarity, direction,\nand execution."} 
-                className="text-5xl md:text-6xl lg:text-7xl font-heading italic tracking-tight mb-6 leading-[1.05]"
+                className="text-5xl md:text-6xl lg:text-7xl font-heading italic tracking-tight mb-4 leading-[1.05]"
               />
               
-              <FadeIn delayMs={800} durationMs={1000} className="mb-8">
+              <FadeIn delayMs={800} durationMs={1000} className="mb-4">
                 <p className={cn("text-lg md:text-xl max-w-xl font-light leading-relaxed transition-colors duration-1000", isBright ? "text-gray-800" : "text-gray-300")}>
                   We help founders launch and scale their digital presence. Not just design, structured execution.
                 </p>
@@ -92,7 +93,7 @@ export function Hero({ onBrightnessChange }: HeroProps) {
 
               <FadeIn delayMs={1200} durationMs={1000}>
                 <div className="flex flex-col sm:flex-row gap-4 mb-2">
-                  <a href="#contact" className={cn("inline-flex items-center justify-center w-full sm:w-[240px] px-8 py-4 rounded-lg text-base font-medium transition-colors duration-1000", isBright ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-gray-200")}>
+                  <a href="https://wa.me/919821687437" target="_blank" rel="noopener noreferrer" className={cn("inline-flex items-center justify-center w-full sm:w-[240px] px-8 py-4 rounded-lg text-base font-medium transition-colors duration-1000", isBright ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-gray-200")}>
                     Book a Call
                   </a>
                 </div>

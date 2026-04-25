@@ -1,8 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, VideoHTMLAttributes } from 'react';
 import Hls from 'hls.js';
 import { cn } from '../lib/utils';
 
-interface HlsVideoProps extends React.VideoHTMLAttributes<HTMLVideoElement> {
+interface HlsVideoProps extends VideoHTMLAttributes<HTMLVideoElement> {
   src: string;
 }
 

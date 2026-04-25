@@ -1,37 +1,14 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowUpRight, FolderKanban, ShoppingCart, MonitorSmartphone } from 'lucide-react';
+import { ArrowUpRight, FolderKanban } from 'lucide-react';
 import { cn } from '../lib/utils';
+import { projects } from '../data/projects';
+import { Link } from 'react-router-dom';
 
 export function WorkSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const projects = [
-    {
-      stage: "Project 1",
-      title: "Apex Fin Dashboard",
-      icon: <FolderKanban className="w-5 h-5 text-[#F24E1E]" />,
-      description: "A complete structural overhaul of an enterprise fintech platform, increasing daily active users by 45% through streamlined navigation.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
-      tags: ["Comprehensive Audit", "UX Overhaul", "Design System"]
-    },
-    {
-      stage: "Project 2",
-      title: "Luminary E-Commerce",
-      icon: <ShoppingCart className="w-5 h-5 text-[#F24E1E]" />,
-      description: "Optimized checkout flows and applied real-time AI personalization, boosting the platform's conversion rate by 2.1x in six weeks.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop",
-      tags: ["AI Integration", "Conversion Optimization"]
-    },
-    {
-      stage: "Project 3",
-      title: "ShiftTech Enterprise",
-      icon: <MonitorSmartphone className="w-5 h-5 text-[#F24E1E]" />,
-      description: "A deeply considered B2B software redesign that reduced user onboarding time from 3 weeks to 48 hours.",
-      image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1600&auto=format&fit=crop",
-      tags: ["SaaS Redesign", "User Onboarding"]
-    }
-  ];
+  const featuredProjects = projects.slice(0, 3);
 
   return (
     <section id="work" className="w-full relative bg-black text-white px-6 md:px-12 lg:px-16 pt-24 pb-48 border-t border-white/5">
@@ -59,7 +36,7 @@ export function WorkSection() {
 
                {/* Stacked Cards Area */}
                <div className="flex flex-col gap-[30vh] lg:gap-[60vh] relative z-20 pb-[20vh]">
-                  {projects.map((project, i) => (
+                  {featuredProjects.map((project, i) => (
                      <motion.div
                         key={i}
                         className="sticky w-full rounded-3xl shadow-2xl overflow-hidden border border-white/5 group"
@@ -70,7 +47,7 @@ export function WorkSection() {
                      >
                         {/* Mobile Background Image (Only visible heavily masked on small screens) */}
                         <div className="absolute inset-0 block lg:hidden z-0">
-                           <img src={project.image} alt={project.title} className="w-full h-full object-cover opacity-20 grayscale transition-opacity duration-700 blur-[2px]" />
+                           <img src={project.coverImage} alt={project.title} className="w-full h-full object-cover opacity-20 grayscale transition-opacity duration-700 blur-[2px]" />
                         </div>
 
                         {/* Card Gradient Background */}
@@ -80,10 +57,10 @@ export function WorkSection() {
                         <div className="relative z-10 p-8 md:p-10 lg:p-12">
                            <div className="flex justify-between items-start mb-10">
                               <div className="w-12 h-12 rounded-xl bg-[#F24E1E]/10 border border-[#F24E1E]/20 flex items-center justify-center text-[#F24E1E] shadow-inner backdrop-blur-md">
-                                 {project.icon}
+                                 <FolderKanban className="w-5 h-5 text-[#F24E1E]" />
                               </div>
                               <div className="px-4 py-1.5 rounded-full bg-[#F24E1E]/10 border border-[#F24E1E]/20 text-[11px] font-semibold text-[#FFD1C2]/90 tracking-wider">
-                                 {project.stage}
+                                 Featured
                               </div>
                            </div>
                            
@@ -92,8 +69,17 @@ export function WorkSection() {
                            </h3>
                            
                            <p className="text-[#FFD1C2]/70 text-sm md:text-base leading-relaxed mb-10 font-light pr-4">
-                              {project.description}
+                              {project.overviewDescription.slice(0, 150)}...
                            </p>
+
+                           <div className="mb-10">
+                             <Link 
+                               to={`/work/${project.slug}`}
+                               className="inline-flex items-center justify-center bg-white text-black px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
+                             >
+                               View Project
+                             </Link>
+                           </div>
                            
                            <div className="flex flex-wrap gap-3">
                               {project.tags.map(tag => (
@@ -114,7 +100,7 @@ export function WorkSection() {
                   <AnimatePresence>
                      <motion.img 
                         key={activeIndex}
-                        src={projects[activeIndex].image}
+                        src={featuredProjects[activeIndex]?.coverImage}
                         alt="Project visualization"
                         initial={{ opacity: 0, scale: 1.1 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -134,10 +120,10 @@ export function WorkSection() {
 
          {/* Global Action Button */}
          <div className="flex justify-center mt-32 px-6 relative z-20">
-            <button className="bg-white text-black w-full sm:w-[240px] px-8 py-4 rounded-lg font-medium text-base hover:bg-gray-200 transition-colors shadow-lg shadow-white/5 flex items-center justify-center gap-3 group">
+            <Link to="/work" className="bg-white text-black w-full sm:w-[240px] px-8 py-4 rounded-lg font-medium text-base hover:bg-gray-200 transition-colors shadow-lg shadow-white/5 flex items-center justify-center gap-3 group">
                See all projects
                <ArrowUpRight className="w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </button>
+            </Link>
          </div>
       </div>
     </section>

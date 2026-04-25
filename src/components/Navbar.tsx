@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { cn } from '../lib/utils';
 import { Logo } from './Logo';
+import { Link } from 'react-router-dom';
 
 export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,25 +27,27 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
       )}
     >
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-16 py-4 flex items-center justify-between">
-        <div 
+        <Link 
+          to="/"
           className={cn("cursor-pointer transition-colors duration-500", textColor)}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <Logo className="h-6 w-auto" />
-        </div>
+        </Link>
         
-        {/* 4 Tertiary buttons/links */}
+        {/* Tertiary buttons/links */}
         <div className={cn("hidden md:flex items-center gap-8 text-sm transition-colors duration-500", linkColor)}>
-          <a href="#work" className="hover:opacity-75 transition-opacity">Work</a>
-          <a href="#services" className="hover:opacity-75 transition-opacity">Services</a>
-          <a href="#team" className="hover:opacity-75 transition-opacity">Team</a>
-          <a href="#faq" className="hover:opacity-75 transition-opacity">FAQ</a>
+          <Link to="/work" className="hover:opacity-75 transition-opacity">Work</Link>
+          <a href="/#services" className="hover:opacity-75 transition-opacity">Services</a>
+          <a href="https://wa.me/919821687437" target="_blank" rel="noopener noreferrer" className="hover:opacity-75 transition-opacity">Contact</a>
         </div>
         
         {/* 1 Primary button */}
         <div>
           <a 
-            href="#contact" 
+            href="https://wa.me/919821687437"
+            target="_blank"
+            rel="noopener noreferrer"
             className={cn(
               "inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-medium transition-colors duration-500",
               btnClass

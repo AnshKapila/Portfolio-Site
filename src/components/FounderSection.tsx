@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowUpRight, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function FounderSection() {
   return (
@@ -20,9 +21,9 @@ export function FounderSection() {
               className="w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-[2rem] overflow-hidden shrink-0 shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-white/20 relative"
             >
                <img 
-                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&h=800&auto=format&fit=crop" 
+                 src="https://ik.imagekit.io/anshkapila/IMG-20250501-WA0010.jpg" 
                  alt="Ansh Kapila - Founder and Product Designer" 
-                 className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-[1500ms]" 
+                 className="absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms]" 
                />
             </motion.div>
 
@@ -92,10 +93,10 @@ export function FounderSection() {
                </div>
              </div>
              
-             <button className="w-full bg-white text-black py-4 rounded-lg font-medium text-base hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 group shadow-lg mt-8">
+             <a href="https://wa.me/919821687437" target="_blank" rel="noopener noreferrer" className="w-full bg-white text-black py-4 rounded-lg font-medium text-base hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 group shadow-lg mt-8">
                Book your call
                <ArrowUpRight className="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
-             </button>
+             </a>
           </motion.div>
 
         </div>
