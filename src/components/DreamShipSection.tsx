@@ -38,7 +38,7 @@ export function DreamShipSection() {
         </motion.div>
 
         {/* Mapped Words for Animation */}
-        <h2 className="text-5xl md:text-6xl lg:text-8xl font-heading italic tracking-tight leading-[0.9] text-white pl-4 mb-6 flex flex-wrap justify-center font-normal gap-x-3 gap-y-2">
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading italic tracking-tight leading-[1.05] text-white pl-4 mb-6 flex flex-wrap justify-center gap-x-3 gap-y-2">
           {words.map((word, i) => (
             <motion.span
               key={i}
@@ -61,7 +61,7 @@ export function DreamShipSection() {
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="text-lg md:text-xl text-white/60 mb-10 max-w-xl"
+          className="text-lg font-light leading-relaxed text-gray-400 mb-10 max-w-xl"
         >
           Transforming visions into high-performance digital reality. Elite engineering combined with meticulous design.
         </motion.p>
@@ -71,7 +71,7 @@ export function DreamShipSection() {
           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-          className="liquid-glass-strong rounded-full px-8 py-3 text-sm tracking-wide text-white transition-transform hover:scale-105 active:scale-95"
+          className="liquid-glass-strong rounded-lg w-full sm:w-[240px] px-8 py-4 font-medium text-base text-white transition-opacity hover:bg-white/10"
         >
           Start Your Project
         </motion.button>

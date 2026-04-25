@@ -81,22 +81,19 @@ export function Hero({ onBrightnessChange }: HeroProps) {
             <div className="flex flex-col">
               <AnimatedHeading 
                 text={"Clarity, direction,\nand execution."} 
-                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading italic tracking-tight mb-4"
+                className="text-5xl md:text-6xl lg:text-7xl font-heading italic tracking-tight mb-6 leading-[1.05]"
               />
               
-              <FadeIn delayMs={800} durationMs={1000} className="mb-5">
-                <p className={cn("text-base md:text-lg max-w-xl transition-colors duration-1000", isBright ? "text-gray-800" : "text-gray-300")}>
+              <FadeIn delayMs={800} durationMs={1000} className="mb-8">
+                <p className={cn("text-lg md:text-xl max-w-xl font-light leading-relaxed transition-colors duration-1000", isBright ? "text-gray-800" : "text-gray-300")}>
                   We help founders launch and scale their digital presence. Not just design, structured execution.
                 </p>
               </FadeIn>
 
               <FadeIn delayMs={1200} durationMs={1000}>
-                <div className="flex flex-wrap gap-4">
-                  <a href="#contact" className={cn("inline-block px-8 py-3 rounded-lg font-medium transition-colors duration-1000", isBright ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-gray-100")}>
+                <div className="flex flex-col sm:flex-row gap-4 mb-2">
+                  <a href="#contact" className={cn("inline-flex items-center justify-center w-full sm:w-[240px] px-8 py-4 rounded-lg text-base font-medium transition-colors duration-1000", isBright ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-gray-200")}>
                     Book a Call
-                  </a>
-                  <a href="#work" className={cn("inline-block border px-8 py-3 rounded-lg font-medium transition-colors duration-1000 backdrop-blur-md", isBright ? "border-black/20 text-black hover:bg-black hover:text-white" : "border-white/20 text-white hover:bg-white hover:text-black")}>
-                    View Work
                   </a>
                 </div>
               </FadeIn>

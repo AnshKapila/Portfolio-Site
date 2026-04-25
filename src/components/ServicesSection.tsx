@@ -141,10 +141,10 @@ export function ServicesSection() {
                 transition={{ duration: 0.3 }}
                 className="flex flex-col"
               >
-                <h4 className="text-white font-medium text-xl md:text-2xl mb-3 tracking-tight">
+                <h4 className="text-2xl font-medium mb-3 text-white tracking-tight">
                   {services[activeIndex].heading}
                 </h4>
-                <p className="text-gray-400 font-light leading-relaxed text-sm md:text-base max-w-lg">
+                <p className="text-lg font-light leading-relaxed text-gray-400 max-w-lg">
                   {services[activeIndex].description}
                 </p>
               </motion.div>

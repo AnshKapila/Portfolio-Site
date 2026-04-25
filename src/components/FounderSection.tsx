@@ -41,7 +41,7 @@ export function FounderSection() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-5xl md:text-6xl font-heading italic tracking-tight mb-2 text-white leading-none"
+                className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight mb-2 text-white"
               >
                 Ansh Kapila
               </motion.h2>
@@ -61,7 +61,7 @@ export function FounderSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="text-white/95 font-medium leading-relaxed max-w-lg text-sm md:text-base"
+                className="text-lg font-light leading-relaxed max-w-lg text-white/95"
               >
                 I partner directly with select teams to translate vision into high-performing digital realities. With a deep focus on business logic and meticulous user experience, no detail goes unnoticed.
               </motion.p>
@@ -92,7 +92,7 @@ export function FounderSection() {
                </div>
              </div>
              
-             <button className="w-full bg-white text-black py-3.5 rounded-xl font-bold text-sm tracking-wide hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 group shadow-lg mt-8">
+             <button className="w-full bg-white text-black py-4 rounded-lg font-medium text-base hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 group shadow-lg mt-8">
                Book your call
                <ArrowUpRight className="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
              </button>

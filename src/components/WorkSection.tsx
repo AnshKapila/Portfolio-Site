@@ -47,12 +47,12 @@ export function WorkSection() {
                      <span className="text-[11px] font-bold uppercase tracking-widest text-[#F24E1E]">Our Transformations</span>
                   </div>
                   
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight text-white mb-6 leading-[1.1]">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight mb-6 text-white">
                      Featured Work. <br className="hidden lg:block"/>
                      <span className="text-[#F24E1E] not-italic font-sans font-medium">Proven Results.</span>
                   </h2>
                   
-                  <p className="text-gray-400 text-base md:text-lg max-w-md font-light leading-relaxed">
+                  <p className="text-lg font-light leading-relaxed text-gray-400 max-w-md">
                      See how we turn complex business logic into extraordinary digital experiences — one project at a time.
                   </p>
                </div>
@@ -134,7 +134,7 @@ export function WorkSection() {
 
          {/* Global Action Button */}
          <div className="flex justify-center mt-32 px-6 relative z-20">
-            <button className="bg-white text-black px-10 py-4 rounded-xl font-semibold text-sm tracking-wide hover:bg-gray-200 transition-colors shadow-lg shadow-white/5 flex items-center gap-3 group">
+            <button className="bg-white text-black w-full sm:w-[240px] px-8 py-4 rounded-lg font-medium text-base hover:bg-gray-200 transition-colors shadow-lg shadow-white/5 flex items-center justify-center gap-3 group">
                See all projects
                <ArrowUpRight className="w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </button>

@@ -13,19 +13,19 @@ export function CtaFooter() {
       {/* Content */}
       <div className="relative z-20 flex flex-col items-center text-center px-4 max-w-3xl mx-auto w-full flex-grow pt-12">
         
-        <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading italic leading-[0.85] text-white mb-8 tracking-tight">
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-heading italic tracking-tight mb-6 text-white leading-[1.05]">
           Your next website starts here.
         </h2>
         
-        <p className="text-white/60 font-body font-light text-sm md:text-base mb-12 max-w-lg">
+        <p className="text-lg font-light leading-relaxed text-gray-400 mb-12 max-w-lg">
           Book a free strategy call. See what AI-powered design can do. No commitment, no pressure. Just possibilities.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4">
-          <button className="liquid-glass-strong rounded-full px-6 py-3 text-white font-medium text-sm hover:bg-white/10 transition-colors w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-4 px-4 sm:px-0">
+          <button className="liquid-glass-strong rounded-lg w-full sm:w-[240px] px-8 py-4 text-white font-medium text-base hover:bg-white/10 transition-colors">
             Book a Call
           </button>
-          <button className="bg-white text-black rounded-full px-6 py-3 font-medium text-sm hover:bg-white/90 transition-colors w-full sm:w-auto">
+          <button className="bg-white text-black rounded-lg w-full sm:w-[240px] px-8 py-4 font-medium text-base hover:bg-white/90 transition-colors">
             View Pricing
           </button>
         </div>

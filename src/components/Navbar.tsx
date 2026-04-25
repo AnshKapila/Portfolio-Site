@@ -46,7 +46,7 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
           <a 
             href="#contact" 
             className={cn(
-              "inline-block px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-500",
+              "inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-medium transition-colors duration-500",
               btnClass
             )}
           >

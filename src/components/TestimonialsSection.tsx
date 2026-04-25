@@ -47,10 +47,10 @@ export function TestimonialsSection() {
               <span className="text-[11px] font-bold uppercase tracking-widest text-[#F24E1E]">Testimonials</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight text-white leading-[1.05] mb-4">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight mb-6">
               What Our <span className="text-[#F24E1E] font-sans not-italic font-medium">Clients</span> Are Saying
             </h2>
-            <p className="text-gray-400 text-base md:text-lg">
+            <p className="text-lg font-light leading-relaxed text-gray-400">
               Real stories from founders who trusted Intent Studios for their products.
             </p>
           </motion.div>

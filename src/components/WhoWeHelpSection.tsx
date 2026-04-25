@@ -22,10 +22,10 @@ export function WhoWeHelpSection() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
         
         <div className="lg:w-1/3">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight mb-6 text-white">
             Who we help
           </h2>
-          <p className="mt-6 text-gray-400">
+          <p className="text-lg font-light leading-relaxed text-gray-400">
             We partner with ambitious teams ready to move beyond generic templates and focus on measurable outcomes.
           </p>
         </div>
