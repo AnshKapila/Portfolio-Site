@@ -4,40 +4,43 @@ import { cn } from '../lib/utils';
 
 export function ServicesSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const services = [
     {
-      title: "UX & Product Design",
-      heading: "Interfaces that reduce friction and drive conversion.",
-      description: "We don’t just design screens. We architect systems that guide user behavior, clarify complex workflows, and accelerate growth.",
-      subItems: ["User Research", "Prototyping", "Design Systems", "Conversion Optimization"],
-      // Minimalist architecture/geometry
-      imageSrc: "https://images.unsplash.com/photo-1604871000636-074fa5117945?q=80&w=1200&auto=format&fit=crop"
-    },
-    {
-      title: "Website Design",
-      heading: "Websites built to convert, not just exist.",
-      description: "From landing pages to SaaS platforms, we design experiences that guide users and drive action.",
-      subItems: ["Landing Pages", "SaaS Platforms", "E-commerce", "Marketing Sites"],
+      title: "Websites & Platforms",
+      heading: "Websites built to drive real results",
+      description: "We design and build websites that help people understand your offer, trust your brand, and take action without confusion or friction.",
+      subItems: ["Landing Pages", "Business Websites", "E-commerce Stores", "SaaS Websites"],
+      bulletColor: "bg-blue-400",
       // Clean abstract texture
       imageSrc: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop"
     },
     {
-      title: "Content & AI Creation",
-      heading: "Systematized messaging that scales your voice.",
-      description: "Asset creation and copywriting that aligns perfectly with your brand voice, engaging your audience and accelerating your go-to-market.",
-      subItems: ["Brand Voice", "Conversion Copy", "AI Systems", "Sales Assets"],
-      // Abstract light/shadow
-      imageSrc: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1200&auto=format&fit=crop"
+      title: "Product & UX Design",
+      heading: "Products that are easy to use",
+      description: "We design apps and platforms that are simple to understand, easy to use, and ready for development with clear structure and clean handoff files.",
+      subItems: ["App UI Design", "UX Flows", "Design Systems", "Developer Ready Handoffs"],
+      bulletColor: "bg-emerald-400",
+      // Minimalist architecture/geometry
+      imageSrc: "https://images.unsplash.com/photo-1604871000636-074fa5117945?q=80&w=1200&auto=format&fit=crop"
     },
     {
-      title: "Brand Strategy",
-      heading: "Narratives that position you as the premium choice.",
-      description: "Defining your core narrative and visual identity so that every touchpoint communicates exact intent.",
-      subItems: ["Visual Identity", "Positioning", "Brand Guidelines", "Messaging Framework"],
+      title: "Brand & Visual Identity",
+      heading: "A brand people can recognize easily",
+      description: "We create a clear and consistent visual identity so your brand looks professional, feels trustworthy, and stays the same across your website and content.",
+      subItems: ["Brand Identity", "Visual Systems", "Logo Design", "Brand Guidelines"],
+      bulletColor: "bg-purple-400",
       // Abstract sleek 3D shape
       imageSrc: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=1200&auto=format&fit=crop"
+    },
+    {
+      title: "AI Content & Growth Systems",
+      heading: "Content that keeps your brand active",
+      description: "We create visuals and content using AI and strategy so your brand stays visible, looks consistent, and communicates clearly across all digital platforms.",
+      subItems: ["AI Visual Content", "Social Media Creatives", "Content Direction", "Marketing Assets"],
+      bulletColor: "bg-pink-400",
+      // Abstract light/shadow
+      imageSrc: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1200&auto=format&fit=crop"
     }
   ];
 
@@ -71,14 +74,13 @@ export function ServicesSection() {
           <div className="flex flex-col mb-16">
             {services.map((service, i) => {
               const isActive = activeIndex === i;
-              const isExpanded = expandedIndex === i;
+              const isExpanded = isActive;
               
               return (
                 <div 
                   key={i} 
                   className="relative cursor-pointer group py-6"
                   onMouseEnter={() => setActiveIndex(i)}
-                  onClick={() => setExpandedIndex(isExpanded ? null : i)}
                 >
                   <h2 className={cn(
                     "text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight transition-colors duration-300", 
@@ -100,7 +102,7 @@ export function ServicesSection() {
                           <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-300 font-light">
                             {service.subItems.map((sub, idx) => (
                               <li key={idx} className="flex items-center gap-2">
-                                <span className="w-1 h-1 rounded-full bg-white/20" />
+                                <span className={cn("w-2 h-2 rounded-full", service.bulletColor)} />
                                 {sub}
                               </li>
                             ))}
