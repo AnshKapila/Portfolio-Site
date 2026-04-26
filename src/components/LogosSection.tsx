@@ -1,10 +1,10 @@
 export function LogosSection() {
   const logos = [
-    { name: 'Ezinore', src: 'https://storage.googleapis.com/mstudio-attachments/df0fc5b1-6aab-49bd-9ba8-42fcfbaf1e57/ezinore.png' },
-    { name: 'Spatial Digest', src: 'https://storage.googleapis.com/mstudio-attachments/a0209489-32cf-4b13-bef1-49bce768be69/Spatial_Digest_horizontal.png' },
-    { name: 'Bergaria', src: 'https://storage.googleapis.com/mstudio-attachments/5d2fe39d-2cc5-4424-95c5-bf67fe997d97/Bergaria.png' },
-    { name: 'Clickpic', src: 'https://storage.googleapis.com/mstudio-attachments/38dca5de-8cde-47cc-afe9-fa19cb9e9f60/Clickpic.png' },
-    { name: 'Petara', src: 'https://storage.googleapis.com/mstudio-attachments/51cf6a52-9653-4bf0-baac-2d4e680a6566/Petara.png' },
+    { name: 'Ezinore', src: '/images/clients/logos/ezinore.png' },
+    { name: 'Spatial Digest', src: '/images/clients/logos/spatial-digest.png' },
+    { name: 'Bergaria', src: '/images/clients/logos/bergaria.png' },
+    { name: 'Clickpic', src: '/images/clients/logos/clickpic.png' },
+    { name: 'Petara', src: '/images/clients/logos/petara.png' },
   ];
 
   return (
