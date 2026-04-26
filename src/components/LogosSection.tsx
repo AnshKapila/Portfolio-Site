@@ -15,13 +15,13 @@ export function LogosSection() {
         </p>
         
         {/* Simple flex strip */}
-        <div className="flex flex-wrap justify-center items-center gap-12 sm:gap-20">
+        <div className="flex flex-wrap justify-center lg:justify-between items-center gap-10 sm:gap-12 md:gap-16 w-full">
           {logos.map((logo) => (
             <img 
               key={logo.name}
               src={logo.src} 
               alt={logo.name} 
-              className="h-8 md:h-10 object-contain opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+              className="h-12 sm:h-14 md:h-16 w-auto max-w-[160px] md:max-w-[200px] object-contain opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
             />
           ))}
         </div>
