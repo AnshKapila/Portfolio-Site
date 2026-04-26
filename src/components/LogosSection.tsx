@@ -1,10 +1,10 @@
 export function LogosSection() {
   const logos = [
-    { name: 'Ezinore', src: '/images/clients/logos/ezinore.png' },
-    { name: 'Spatial Digest', src: '/images/clients/logos/spatial-digest.png' },
-    { name: 'Bergaria', src: '/images/clients/logos/bergaria.png' },
-    { name: 'Clickpic', src: '/images/clients/logos/clickpic.png' },
-    { name: 'Petara', src: '/images/clients/logos/petara.png' },
+    { name: 'Ezinore', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Ezinore_Logo_uepkie.png' },
+    { name: 'Spatial Digest', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Spatial_Digest_Logo_h3kc8h.avif' },
+    { name: 'Bergaria', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Untitled_design_5_ggohdk.avif' },
+    { name: 'Metline', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Metline_logo_stksnk.webp' },
+    { name: 'Petara', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777187149/Asset_14_3x_m2sumv.png' },
   ];
 
   return (
