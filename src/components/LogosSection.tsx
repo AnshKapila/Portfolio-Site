@@ -14,15 +14,24 @@ export function LogosSection() {
           Trusted by ambitious teams
         </p>
         
-        {/* Simple flex strip */}
-        <div className="flex flex-wrap justify-center lg:justify-between items-center gap-10 sm:gap-12 md:gap-16 w-full">
-          {logos.map((logo) => (
-            <img 
-              key={logo.name}
-              src={logo.src} 
-              alt={logo.name} 
-              className="h-12 sm:h-14 md:h-16 w-auto max-w-[160px] md:max-w-[200px] object-contain opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
-            />
+        {/* Infinite scrolling logos */}
+        <div className="relative flex overflow-hidden w-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          {/* Create 4 sets of the logos so they span ultra wide monitors before looping resets */}
+          {[1, 2, 3, 4].map((set) => (
+            <div 
+              key={set} 
+              className="flex shrink-0 animate-marquee items-center gap-10 sm:gap-16 px-5 sm:px-8"
+              aria-hidden={set > 1 ? "true" : undefined}
+            >
+              {logos.map((logo) => (
+                <img 
+                  key={`${set}-${logo.name}`}
+                  src={logo.src} 
+                  alt={logo.name} 
+                  className="h-12 sm:h-14 md:h-16 w-auto max-w-[160px] md:max-w-[200px] object-contain opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300 pointer-events-auto"
+                />
+              ))}
+            </div>
           ))}
         </div>
       </div>
