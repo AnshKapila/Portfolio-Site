@@ -2,11 +2,6 @@ import bergariaCover from '../assets/images/regenerated_image_1778648802440.jpg'
 import bergariaDetail1 from '../assets/images/regenerated_image_1778648472194.jpg';
 import bergariaDetail2 from '../assets/images/regenerated_image_1778648465172.png';
 
-import sulipsaCover from '../assets/images/regenerated_image_1778674254290.png';
-import sulipsaDetail1 from '../assets/images/regenerated_image_1778674258010.png';
-import sulipsaDetail2 from '../assets/images/regenerated_image_1778674262647.png';
-import sulipsaBanner from '../assets/images/regenerated_image_1778674265333.png';
-
 export interface Project {
   slug: string;
   title: string;
@@ -55,7 +50,7 @@ const allProjects: Project[] = [
     slug: "sulipsa-choudhury-personal-website",
     title: "Sulipsa Choudhury Personal Website",
     tags: ["Personal Brand", "Portfolio Website"],
-    coverImage: sulipsaCover,
+    coverImage: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=2000&auto=format&fit=crop",
     listTitle: "Personal Brand • Web • UX",
     listSubtitle: "",
     overviewHeading: "Overview",
@@ -63,13 +58,13 @@ const allProjects: Project[] = [
     strategyHeading: "Challenge & Strategy",
     strategyDescription1: "One of the biggest challenges was balancing artistic immersion with professional trust-building. Early concepts focused heavily on emotional storytelling and visual atmosphere, but this created a UX issue where visitors could appreciate the aesthetic experience without fully understanding Sulipsa’s authority and credibility as a performer and collaborator. Another major challenge came from the available content being mainly performance visuals rather than structured case studies.",
     strategyDescription2: "To solve this, the interface used a calm editorial system with serif typography, warm beige tones, and high whitespace. The homepage flow introduced authority earlier, and performances were displayed in a cinematic gallery instead of traditional portfolio cards. The Social Diary was positioned lower to support rather than overpower the literary identity, and an \"Upcoming Books\" section was added for organic audience building.",
-    detailImage1: sulipsaDetail1,
-    detailImage2: sulipsaDetail2,
+    detailImage1: "https://images.unsplash.com/photo-1520110120835-c96534a4c984?q=80&w=2000&auto=format&fit=crop",
+    detailImage2: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2000&auto=format&fit=crop",
     outcomeHeading: "Outcome",
     outcomeDescription: "The final product successfully balanced emotional storytelling with professional positioning. Rather than functioning as a standard portfolio, the website evolved into a cultural personal brand platform that communicates artistry, stage presence, literary identity, collaboration readiness, and public-facing credibility. The final structure helped visitors emotionally connect with Sulipsa’s work while clearly understanding her value as a performer and emerging literary voice.",
     buttonText: "View Website",
     buttonLink: "https://sulipsa-choudhury.kite.space/",
-    bannerImage: sulipsaBanner
+    bannerImage: "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=2000&auto=format&fit=crop"
   },
   {
     slug: "bergaria-luxury",
