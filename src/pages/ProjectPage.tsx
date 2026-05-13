@@ -35,7 +35,7 @@ export function ProjectPage() {
       <div className="max-w-4xl mx-auto">
         
         {/* Project Hero */}
-        <div className="mb-16 md:mb-24 flex flex-col items-start xl:px-4">
+        <div className="mb-16 md:mb-24 flex flex-col items-start">
           <FadeIn delayMs={100} durationMs={800}>
             <div className="flex flex-wrap gap-3 mb-6">
               {project.tags.map(tag => (
@@ -67,8 +67,8 @@ export function ProjectPage() {
         </div>
 
         {/* Main Visual */}
-        <FadeIn delayMs={400} durationMs={800} className="mb-24 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl bg-zinc-900 aspect-video">
-          <img src={project.coverImage} alt={project.title} className="w-full h-full object-cover" />
+        <FadeIn delayMs={400} durationMs={800} className="mb-24 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl bg-zinc-900">
+          <img src={project.coverImage} alt={project.title} className="w-full h-auto block" />
         </FadeIn>
 
         {/* Content Structure */}

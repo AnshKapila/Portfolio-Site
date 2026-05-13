@@ -36,10 +36,10 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
         </Link>
         
         {/* Tertiary buttons/links */}
-        <div className={cn("hidden md:flex items-center gap-8 text-sm transition-colors duration-500", linkColor)}>
+        <div className={cn("hidden md:flex items-center gap-8 lg:gap-12 text-base transition-colors duration-500 absolute left-1/2 -translate-x-1/2", linkColor)}>
           <Link to="/work" className="hover:opacity-75 transition-opacity">Work</Link>
           <a href="/#services" className="hover:opacity-75 transition-opacity">Services</a>
-          <a href="https://wa.me/919821687437" target="_blank" rel="noopener noreferrer" className="hover:opacity-75 transition-opacity">Contact</a>
+          <Link to="/contact" className="hover:opacity-75 transition-opacity">Contact</Link>
         </div>
         
         {/* 1 Primary button */}
