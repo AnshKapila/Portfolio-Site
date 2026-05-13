@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import { FadeIn } from '../components/FadeIn';
+import { SEO } from '../components/SEO';
 
 export function ProjectPage() {
   const { slug } = useParams();
@@ -13,22 +14,32 @@ export function ProjectPage() {
 
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-3xl font-heading italic">Project not found</h1>
-      </div>
+      <>
+        <SEO title="Project Not Found | Intent Studios" />
+        <div className="min-h-screen flex items-center justify-center">
+          <h1 className="text-3xl font-heading italic">Project not found</h1>
+        </div>
+      </>
     );
   }
 
   return (
-    <div className="pt-32 pb-48 px-6 md:px-12 lg:px-16 min-h-screen">
+    <>
+      <SEO 
+        title={`${project.title} | Intent Studios`}
+        description={project.overviewDescription.slice(0, 160).trim() + "..."}
+        image={project.coverImage || "/favicon.svg"}
+        url={`https://intentstudios.com/work/${project.slug}`}
+      />
+      <div className="pt-32 pb-48 px-6 md:px-12 lg:px-16 min-h-screen">
       <div className="max-w-4xl mx-auto">
         
         {/* Project Hero */}
-        <div className="mb-20">
+        <div className="mb-16 md:mb-24 flex flex-col items-start xl:px-4">
           <FadeIn delayMs={100} durationMs={800}>
-            <div className="flex flex-wrap gap-3 mb-8">
+            <div className="flex flex-wrap gap-3 mb-6">
               {project.tags.map(tag => (
-                <span key={tag} className="px-4 py-2 rounded-lg bg-[#F24E1E]/10 border border-[#F24E1E]/20 text-xs font-semibold tracking-wide text-[#FFD1C2]/90 shadow-sm">
+                <span key={tag} className="px-3 py-1.5 rounded-lg bg-[#2a0e05] border border-[#4a1805] text-[13px] font-medium tracking-wide text-[#ffd3c2] shadow-sm">
                   {tag}
                 </span>
               ))}
@@ -36,29 +47,27 @@ export function ProjectPage() {
           </FadeIn>
           
           <FadeIn delayMs={200} durationMs={800}>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading italic tracking-tight mb-8 leading-[1.05]">
+            <h1 className="text-5xl md:text-6xl lg:text-[5rem] font-heading italic tracking-tight mb-8 leading-[1.1]">
               {project.title}
             </h1>
           </FadeIn>
 
           <FadeIn delayMs={300} durationMs={800}>
-            <div className="flex flex-wrap gap-4 mt-8">
-              {project.buttonLink && project.buttonLink.trim() !== '' && (
-                <a 
-                  href={project.buttonLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-black rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors w-full sm:w-auto"
-                >
-                  {project.buttonText || "View Live"}
-                </a>
-              )}
-            </div>
+            {project.buttonLink && project.buttonLink.trim() !== '' && (
+              <a 
+                href={project.buttonLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3.5 bg-white text-black rounded-lg font-semibold text-[15px] hover:bg-gray-200 transition-colors"
+              >
+                {project.buttonText || "View Live"}
+              </a>
+            )}
           </FadeIn>
         </div>
 
         {/* Main Visual */}
-        <FadeIn delayMs={400} durationMs={800} className="mb-24 rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl bg-zinc-900 aspect-video">
+        <FadeIn delayMs={400} durationMs={800} className="mb-24 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl bg-zinc-900 aspect-video">
           <img src={project.coverImage} alt={project.title} className="w-full h-full object-cover" />
         </FadeIn>
 
@@ -123,5 +132,6 @@ export function ProjectPage() {
 
       </div>
     </div>
+    </>
   );
 }

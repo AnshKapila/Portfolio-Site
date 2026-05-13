@@ -1,3 +1,12 @@
+import bergariaCover from '../assets/images/regenerated_image_1778648802440.jpg';
+import bergariaDetail1 from '../assets/images/regenerated_image_1778648472194.jpg';
+import bergariaDetail2 from '../assets/images/regenerated_image_1778648465172.png';
+
+import sulipsaCover from '../assets/images/regenerated_image_1778674254290.png';
+import sulipsaDetail1 from '../assets/images/regenerated_image_1778674258010.png';
+import sulipsaDetail2 from '../assets/images/regenerated_image_1778674262647.png';
+import sulipsaBanner from '../assets/images/regenerated_image_1778674265333.png';
+
 export interface Project {
   slug: string;
   title: string;
@@ -17,9 +26,71 @@ export interface Project {
   buttonText: string;
   buttonLink: string;
   bannerImage: string;
+  hidden?: boolean;
 }
 
-export const projects: Project[] = [
+const allProjects: Project[] = [
+  {
+    slug: "fintrack",
+    title: "Fintrack",
+    tags: ["Product Design", "UX Design", "Finance App", "Dashboard", "Mobile App", "System Design"],
+    coverImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2000&auto=format&fit=crop",
+    listTitle: "Concept Product • Product Design",
+    listSubtitle: "",
+    overviewHeading: "Overview",
+    overviewDescription: "Fintrack was designed as a calm and structured finance product that prioritizes reflection over urgency.\n\nThe experience was intentionally built for users who already invest and want clarity around where their money exists, how it is distributed, and what long-term goals it supports. Rather than encouraging constant engagement, the product focused on creating a lightweight and mentally calm financial overview system.",
+    strategyHeading: "Core Product Philosophy & Architecture",
+    strategyDescription1: "One of the biggest strategic decisions was intentionally rejecting common fintech UX patterns—avoiding real-time trading behavior, addictive analytics loops, and notification-driven engagement. Instead, the focus was on predictable interactions, reflection-first behavior, and intentional manual entry. The navigation system remained flat and cognitively lightweight across Home, Wealth, Goals, and Spendings, avoiding deep nested structures to preserve contextual consistency.",
+    strategyDescription2: "A major challenge was the investment entry flow. Instead of fragmented 'Add' flows, a hybrid global investment model was introduced with a centralized entry point. The mental model was shifted to 'I already invested, I am simply recording it', which fundamentally changed the tone. Additionally, Goals and Spendings were designed as awareness systems rather than control systems—removing gamification from Goals and avoiding daily micro-tracking in Spendings to preserve the overall calmness.",
+    detailImage1: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2000&auto=format&fit=crop",
+    detailImage2: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop",
+    outcomeHeading: "Architecture & Outcome",
+    outcomeDescription: "Built with scalable architecture in mind using Next.js, Supabase, and Tailwind CSS, the project followed a phased roadmap to separate UX validation from technical scaling.\n\nThe final product direction positioned Fintrack as a calmer alternative to traditional finance apps. Rather than maximizing engagement frequency, the experience focused on helping users understand where their money exists, why it exists there, and what long-term goals it supports, demonstrating how intentional UX systems can create stronger emotional trust.",
+    buttonText: "Coming Soon",
+    buttonLink: "#",
+    bannerImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2000&auto=format&fit=crop",
+    hidden: true
+  },
+  {
+    slug: "sulipsa-choudhury-personal-website",
+    title: "Sulipsa Choudhury Personal Website",
+    tags: ["Personal Brand", "Portfolio Website"],
+    coverImage: sulipsaCover,
+    listTitle: "Personal Brand • Web • UX",
+    listSubtitle: "",
+    overviewHeading: "Overview",
+    overviewDescription: "The website was designed to create a soft editorial experience inspired by literary journals and personal storytelling spaces rather than commercial portfolio websites. The goal was to emotionally connect visitors with Sulipsa’s poetry, performances, and artistic personality while also establishing professional credibility for collaborations and public opportunities.",
+    strategyHeading: "Challenge & Strategy",
+    strategyDescription1: "One of the biggest challenges was balancing artistic immersion with professional trust-building. Early concepts focused heavily on emotional storytelling and visual atmosphere, but this created a UX issue where visitors could appreciate the aesthetic experience without fully understanding Sulipsa’s authority and credibility as a performer and collaborator. Another major challenge came from the available content being mainly performance visuals rather than structured case studies.",
+    strategyDescription2: "To solve this, the interface used a calm editorial system with serif typography, warm beige tones, and high whitespace. The homepage flow introduced authority earlier, and performances were displayed in a cinematic gallery instead of traditional portfolio cards. The Social Diary was positioned lower to support rather than overpower the literary identity, and an \"Upcoming Books\" section was added for organic audience building.",
+    detailImage1: sulipsaDetail1,
+    detailImage2: sulipsaDetail2,
+    outcomeHeading: "Outcome",
+    outcomeDescription: "The final product successfully balanced emotional storytelling with professional positioning. Rather than functioning as a standard portfolio, the website evolved into a cultural personal brand platform that communicates artistry, stage presence, literary identity, collaboration readiness, and public-facing credibility. The final structure helped visitors emotionally connect with Sulipsa’s work while clearly understanding her value as a performer and emerging literary voice.",
+    buttonText: "View Website",
+    buttonLink: "https://sulipsa-choudhury.kite.space/",
+    bannerImage: sulipsaBanner
+  },
+  {
+    slug: "bergaria-luxury",
+    title: "Bergaria Luxury",
+    tags: ["AI Photoshoot", "Campaign Design", "Catalogue Design"],
+    coverImage: bergariaCover,
+    listTitle: "AI • Campaign • Visuals",
+    listSubtitle: "",
+    overviewHeading: "Overview",
+    overviewDescription: "A complete perfume product catalogue and campaign visual system created entirely without a physical photoshoot. The project focused on delivering premium luxury perception through AI-assisted image generation, campaign design, and content systems while maintaining a visually distinctive identity for the brand.",
+    strategyHeading: "Challenge",
+    strategyDescription1: "The main challenge was to visually communicate the inspiration behind the perfumes without directly replicating or copying existing luxury fragrance brands. The visuals had to create recognition and familiarity while remaining unique enough to avoid legal and branding conflicts.",
+    strategyDescription2: "The system also needed to maintain consistency across product visuals, social media creatives, catalogue layouts, and website banners while being executed within a short timeline.",
+    detailImage1: bergariaDetail1,
+    detailImage2: bergariaDetail2,
+    outcomeHeading: "Process & Output",
+    outcomeDescription: "Process: Detailed structured prompt development, AI image generation via Google Nano Banana Pro, Photoshop refinement, and Campaign & Catalogue Design.\n\nOutput: 80+ campaign visuals, Instagram creatives, Website carousel banners, Perfume catalogue system, Product showcase imagery, Luxury campaign assets. All completed within 6 days. Creative posters and campaign creative direction were enhanced in collaboration with Priyanka Kaim.",
+    buttonText: "View Website",
+    buttonLink: "https://bergarialuxury.com/",
+    bannerImage: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2000&auto=format&fit=crop"
+  },
   {
     slug: "fityard",
     title: "FitYard",
@@ -161,3 +232,5 @@ export const projects: Project[] = [
     bannerImage: "https://framerusercontent.com/images/9BxfKrQGFcpvVplJ1mTqejqOo8k.png"
   }
 ];
+
+export const projects = allProjects.filter(p => !p.hidden);

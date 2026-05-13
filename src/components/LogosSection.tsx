@@ -1,10 +1,14 @@
+import petaraLogo from '../assets/images/regenerated_image_1778647625524.png';
+import bergariaLogo from '../assets/images/regenerated_image_1778647627895.avif';
+
 export function LogosSection() {
   const logos = [
     { name: 'Ezinore', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Ezinore_Logo_uepkie.png' },
     { name: 'Spatial Digest', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Spatial_Digest_Logo_h3kc8h.avif' },
-    { name: 'Bergaria', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Untitled_design_5_ggohdk.avif' },
+    { name: 'Bergaria', src: bergariaLogo },
     { name: 'Metline', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Metline_logo_stksnk.webp' },
-    { name: 'Petara', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777187149/Asset_14_3x_m2sumv.png' },
+    { name: 'Petara Original', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777187149/Asset_14_3x_m2sumv.png' },
+    { name: 'Petara New', src: petaraLogo },
   ];
 
   return (
@@ -20,16 +24,17 @@ export function LogosSection() {
           {[1, 2, 3, 4].map((set) => (
             <div 
               key={set} 
-              className="flex shrink-0 animate-marquee items-center gap-10 sm:gap-16 px-5 sm:px-8"
+              className="flex shrink-0 animate-marquee items-center"
               aria-hidden={set > 1 ? "true" : undefined}
             >
-              {logos.map((logo) => (
-                <img 
-                  key={`${set}-${logo.name}`}
-                  src={logo.src} 
-                  alt={logo.name} 
-                  className="h-12 sm:h-14 md:h-16 w-auto max-w-[160px] md:max-w-[200px] object-contain opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300 pointer-events-auto"
-                />
+              {logos.map((logo, idx) => (
+                <div key={`${set}-${logo.name}-${idx}`} className="flex justify-center items-center w-40 sm:w-48 md:w-56 shrink-0">
+                  <img 
+                    src={logo.src} 
+                    alt={logo.name} 
+                    className="h-12 sm:h-14 md:h-16 w-auto max-w-[140px] md:max-w-[180px] object-contain opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300 pointer-events-auto"
+                  />
+                </div>
               ))}
             </div>
           ))}

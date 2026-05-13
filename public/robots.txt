@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://intentstudios.com/sitemap.xml

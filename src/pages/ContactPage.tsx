@@ -1,9 +1,16 @@
 import { FadeIn } from '../components/FadeIn';
+import { SEO } from '../components/SEO';
 
 export function ContactPage() {
   return (
-    <div className="pt-32 pb-48 px-6 md:px-12 lg:px-16 min-h-screen flex items-center justify-center">
-      <div className="max-w-xl w-full">
+    <>
+      <SEO 
+        title="Contact Us | Intent Studios" 
+        description="Get in touch with Intent Studios to discuss your next web design, product design, or visual system project."
+        url="https://intentstudios.com/contact"
+      />
+      <div className="pt-32 pb-48 px-6 md:px-12 lg:px-16 min-h-screen flex items-center justify-center">
+        <div className="max-w-xl w-full">
         {/* Hero */}
         <div className="mb-16 text-center flex flex-col items-center">
            <FadeIn delayMs={100} durationMs={800}>
@@ -66,5 +73,6 @@ export function ContactPage() {
         </FadeIn>
       </div>
     </div>
+    </>
   );
 }

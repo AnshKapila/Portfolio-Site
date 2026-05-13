@@ -4,6 +4,8 @@ import { cn } from '../lib/utils';
 
 interface HlsVideoProps extends VideoHTMLAttributes<HTMLVideoElement> {
   src: string;
+  className?: string;
+  autoPlay?: boolean;
 }
 
 export function HlsVideo({ src, className, ...props }: HlsVideoProps) {

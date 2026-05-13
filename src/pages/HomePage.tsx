@@ -1,3 +1,4 @@
+import { SEO } from '../components/SEO';
 import { Hero } from '../components/Hero';
 import { WorkSection } from '../components/WorkSection';
 import { WhoWeHelpSection } from '../components/WhoWeHelpSection';
@@ -15,6 +16,7 @@ interface HomePageProps {
 export function HomePage({ setIsHeroBright }: HomePageProps) {
   return (
     <>
+      <SEO />
       <Hero onBrightnessChange={setIsHeroBright} />
       <WorkSection />
       <WhoWeHelpSection />

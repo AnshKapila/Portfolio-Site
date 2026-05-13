@@ -71,6 +71,9 @@ export function Hero({ onBrightnessChange }: HeroProps) {
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 
+      {/* Overlay for contrast */}
+      <div className="absolute inset-0 bg-black/20 z-[1]" />
+
       {/* Content Wrapper */}
       <div className="relative z-10 flex flex-col w-full h-full">
         
