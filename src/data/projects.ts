@@ -10,7 +10,8 @@ import fintrackBanner from '../assets/images/regenerated_image_1778692171500.png
 import sulipsaCover from '../assets/images/regenerated_image_1778674254290.png';
 import sulipsaDetail1 from '../assets/images/regenerated_image_1778674258010.png';
 import sulipsaDetail2 from '../assets/images/regenerated_image_1778700280861.png';
-import sulipsaBanner from '../assets/images/regenerated_image_1778700284946.png';
+// import sulipsaBanner from '../assets/images/regenerated_image_1778700284946.png';
+const sulipsaBanner = "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=2000&auto=format&fit=crop";
 
 export interface Project {
   slug: string;
