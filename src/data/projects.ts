@@ -120,7 +120,7 @@ const allProjects: Project[] = [
   {
     slug: "clickpick",
     title: "Clickpic",
-    tags: ["App UI/UX", "Lovable", "Dashboard"],
+    tags: ["Case Study", "App UI/UX", "Lovable", "Dashboard"],
     coverImage: "https://framerusercontent.com/images/pjuOW03Tgplmb2XbyC5lFrvBg.jpg",
     listTitle: "Campus Printouts under 60 Seconds",
     listSubtitle: "",
@@ -160,7 +160,7 @@ const allProjects: Project[] = [
   {
     slug: "vigorx",
     title: "VigorX",
-    tags: ["App UI/UX", "Figma", "Fitness"],
+    tags: ["Case Study", "App UI/UX", "Figma", "Fitness"],
     coverImage: "https://framerusercontent.com/images/JqTzyJQ7gRbg4CSjpnMfaavoQLw.jpg",
     listTitle: "UX • Product • Mobile",
     listSubtitle: "",
@@ -231,8 +231,8 @@ const allProjects: Project[] = [
     strategyDescription2: "The design showcased amenities from lush community spaces to premium interior details in an engaging, larger-than-life format. This elevated user perception while optimizing layout and interface elements for fast engagement and clear decision-paths.",
     detailImage1: "https://framerusercontent.com/images/ldlBpF3V0dXynrFgvTTPwtpA.jpg",
     detailImage2: "https://framerusercontent.com/images/2Vz5WwY9VDpRHHJFZgzEkufWm8.jpg",
-    outcomeHeading: "FINAL PERFORMANCE",
-    outcomeDescription: "Bruno has since become a go-to choice for creatives launching personal sites on Framer. Its flexible structure and elegant design helped users convert views into collaborations and client inquiries. Many who’ve used Bruno have praised its clarity and visual impact — proving that minimalist doesn’t mean forgettable.",
+    outcomeHeading: "Outcome",
+    outcomeDescription: "The final landing page serves as a high-converting, top-of-funnel marketing asset that captures the imagination of luxury property buyers and investors. By elegantly combining the allure of an exclusive Dubai lifestyle with a frictionless user journey, the digital experience effectively turns high-intent traffic into qualified leads. This sophisticated approach to real estate digital marketing establishes prestige and trust, driving meaningful engagement and measurable interest in the Violet Damac Hills 2 townhouses.",
     buttonText: "Live Project",
     buttonLink: "https://www.behance.net/gallery/219778095/Violet-Damac-Hills-2-Landing-Page",
     bannerImage: "https://framerusercontent.com/images/9BxfKrQGFcpvVplJ1mTqejqOo8k.png"

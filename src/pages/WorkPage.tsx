@@ -9,13 +9,14 @@ import { SEO } from '../components/SEO';
 export function WorkPage() {
   const [filter, setFilter] = useState('All');
 
-  const filters = ['All', 'Websites', 'Products', 'Visual Work'];
+  const filters = ['All', 'Case Studies', 'Websites', 'Products', 'Visual Work'];
 
   const filteredProjects = projects.filter(project => {
     if (filter === 'All') return true;
     if (filter === 'Websites' && project.tags.some(t => t.toLowerCase().includes('web'))) return true;
     if (filter === 'Products' && project.tags.some(t => t.toLowerCase().includes('app') || t.toLowerCase().includes('dashboard') || t.toLowerCase().includes('saas'))) return true;
     if (filter === 'Visual Work' && project.tags.some(t => t.toLowerCase().includes('ui/ux') || t.toLowerCase().includes('imagery') || t.toLowerCase().includes('design'))) return true;
+    if (filter === 'Case Studies' && project.tags.some(t => t.toLowerCase().includes('case study'))) return true;
     return false; // Fallback mapping based on simple keyword search in tags
   });
 
@@ -51,9 +52,13 @@ export function WorkPage() {
                   onClick={() => setFilter(f)}
                   className={cn(
                     "px-6 py-2 rounded-full text-sm font-medium transition-colors border",
-                    filter === f 
-                      ? "bg-white text-black border-white" 
-                      : "bg-transparent text-gray-400 border-white/10 hover:border-white/30 hover:text-white"
+                    f === 'Case Studies'
+                      ? filter === f
+                        ? "bg-[#F24E1E] text-white border-[#F24E1E] shadow-[0_0_15px_rgba(242,78,30,0.4)]"
+                        : "bg-transparent text-[#F24E1E] border-[#F24E1E]/50 hover:border-[#F24E1E] hover:bg-[#F24E1E]/10"
+                      : filter === f 
+                        ? "bg-white text-black border-white" 
+                        : "bg-transparent text-gray-400 border-white/10 hover:border-white/30 hover:text-white"
                   )}
                 >
                   {f}
