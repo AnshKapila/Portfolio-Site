@@ -13,6 +13,10 @@ import sulipsaDetail2 from '../assets/images/regenerated_image_1778700280861.png
 // import sulipsaBanner from '../assets/images/regenerated_image_1778700284946.png';
 const sulipsaBanner = "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=2000&auto=format&fit=crop";
 
+import damacBanner from '../assets/images/regenerated_image_1778846668612.jpg';
+import damacDetail2 from '../assets/images/regenerated_image_1778846673192.jpg';
+import damacCover from '../assets/images/regenerated_image_1778846676083.png';
+
 export interface Project {
   slug: string;
   title: string;
@@ -221,7 +225,7 @@ const allProjects: Project[] = [
     slug: "damacviolet",
     title: "Damac Violet",
     tags: ["Web Design", "landing Page", "SEO Optimization"],
-    coverImage: "https://framerusercontent.com/images/BFq3WiNRlZnWP4akdmCwJuPFrA.jpg",
+    coverImage: damacCover,
     listTitle: "UX • Web • Conversion",
     listSubtitle: "",
     overviewHeading: "Project Overview",
@@ -230,12 +234,12 @@ const allProjects: Project[] = [
     strategyDescription1: "The primary challenge was translating a high-end lifestyle offering into a compelling online experience that resonates with international buyers. I structured the landing page to balance emotional appeal and rational clarity, using visual hierarchy, immersive hero imagery, and seamless navigation to guide users toward conversion.",
     strategyDescription2: "The design showcased amenities from lush community spaces to premium interior details in an engaging, larger-than-life format. This elevated user perception while optimizing layout and interface elements for fast engagement and clear decision-paths.",
     detailImage1: "https://framerusercontent.com/images/ldlBpF3V0dXynrFgvTTPwtpA.jpg",
-    detailImage2: "https://framerusercontent.com/images/2Vz5WwY9VDpRHHJFZgzEkufWm8.jpg",
+    detailImage2: damacDetail2,
     outcomeHeading: "Outcome",
     outcomeDescription: "The final landing page serves as a high-converting, top-of-funnel marketing asset that captures the imagination of luxury property buyers and investors. By elegantly combining the allure of an exclusive Dubai lifestyle with a frictionless user journey, the digital experience effectively turns high-intent traffic into qualified leads. This sophisticated approach to real estate digital marketing establishes prestige and trust, driving meaningful engagement and measurable interest in the Violet Damac Hills 2 townhouses.",
     buttonText: "Live Project",
     buttonLink: "https://www.behance.net/gallery/219778095/Violet-Damac-Hills-2-Landing-Page",
-    bannerImage: "https://framerusercontent.com/images/9BxfKrQGFcpvVplJ1mTqejqOo8k.png"
+    bannerImage: damacBanner
   }
 ];
 
