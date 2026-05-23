@@ -1,13 +1,14 @@
-import { useParams, Link } from "next/link";
+"use client";
+import Link from "next/link";
+import {   } from "next/navigation";
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { services } from '../data/services';
 import { projects } from '../data/projects';
 import { FadeIn } from '../components/FadeIn';
-import { SEO } from '../components/SEO';
 
-export function ServicePage() {
-  const { slug } = useParams<{ slug: string }>();
+export function ServicePage({ params }: { params?: { slug: string } }) {
+  const slug = params?.slug;
   const service = services.find((s) => s.slug === slug);
 
   if (!service) {
@@ -42,11 +43,7 @@ export function ServicePage() {
 
   return (
     <>
-      <SEO
-        title={`${service.title} | Intent Studios`}
-        description={service.overview}
-        url={`https://intentstudios.com/services/${service.slug}`}
-      />
+      
       <div className="pt-32 pb-48 md:pt-40 px-6 md:px-12 lg:px-16 min-h-screen">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}

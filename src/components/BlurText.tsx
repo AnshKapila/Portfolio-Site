@@ -1,3 +1,4 @@
+"use client";
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { cn } from '../lib/utils';

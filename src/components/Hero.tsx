@@ -1,16 +1,15 @@
+"use client";
 import { useRef, useEffect, useState } from 'react';
 import { AnimatedHeading } from './AnimatedHeading';
 import { FadeIn } from './FadeIn';
 import { cn } from '../lib/utils';
-import { Link } from 'react-router-dom';
+import Link from "next/link";
+import { useThemeContext } from '@/app/ThemeProvider';
 
-interface HeroProps {
-  onBrightnessChange?: (isBright: boolean) => void;
-}
-
-export function Hero({ onBrightnessChange }: HeroProps) {
+export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isBright, setIsBright] = useState(false);
+  const { setIsHeroBright } = useThemeContext();
 
   useEffect(() => {
     const video = videoRef.current;
@@ -46,7 +45,7 @@ export function Hero({ onBrightnessChange }: HeroProps) {
         if (currentlyBright !== lastBright) {
           lastBright = currentlyBright;
           setIsBright(currentlyBright);
-          onBrightnessChange?.(currentlyBright);
+          setIsHeroBright(currentlyBright);
         }
       } catch (e) {
         // Silently catch cross-origin canvas read errors
@@ -55,7 +54,7 @@ export function Hero({ onBrightnessChange }: HeroProps) {
 
     const intervalId = setInterval(checkBrightness, 250);
     return () => clearInterval(intervalId);
-  }, [onBrightnessChange]);
+  }, [setIsHeroBright]);
 
   return (
     <section className="relative w-full h-[100dvh] flex flex-col font-sans overflow-hidden">

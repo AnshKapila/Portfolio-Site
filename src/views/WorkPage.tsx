@@ -1,10 +1,10 @@
+"use client";
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { projects } from '../data/projects';
-import { Link } from "next/link";
+import Link from "next/link";
 import { cn } from '../lib/utils';
 import { FadeIn } from '../components/FadeIn';
-import { SEO } from '../components/SEO';
 
 export function WorkPage() {
   const [filter, setFilter] = useState('All');
@@ -22,11 +22,7 @@ export function WorkPage() {
 
   return (
     <>
-      <SEO 
-        title="Selected Work | Intent Studios" 
-        description="A collection of web design, product design, and visual systems created by Intent Studios."
-        url="https://intentstudios.com/work"
-      />
+      
       <div className="pt-32 pb-48 px-6 md:px-12 lg:px-16 min-h-screen">
         <div className="max-w-7xl mx-auto">
           {/* Hero */}

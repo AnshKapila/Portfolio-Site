@@ -1,6 +1,7 @@
+"use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "../lib/utils";
 import { services as servicesData } from "../data/services";
@@ -81,7 +82,7 @@ export function ServicesSection() {
                   className="relative cursor-pointer group py-6"
                   onClick={() => setActiveIndex(i)}
                 >
-                  <Link to={`/services/${service.slug}`} className="block">
+                  <Link href={`/services/${service.slug}`} className="block">
                     <h2
                       className={cn(
                         "text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight transition-colors duration-300",
@@ -162,7 +163,7 @@ export function ServicesSection() {
                   {services[activeIndex].description}
                 </p>
                 <Link
-                  to={`/services/${services[activeIndex].slug}`}
+                  href={`/services/${services[activeIndex].slug}`}
                   className="bg-white text-black px-6 py-3 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors inline-flex items-center gap-2 self-start group/btn"
                 >
                   Explore Service

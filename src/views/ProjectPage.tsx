@@ -1,21 +1,15 @@
-import { useEffect } from 'react';
 import Link from "next/link";
 import { projects } from '../data/projects';
 import { FadeIn } from '../components/FadeIn';
-import { SEO } from '../components/SEO';
 
 export function ProjectPage({ params }: { params?: { slug: string } }) {
   const slug = params?.slug;
   const project = projects.find(p => p.slug === slug);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [slug]);
-
   if (!project) {
     return (
       <>
-        <SEO title="Project Not Found | Intent Studios" />
+        
         <div className="min-h-screen flex items-center justify-center">
           <h1 className="text-3xl font-heading italic">Project not found</h1>
         </div>

@@ -1,7 +1,8 @@
+"use client";
 import { motion } from 'motion/react';
 import { cn } from '../lib/utils';
 import { HlsVideo } from './HlsVideo';
-import { Link } from 'react-router-dom';
+import Link from "next/link";
 
 export function DreamShipSection() {
   const headingText = "You dream it. We ship it.";

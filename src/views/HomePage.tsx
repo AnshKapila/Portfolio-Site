@@ -1,4 +1,3 @@
-import { SEO } from '../components/SEO';
 import { Hero } from '../components/Hero';
 import { WorkSection } from '../components/WorkSection';
 import { WhoWeHelpSection } from '../components/WhoWeHelpSection';
@@ -12,7 +11,7 @@ import { FounderSection } from '../components/FounderSection';
 export function HomePage() {
   return (
     <>
-      <SEO />
+      
       <Hero />
       <WorkSection />
       <WhoWeHelpSection />

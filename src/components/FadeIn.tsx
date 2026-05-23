@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState, ReactNode } from 'react';
 import { cn } from '../lib/utils'; // Assuming you have this alias or relative path
 

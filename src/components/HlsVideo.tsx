@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef, VideoHTMLAttributes } from 'react';
 import Hls from 'hls.js';
 import { cn } from '../lib/utils';

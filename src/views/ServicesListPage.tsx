@@ -1,4 +1,5 @@
-import { Link } from "next/link";
+"use client";
+import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import { services } from "../data/services";
@@ -8,11 +9,7 @@ import { SEO } from "../components/SEO";
 export function ServicesListPage() {
   return (
     <>
-      <SEO
-        title="Services | Intent Studios"
-        description="Explore our core services including Web & Product Design, AI Visuals, Brand Systems, and Content Growth Systems."
-        url="https://intentstudios.com/services"
-      />
+      
       <div className="pt-32 pb-48 md:pt-40 px-6 md:px-12 lg:px-16 min-h-screen bg-black text-white">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}

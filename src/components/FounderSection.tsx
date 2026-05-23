@@ -1,6 +1,7 @@
+"use client";
 import { motion } from 'motion/react';
 import { ArrowUpRight, Calendar } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from "next/link";
 
 export function FounderSection() {
   return (
