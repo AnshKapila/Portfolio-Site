@@ -31,8 +31,8 @@ export function ServicesListPage() {
             {services.map((service, index) => (
               <motion.div
                 key={service.slug}
-                initial={false}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}
                 
                 transition={{ duration: 0.8 }}
                 className="group relative border border-white/10 rounded-3xl p-8 md:p-12 lg:p-16 hover:border-white/30 transition-colors bg-zinc-950/50"

@@ -16,8 +16,8 @@ export function FounderSection() {
             
             {/* Confined Image Container */}
             <motion.div 
-              initial={false}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-50px" }}
               
               className="w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-[2rem] overflow-hidden shrink-0 shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-white/20 relative"
             >
@@ -31,8 +31,8 @@ export function FounderSection() {
             {/* Text Content */}
             <div className="flex flex-col justify-center md:pt-4">
               <motion.p 
-                initial={false}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}
                 
                 className="text-xs text-white/90 uppercase tracking-widest font-bold mb-4"
               >
@@ -40,8 +40,8 @@ export function FounderSection() {
               </motion.p>
               
               <motion.h2 
-                initial={false}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}
                 
                 className="text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight mb-2 text-white"
               >
@@ -49,8 +49,8 @@ export function FounderSection() {
               </motion.h2>
               
               <motion.p 
-                initial={false}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}
                 
                 transition={{ delay: 0.1 }}
                 className="text-[#FFD1C2] font-semibold text-lg md:text-xl tracking-wide mb-6"
@@ -59,8 +59,8 @@ export function FounderSection() {
               </motion.p>
               
               <motion.p 
-                initial={false}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}
                 
                 transition={{ delay: 0.2 }}
                 className="text-lg font-light leading-relaxed max-w-lg text-white/95"
@@ -72,7 +72,7 @@ export function FounderSection() {
 
           {/* Restored and Stretched 15-Minute Call CTA Widget */}
           <motion.div
-            initial={false}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ y: 0, opacity: 1 }}
             
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}

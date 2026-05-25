@@ -78,8 +78,8 @@ export function ServicePage({ slug }: { slug?: string }) {
                   {showcaseImages.map((img, i) => (
                     <motion.div
                       key={i}
-                      initial={false}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}
                       
                       transition={{ delay: (i % 3) * 0.1, duration: 0.8 }}
                       className="break-inside-avoid relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900"
@@ -136,8 +136,8 @@ export function ServicePage({ slug }: { slug?: string }) {
                 {relatedProjects.map((project, i) => (
                   <motion.div
                     key={project.slug}
-                    initial={false}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}
                     
                     transition={{ delay: i * 0.1, duration: 0.8 }}
                     className="group flex flex-col items-start bg-zinc-950/50 border border-white/5 rounded-3xl overflow-hidden shadow-2xl hover:border-white/10 transition-colors"

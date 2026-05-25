@@ -38,8 +38,8 @@ export function TestimonialsSection() {
         <div className="w-full lg:w-1/2 flex flex-col">
           
           <motion.div 
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}
             
             className="mb-8"
           >
@@ -60,8 +60,8 @@ export function TestimonialsSection() {
             {smallTestimonials.map((t, i) => (
               <motion.div 
                 key={i}
-                initial={false}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}
                 
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-white/20 transition-colors"
@@ -86,8 +86,8 @@ export function TestimonialsSection() {
 
         {/* Right Column: Featured Image Testimonial */}
         <motion.div 
-          initial={false}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-50px" }}
           
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-full lg:w-1/2 relative rounded-3xl overflow-hidden min-h-[500px] lg:min-h-full border border-white/10 flex flex-col justify-end group shadow-[0_0_40px_rgba(242,78,30,0.05)]"

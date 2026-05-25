@@ -120,8 +120,8 @@ export function WorkSection() {
                   key={activeIndex}
                   src={featuredProjects[activeIndex]?.coverImage}
                   alt="Project visualization"
-                  initial={false}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-50px" }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
                   className="absolute inset-0 w-full h-full object-cover"

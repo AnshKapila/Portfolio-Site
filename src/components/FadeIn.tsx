@@ -13,8 +13,8 @@ interface FadeInProps {
 export function FadeIn({ children, delayMs = 0, durationMs = 1000, className }: FadeInProps) {
   return (
     <motion.div
-      initial={false}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}
       transition={{ delay: delayMs / 1000, duration: durationMs / 1000 }}
       className={cn(className)}
     >

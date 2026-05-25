@@ -56,8 +56,8 @@ export function ServicesSection() {
               key={activeIndex}
               src={services[activeIndex].imageSrc}
               alt={services[activeIndex].title}
-              initial={false}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-50px" }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="absolute inset-0 w-full h-full object-cover grayscale-[0.2]"
@@ -81,6 +81,7 @@ export function ServicesSection() {
                   key={i}
                   className="relative cursor-pointer group py-6"
                   onClick={() => setActiveIndex(i)}
+                  onMouseEnter={() => setActiveIndex(i)}
                 >
                   <Link href={`/services/${service.slug}`} className="block">
                     <h2
@@ -98,7 +99,7 @@ export function ServicesSection() {
                   <AnimatePresence>
                     {isExpanded && (
                       <motion.div
-                        initial={false}
+                        initial={{ opacity: 0, y: 20 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -131,7 +132,7 @@ export function ServicesSection() {
                     <motion.div
                       layoutId="activeServiceLine"
                       className="absolute bottom-0 left-0 h-[2px] bg-white z-10"
-                      initial={false}
+                      initial={{ opacity: 0, y: 20 }}
                       transition={{
                         type: "spring",
                         stiffness: 300,
@@ -150,8 +151,8 @@ export function ServicesSection() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeIndex}
-                initial={false}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
                 className="flex flex-col"
