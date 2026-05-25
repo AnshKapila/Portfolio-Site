@@ -79,11 +79,10 @@ export function ServicesSection() {
               return (
                 <div
                   key={i}
-                  className="relative cursor-pointer group py-6"
-                  onClick={() => setActiveIndex(i)}
+                  className="relative cursor-pointer group"
                   onMouseEnter={() => setActiveIndex(i)}
                 >
-                  <Link href={`/services/${service.slug}`} className="block">
+                  <Link href={`/services/${service.slug}`} className="block py-6">
                     <h2
                       className={cn(
                         "text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight transition-colors duration-300",
@@ -99,39 +98,41 @@ export function ServicesSection() {
                   <AnimatePresence>
                     {isExpanded && (
                       <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="pt-5 pb-3">
-                          <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-300 font-light">
-                            {service.subItems.map((sub, idx) => (
-                              <li key={idx} className="flex items-center gap-2">
-                                <span
-                                  className={cn(
-                                    "w-2 h-2 rounded-full",
-                                    service.bulletColor,
-                                  )}
-                                />
-                                {sub}
-                              </li>
-                            ))}
-                          </ul>
+                        <div className="pt-2 pb-5">
+                          <Link href={`/services/${service.slug}`} className="block">
+                            <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-300 font-light">
+                              {service.subItems.map((sub, idx) => (
+                                <li key={idx} className="flex items-center gap-2">
+                                  <span
+                                    className={cn(
+                                      "w-2 h-2 rounded-full",
+                                      service.bulletColor,
+                                    )}
+                                  />
+                                  {sub}
+                                </li>
+                              ))}
+                            </ul>
+                          </Link>
                         </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
 
                   {/* Base separator line */}
-                  <div className="absolute bottom-0 left-0 w-full h-[1px] bg-white/10" />
+                  <div className="absolute bottom-0 left-0 w-full h-[1px] bg-white/10 pointer-events-none" />
 
                   {/* Animated Active Line */}
                   {isActive && (
                     <motion.div
                       layoutId="activeServiceLine"
-                      className="absolute bottom-0 left-0 h-[2px] bg-white z-10"
+                      className="absolute bottom-0 left-0 h-[2px] bg-white z-10 pointer-events-none"
                       initial={{ opacity: 0, y: 20 }}
                       transition={{
                         type: "spring",
