@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import "@/src/index.css";
 import { ThemeProvider } from "./ThemeProvider";
@@ -5,8 +6,8 @@ import { NavbarWrapper } from "./NavbarWrapper";
 import { Footer } from "@/src/components/Footer";
 
 export const metadata: Metadata = {
-  title: 'React Example',
-  description: 'A Next.js Application',
+  title: 'Design & Development Studio',
+  description: 'We build digital products, websites, and brand identities.',
 };
 
 export default function RootLayout({

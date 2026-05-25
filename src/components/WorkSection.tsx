@@ -54,7 +54,7 @@ export function WorkSection() {
                   // Stack offset logic: Card 1 at 120px, Card 2 at 160px, etc.
                   style={{ top: `calc(120px + ${i * 40}px)` }}
                   onViewportEnter={() => setActiveIndex(i)}
-                  viewport={{ margin: "-50% 0px -50% 0px" }}
+                  
                 >
                   {/* Mobile Background Image (Only visible heavily masked on small screens) */}
                   <div className="absolute inset-0 block lg:hidden z-0">
@@ -120,7 +120,7 @@ export function WorkSection() {
                   key={activeIndex}
                   src={featuredProjects[activeIndex]?.coverImage}
                   alt="Project visualization"
-                  initial={{ opacity: 0, scale: 1.1 }}
+                  initial={false}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}

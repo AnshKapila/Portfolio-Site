@@ -7,7 +7,8 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const project = projects.find(p => p.slug === params.slug);
   return {
     title: project ? `${project.title} | Case Study` : 'Project Not Found',
@@ -15,6 +16,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
-  return <ProjectPage params={params} />;
+export default async function Page(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
+  return <ProjectPage slug={params.slug} />;
 }

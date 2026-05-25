@@ -1,6 +1,7 @@
 "use client";
-import { useEffect, useState, ReactNode } from 'react';
-import { cn } from '../lib/utils'; // Assuming you have this alias or relative path
+import { ReactNode } from 'react';
+import { motion } from 'motion/react';
+import { cn } from '../lib/utils';
 
 interface FadeInProps {
   children: ReactNode;
@@ -10,24 +11,15 @@ interface FadeInProps {
 }
 
 export function FadeIn({ children, delayMs = 0, durationMs = 1000, className }: FadeInProps) {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, delayMs);
-    return () => clearTimeout(timer);
-  }, [delayMs]);
-
   return (
-    <div
-      className={cn("transition-opacity", className)}
-      style={{
-        opacity: isVisible ? 1 : 0,
-        transitionDuration: `${durationMs}ms`,
-      }}
+    <motion.div
+      initial={false}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: delayMs / 1000, duration: durationMs / 1000 }}
+      className={cn(className)}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }
+

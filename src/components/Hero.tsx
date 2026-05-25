@@ -104,13 +104,6 @@ export function Hero() {
 
             {/* Right Column */}
             <div className="flex justify-start lg:justify-end mt-8 lg:mt-0">
-              <FadeIn delayMs={1400} durationMs={1000}>
-                <div className={cn("border px-6 py-3 rounded-xl inline-block backdrop-blur-md transition-colors duration-1000", isBright ? "border-black/20 bg-white/20 text-black" : "border-white/20 bg-black/10 text-white")}>
-                  <span className="text-lg md:text-xl font-light">
-                    UX. Websites. Growth.
-                  </span>
-                </div>
-              </FadeIn>
             </div>
 
           </div>

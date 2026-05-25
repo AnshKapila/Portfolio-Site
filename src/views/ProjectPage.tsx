@@ -2,8 +2,7 @@ import Link from "next/link";
 import { projects } from '../data/projects';
 import { FadeIn } from '../components/FadeIn';
 
-export function ProjectPage({ params }: { params?: { slug: string } }) {
-  const slug = params?.slug;
+export function ProjectPage({ slug }: { slug?: string }) {
   const project = projects.find(p => p.slug === slug);
 
   if (!project) {
@@ -19,12 +18,6 @@ export function ProjectPage({ params }: { params?: { slug: string } }) {
 
   return (
     <>
-      <SEO 
-        title={`${project.title} | Intent Studios`}
-        description={project.overviewDescription.slice(0, 160).trim() + "..."}
-        image={project.coverImage || "/favicon.svg"}
-        url={`https://intentstudios.com/work/${project.slug}`}
-      />
       <div className="pt-32 pb-48 px-6 md:px-12 lg:px-16 min-h-screen">
       <div className="max-w-4xl mx-auto">
         
