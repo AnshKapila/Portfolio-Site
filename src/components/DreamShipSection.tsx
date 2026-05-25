@@ -30,8 +30,8 @@ export function DreamShipSection() {
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }} viewport={{ once: true, margin: "-50px" }}
-          
+          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="liquid-glass rounded-full px-4 py-1.5 mb-8 flex items-center gap-2"
         >
@@ -45,8 +45,8 @@ export function DreamShipSection() {
             <motion.span
               key={i}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }} viewport={{ once: true, margin: "-50px" }}
-              
+              whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{
                 duration: 0.35,
                 delay: i * 0.15,
@@ -60,8 +60,8 @@ export function DreamShipSection() {
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, filter: "blur(0px)" }} viewport={{ once: true, margin: "-50px" }}
-          
+          whileInView={{ opacity: 1, filter: "blur(0px)" }}
+          viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="text-lg font-light leading-relaxed text-gray-400 mb-10 max-w-xl"
         >
@@ -70,8 +70,8 @@ export function DreamShipSection() {
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }} viewport={{ once: true, margin: "-50px" }}
-          
+          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
           className="w-full sm:w-auto"
         >

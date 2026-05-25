@@ -22,7 +22,7 @@ export function BlurText({ text, className, delay = 100, staggerMs = 200 }: Blur
         <motion.span
           key={`${word}-${i}`}
           className="inline-block whitespace-pre"
-          initial={false}
+          initial={{ filter: 'blur(10px)', opacity: 0, y: 50 }}
           animate={
             isInView
               ? {

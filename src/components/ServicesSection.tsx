@@ -57,7 +57,7 @@ export function ServicesSection() {
               src={services[activeIndex].imageSrc}
               alt={services[activeIndex].title}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-50px" }}
+              animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="absolute inset-0 w-full h-full object-cover grayscale-[0.2]"
@@ -153,7 +153,7 @@ export function ServicesSection() {
               <motion.div
                 key={activeIndex}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}
+                animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
                 className="flex flex-col"

@@ -69,7 +69,7 @@ export function WorkPage() {
                <motion.div
                  key={project.slug}
                  initial={{ opacity: 0, y: 20 }}
-                 whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }}
+                 whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true, margin: "-50px" }}
                  transition={{ delay: i * 0.1, duration: 0.8 }}
                  className="group flex flex-col items-start bg-zinc-950/50 border border-white/5 rounded-3xl overflow-hidden shadow-2xl hover:border-white/10 transition-colors"
                >

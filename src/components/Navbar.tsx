@@ -134,7 +134,7 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, height: "auto" }} viewport={{ once: true, margin: "-50px" }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="md:hidden bg-black border-t border-white/10 overflow-hidden"
