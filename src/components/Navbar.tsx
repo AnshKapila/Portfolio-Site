@@ -1,9 +1,7 @@
-"use client";
 import { useState, useEffect } from "react";
 import { cn } from "../lib/utils";
 import { Logo } from "./Logo";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { services } from "../data/services";
@@ -11,7 +9,7 @@ import { services } from "../data/services";
 export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +23,7 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
   // Close mobile menu on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
-  }, [pathname]);
+  }, [location.pathname]);
 
   const textColor = !isScrolled && isHeroBright ? "text-black" : "text-white";
   const linkColor =
@@ -44,7 +42,7 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
     >
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-16 py-4 flex items-center justify-between">
         <Link
-          href="/"
+          to="/"
           className={cn(
             "cursor-pointer transition-colors duration-500",
             textColor,
@@ -61,13 +59,13 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
             linkColor,
           )}
         >
-          <Link href="/work" className="hover:opacity-75 transition-opacity">
+          <Link to="/work" className="hover:opacity-75 transition-opacity">
             Work
           </Link>
 
           <div className="relative group p-4 -m-4 flex items-center justify-center">
             <Link
-              href="/services"
+              to="/services"
               className="hover:opacity-75 transition-opacity flex items-center gap-1"
             >
               Services
@@ -78,7 +76,7 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
                 {services.map((service) => (
                   <Link
                     key={service.slug}
-                    href={`/services/${service.slug}`}
+                    to={`/services/${service.slug}`}
                     className="block px-4 py-3 rounded-lg hover:bg-white/5 transition-colors group/link"
                   >
                     <span className="block text-sm font-medium text-white mb-1 group-hover/link:text-[#FFD1C2] transition-colors">
@@ -93,7 +91,7 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
             </div>
           </div>
 
-          <Link href="/contact" className="hover:opacity-75 transition-opacity">
+          <Link to="/contact" className="hover:opacity-75 transition-opacity">
             Contact
           </Link>
         </div>
@@ -133,7 +131,7 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -141,7 +139,7 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
           >
             <div className="flex flex-col p-6 gap-6">
               <Link
-                href="/work"
+                to="/work"
                 className="text-2xl font-heading italic text-white hover:text-[#F24E1E] transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -149,7 +147,7 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
               </Link>
               <div className="flex flex-col gap-4">
                 <Link
-                  href="/services"
+                  to="/services"
                   className="text-2xl font-heading italic text-white hover:text-[#F24E1E] transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -159,7 +157,7 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
                   {services.map((service) => (
                     <Link
                       key={service.slug}
-                      href={`/services/${service.slug}`}
+                      to={`/services/${service.slug}`}
                       className="text-base text-gray-400 hover:text-white transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
@@ -169,7 +167,7 @@ export function Navbar({ isHeroBright = false }: { isHeroBright?: boolean }) {
                 </div>
               </div>
               <Link
-                href="/contact"
+                to="/contact"
                 className="text-2xl font-heading italic text-white hover:text-[#F24E1E] transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

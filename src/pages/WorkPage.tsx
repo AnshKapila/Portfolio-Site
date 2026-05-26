@@ -1,10 +1,10 @@
-"use client";
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { projects } from '../data/projects';
-import Link from "next/link";
+import { Link } from 'react-router-dom';
 import { cn } from '../lib/utils';
 import { FadeIn } from '../components/FadeIn';
+import { SEO } from '../components/SEO';
 
 export function WorkPage() {
   const [filter, setFilter] = useState('All');
@@ -22,7 +22,11 @@ export function WorkPage() {
 
   return (
     <>
-      
+      <SEO 
+        title="Selected Work | Intent Studios" 
+        description="A collection of web design, product design, and visual systems created by Intent Studios."
+        url="https://intentstudios.com/work"
+      />
       <div className="pt-32 pb-48 px-6 md:px-12 lg:px-16 min-h-screen">
         <div className="max-w-7xl mx-auto">
           {/* Hero */}
@@ -69,7 +73,7 @@ export function WorkPage() {
                <motion.div
                  key={project.slug}
                  initial={{ opacity: 0, y: 20 }}
-                 whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true }}
+                 animate={{ opacity: 1, y: 0 }}
                  transition={{ delay: i * 0.1, duration: 0.8 }}
                  className="group flex flex-col items-start bg-zinc-950/50 border border-white/5 rounded-3xl overflow-hidden shadow-2xl hover:border-white/10 transition-colors"
                >
@@ -100,7 +104,7 @@ export function WorkPage() {
                    </p>
                    
                    <Link 
-                     href={`/work/${project.slug}`}
+                     to={`/work/${project.slug}`}
                      className="inline-flex items-center justify-center w-full px-8 py-4 bg-white text-black rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors"
                    >
                      View Project

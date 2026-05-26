@@ -1,14 +1,18 @@
-"use client";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import { services } from "../data/services";
 import { FadeIn } from "../components/FadeIn";
+import { SEO } from "../components/SEO";
 
 export function ServicesListPage() {
   return (
     <>
-      
+      <SEO
+        title="Services | Intent Studios"
+        description="Explore our core services including Web & Product Design, AI Visuals, Brand Systems, and Content Growth Systems."
+        url="https://intentstudios.com/services"
+      />
       <div className="pt-32 pb-48 md:pt-40 px-6 md:px-12 lg:px-16 min-h-screen bg-black text-white">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -31,14 +35,14 @@ export function ServicesListPage() {
             {services.map((service, index) => (
               <motion.div
                 key={service.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true }}
-                
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8 }}
                 className="group relative border border-white/10 rounded-3xl p-8 md:p-12 lg:p-16 hover:border-white/30 transition-colors bg-zinc-950/50"
               >
                 <Link
-                  href={`/services/${service.slug}`}
+                  to={`/services/${service.slug}`}
                   className="absolute inset-0 z-10"
                   aria-label={`View ${service.title} service`}
                 />

@@ -1,7 +1,6 @@
-"use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "../lib/utils";
 import { services as servicesData } from "../data/services";
@@ -56,7 +55,7 @@ export function ServicesSection() {
               key={activeIndex}
               src={services[activeIndex].imageSrc}
               alt={services[activeIndex].title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, scale: 1.05 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -79,10 +78,10 @@ export function ServicesSection() {
               return (
                 <div
                   key={i}
-                  className="relative cursor-pointer group"
-                  onMouseEnter={() => setActiveIndex(i)}
+                  className="relative cursor-pointer group py-6"
+                  onClick={() => setActiveIndex(i)}
                 >
-                  <Link href={`/services/${service.slug}`} className="block py-6">
+                  <Link to={`/services/${service.slug}`} className="block">
                     <h2
                       className={cn(
                         "text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight transition-colors duration-300",
@@ -98,42 +97,40 @@ export function ServicesSection() {
                   <AnimatePresence>
                     {isExpanded && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="pt-2 pb-5">
-                          <Link href={`/services/${service.slug}`} className="block">
-                            <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-300 font-light">
-                              {service.subItems.map((sub, idx) => (
-                                <li key={idx} className="flex items-center gap-2">
-                                  <span
-                                    className={cn(
-                                      "w-2 h-2 rounded-full",
-                                      service.bulletColor,
-                                    )}
-                                  />
-                                  {sub}
-                                </li>
-                              ))}
-                            </ul>
-                          </Link>
+                        <div className="pt-5 pb-3">
+                          <ul className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-gray-300 font-light">
+                            {service.subItems.map((sub, idx) => (
+                              <li key={idx} className="flex items-center gap-2">
+                                <span
+                                  className={cn(
+                                    "w-2 h-2 rounded-full",
+                                    service.bulletColor,
+                                  )}
+                                />
+                                {sub}
+                              </li>
+                            ))}
+                          </ul>
                         </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
 
                   {/* Base separator line */}
-                  <div className="absolute bottom-0 left-0 w-full h-[1px] bg-white/10 pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 w-full h-[1px] bg-white/10" />
 
                   {/* Animated Active Line */}
                   {isActive && (
                     <motion.div
                       layoutId="activeServiceLine"
-                      className="absolute bottom-0 left-0 h-[2px] bg-white z-10 pointer-events-none"
-                      initial={{ opacity: 0, y: 20 }}
+                      className="absolute bottom-0 left-0 h-[2px] bg-white z-10"
+                      initial={false}
                       transition={{
                         type: "spring",
                         stiffness: 300,
@@ -152,7 +149,7 @@ export function ServicesSection() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeIndex}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
@@ -165,7 +162,7 @@ export function ServicesSection() {
                   {services[activeIndex].description}
                 </p>
                 <Link
-                  href={`/services/${services[activeIndex].slug}`}
+                  to={`/services/${services[activeIndex].slug}`}
                   className="bg-white text-black px-6 py-3 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors inline-flex items-center gap-2 self-start group/btn"
                 >
                   Explore Service

@@ -1,15 +1,16 @@
-"use client";
 import { useRef, useEffect, useState } from 'react';
 import { AnimatedHeading } from './AnimatedHeading';
 import { FadeIn } from './FadeIn';
 import { cn } from '../lib/utils';
-import Link from "next/link";
-import { useThemeContext } from '@/app/ThemeProvider';
+import { Link } from 'react-router-dom';
 
-export function Hero() {
+interface HeroProps {
+  onBrightnessChange?: (isBright: boolean) => void;
+}
+
+export function Hero({ onBrightnessChange }: HeroProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isBright, setIsBright] = useState(false);
-  const { setIsHeroBright } = useThemeContext();
 
   useEffect(() => {
     const video = videoRef.current;
@@ -45,7 +46,7 @@ export function Hero() {
         if (currentlyBright !== lastBright) {
           lastBright = currentlyBright;
           setIsBright(currentlyBright);
-          setIsHeroBright(currentlyBright);
+          onBrightnessChange?.(currentlyBright);
         }
       } catch (e) {
         // Silently catch cross-origin canvas read errors
@@ -54,7 +55,7 @@ export function Hero() {
 
     const intervalId = setInterval(checkBrightness, 250);
     return () => clearInterval(intervalId);
-  }, [setIsHeroBright]);
+  }, [onBrightnessChange]);
 
   return (
     <section className="relative w-full h-[100dvh] flex flex-col font-sans overflow-hidden">
@@ -104,6 +105,13 @@ export function Hero() {
 
             {/* Right Column */}
             <div className="flex justify-start lg:justify-end mt-8 lg:mt-0">
+              <FadeIn delayMs={1400} durationMs={1000}>
+                <div className={cn("border px-6 py-3 rounded-xl inline-block backdrop-blur-md transition-colors duration-1000", isBright ? "border-black/20 bg-white/20 text-black" : "border-white/20 bg-black/10 text-white")}>
+                  <span className="text-lg md:text-xl font-light">
+                    UX. Websites. Growth.
+                  </span>
+                </div>
+              </FadeIn>
             </div>
 
           </div>

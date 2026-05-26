@@ -1,14 +1,21 @@
-import Link from "next/link";
+import { useEffect } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import { projects } from '../data/projects';
 import { FadeIn } from '../components/FadeIn';
+import { SEO } from '../components/SEO';
 
-export function ProjectPage({ slug }: { slug?: string }) {
+export function ProjectPage() {
+  const { slug } = useParams();
   const project = projects.find(p => p.slug === slug);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   if (!project) {
     return (
       <>
-        
+        <SEO title="Project Not Found | Intent Studios" />
         <div className="min-h-screen flex items-center justify-center">
           <h1 className="text-3xl font-heading italic">Project not found</h1>
         </div>
@@ -18,6 +25,12 @@ export function ProjectPage({ slug }: { slug?: string }) {
 
   return (
     <>
+      <SEO 
+        title={`${project.title} | Intent Studios`}
+        description={project.overviewDescription.slice(0, 160).trim() + "..."}
+        image={project.coverImage || "/favicon.svg"}
+        url={`https://intentstudios.com/work/${project.slug}`}
+      />
       <div className="pt-32 pb-48 px-6 md:px-12 lg:px-16 min-h-screen">
       <div className="max-w-4xl mx-auto">
         

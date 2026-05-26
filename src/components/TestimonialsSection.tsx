@@ -1,4 +1,3 @@
-"use client";
 import { motion } from 'motion/react';
 import { Quote } from 'lucide-react';
 
@@ -38,9 +37,9 @@ export function TestimonialsSection() {
         <div className="w-full lg:w-1/2 flex flex-col">
           
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true }}
-            
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="mb-8"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#F24E1E]/30 bg-[#F24E1E]/10 mb-6">
@@ -61,8 +60,8 @@ export function TestimonialsSection() {
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true }}
-                
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-white/20 transition-colors"
               >
@@ -86,9 +85,9 @@ export function TestimonialsSection() {
 
         {/* Right Column: Featured Image Testimonial */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true }}
-          
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-full lg:w-1/2 relative rounded-3xl overflow-hidden min-h-[500px] lg:min-h-full border border-white/10 flex flex-col justify-end group shadow-[0_0_40px_rgba(242,78,30,0.05)]"
         >

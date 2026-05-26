@@ -1,20 +1,20 @@
-"use client";
-import Link from "next/link";
-import {   } from "next/navigation";
+import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { services } from '../data/services';
 import { projects } from '../data/projects';
 import { FadeIn } from '../components/FadeIn';
+import { SEO } from '../components/SEO';
 
-export function ServicePage({ slug }: { slug?: string }) {
+export function ServicePage() {
+  const { slug } = useParams<{ slug: string }>();
   const service = services.find((s) => s.slug === slug);
 
   if (!service) {
     return (
       <div className="pt-32 pb-48 px-6 min-h-screen text-center flex flex-col items-center justify-center">
         <h1 className="text-3xl font-heading italic">Service not found</h1>
-        <Link href="/" className="mt-8 text-[#F24E1E] hover:underline">
+        <Link to="/" className="mt-8 text-[#F24E1E] hover:underline">
           Return Home
         </Link>
       </div>
@@ -42,7 +42,11 @@ export function ServicePage({ slug }: { slug?: string }) {
 
   return (
     <>
-      
+      <SEO
+        title={`${service.title} | Intent Studios`}
+        description={service.overview}
+        url={`https://intentstudios.com/services/${service.slug}`}
+      />
       <div className="pt-32 pb-48 md:pt-40 px-6 md:px-12 lg:px-16 min-h-screen">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -79,8 +83,8 @@ export function ServicePage({ slug }: { slug?: string }) {
                     <motion.div
                       key={i}
                       initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true }}
-                      
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: '-50px' }}
                       transition={{ delay: (i % 3) * 0.1, duration: 0.8 }}
                       className="break-inside-avoid relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900"
                     >
@@ -137,8 +141,8 @@ export function ServicePage({ slug }: { slug?: string }) {
                   <motion.div
                     key={project.slug}
                     initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true }}
-                    
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                     transition={{ delay: i * 0.1, duration: 0.8 }}
                     className="group flex flex-col items-start bg-zinc-950/50 border border-white/5 rounded-3xl overflow-hidden shadow-2xl hover:border-white/10 transition-colors"
                   >
@@ -171,7 +175,7 @@ export function ServicePage({ slug }: { slug?: string }) {
                       </p>
 
                       <Link
-                        href={`/work/${project.slug}`}
+                        to={`/work/${project.slug}`}
                         className="mt-auto px-6 py-3 bg-white text-black rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors inline-flex items-center gap-2 group/btn self-start"
                       >
                         View Project
@@ -197,7 +201,7 @@ export function ServicePage({ slug }: { slug?: string }) {
                   Let's collaborate to build something exceptional. Reach out to discuss how we can help achieve your goals.
                 </p>
                 <Link 
-                  href="/contact" 
+                  to="/contact" 
                   className="bg-[#F24E1E] text-white px-8 py-4 rounded-lg font-medium text-base hover:bg-[#FF6A4D] transition-colors inline-flex items-center gap-2 shadow-lg shadow-[#F24E1E]/20"
                 >
                   {service.ctaText}

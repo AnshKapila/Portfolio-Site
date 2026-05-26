@@ -1,10 +1,9 @@
-"use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowUpRight, FolderKanban } from "lucide-react";
 import { cn } from "../lib/utils";
 import { projects } from "../data/projects";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 export function WorkSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -54,7 +53,7 @@ export function WorkSection() {
                   // Stack offset logic: Card 1 at 120px, Card 2 at 160px, etc.
                   style={{ top: `calc(120px + ${i * 40}px)` }}
                   onViewportEnter={() => setActiveIndex(i)}
-                  
+                  viewport={{ margin: "-50% 0px -50% 0px" }}
                 >
                   {/* Mobile Background Image (Only visible heavily masked on small screens) */}
                   <div className="absolute inset-0 block lg:hidden z-0">
@@ -89,7 +88,7 @@ export function WorkSection() {
 
                     <div className="mb-10">
                       <Link
-                        href={`/work/${project.slug}`}
+                        to={`/work/${project.slug}`}
                         className="inline-flex items-center justify-center bg-white text-black px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors"
                       >
                         View Project
@@ -120,7 +119,7 @@ export function WorkSection() {
                   key={activeIndex}
                   src={featuredProjects[activeIndex]?.coverImage}
                   alt="Project visualization"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, scale: 1.1 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
@@ -138,7 +137,7 @@ export function WorkSection() {
         {/* Global Action Button */}
         <div className="flex justify-center mt-32 px-6 relative z-20">
           <Link
-            href="/work"
+            to="/work"
             className="bg-white text-black w-full sm:w-[240px] px-8 py-4 rounded-lg font-medium text-base hover:bg-gray-200 transition-colors shadow-lg shadow-white/5 flex items-center justify-center gap-3 group"
           >
             See all projects

@@ -5,10 +5,10 @@ export function LogosSection() {
   const logos = [
     { name: 'Ezinore', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Ezinore_Logo_uepkie.png' },
     { name: 'Spatial Digest', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Spatial_Digest_Logo_h3kc8h.avif' },
-    { name: 'Bergaria', src: (bergariaLogo as any)?.src || bergariaLogo },
+    { name: 'Bergaria', src: bergariaLogo },
     { name: 'Metline', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Metline_logo_stksnk.webp' },
     { name: 'Petara Original', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777187149/Asset_14_3x_m2sumv.png' },
-    { name: 'Petara New', src: (petaraLogo as any)?.src || petaraLogo },
+    { name: 'Petara New', src: petaraLogo },
   ];
 
   return (

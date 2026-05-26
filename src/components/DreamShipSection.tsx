@@ -1,8 +1,7 @@
-"use client";
 import { motion } from 'motion/react';
 import { cn } from '../lib/utils';
 import { HlsVideo } from './HlsVideo';
-import Link from "next/link";
+import { Link } from 'react-router-dom';
 
 export function DreamShipSection() {
   const headingText = "You dream it. We ship it.";
@@ -29,9 +28,9 @@ export function DreamShipSection() {
         
         {/* Badge */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, filter: "blur(10px)", y: 50 }}
           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="liquid-glass rounded-full px-4 py-1.5 mb-8 flex items-center gap-2"
         >
@@ -44,9 +43,9 @@ export function DreamShipSection() {
           {words.map((word, i) => (
             <motion.span
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, filter: "blur(10px)", y: 50 }}
               whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{
                 duration: 0.35,
                 delay: i * 0.15,
@@ -59,9 +58,9 @@ export function DreamShipSection() {
         </h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           className="text-lg font-light leading-relaxed text-gray-400 mb-10 max-w-xl"
         >
@@ -69,9 +68,9 @@ export function DreamShipSection() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, filter: "blur(10px)", y: 30 }}
           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
           className="w-full sm:w-auto"
         >
