@@ -84,7 +84,7 @@ export function Hero() {
             <div className="flex flex-col">
               <AnimatedHeading 
                 text={"Clarity, direction,\nand execution."} 
-                className="text-5xl md:text-6xl lg:text-7xl font-heading italic tracking-tight mb-4 leading-[1.05]"
+                className="text-5xl md:text-6xl lg:text-7xl font-sans font-medium tracking-tight mb-4 leading-[1.05]"
               />
               
               <FadeIn delayMs={800} durationMs={1000} className="mb-4">
