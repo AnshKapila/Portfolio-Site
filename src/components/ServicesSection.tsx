@@ -66,9 +66,9 @@ export function ServicesSection() {
 
         {/* RIGHT CONTENT CONTAINER */}
         <div className="flex flex-col order-1 lg:order-2">
-          <p className="text-sm font-medium text-gray-400 mb-10">
-            Our Capabilities
-          </p>
+          <h3 className="text-2xl md:text-3xl font-semibold text-white tracking-tight mb-10">
+            What We Offer
+          </h3>
 
           <div className="flex flex-col mb-16">
             {services.map((service, i) => {

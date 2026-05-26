@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import { cn } from '../lib/utils';
 
@@ -23,6 +23,19 @@ export function FaqSection() {
   ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(
+        window.innerWidth < 1024 || 
+        window.matchMedia("(pointer: coarse)").matches
+      );
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <section id="faq" className="py-24 px-6 md:px-12 lg:px-16 bg-zinc-950 border-t border-white/5">
@@ -41,21 +54,31 @@ export function FaqSection() {
               <div 
                 key={i} 
                 className={cn(
-                  "border border-white/10 rounded-xl overflow-hidden transition-colors duration-300",
+                  "border border-white/10 rounded-xl overflow-hidden transition-colors duration-300 cursor-pointer select-none",
                   isOpen ? "bg-white/[0.04]" : "bg-transparent hover:bg-white/[0.02]"
                 )}
+                onMouseEnter={() => {
+                  if (!isMobile) {
+                    setOpenIndex(i);
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (!isMobile) {
+                    setOpenIndex(null);
+                  }
+                }}
+                onClick={() => {
+                  setOpenIndex(isOpen ? null : i);
+                }}
               >
-                <button
-                  className="w-full flex items-center justify-between p-6 text-left"
-                  onClick={() => setOpenIndex(isOpen ? null : i)}
-                >
+                <div className="w-full flex items-center justify-between p-6 text-left">
                   <span className="text-lg font-medium text-white pr-8">
                     {faq.question}
                   </span>
                   <div className="text-gray-400 flex-shrink-0">
                     {isOpen ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
                   </div>
-                </button>
+                </div>
                 
                 <div 
                   className={cn(

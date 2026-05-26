@@ -13,7 +13,7 @@ import sulipsaDetail2 from '../assets/images/regenerated_image_1778700280861.png
 // import sulipsaBanner from '../assets/images/regenerated_image_1778700284946.png';
 const sulipsaBanner = "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=2000&auto=format&fit=crop";
 
-import damacBanner from '../assets/images/regenerated_image_1778870277428.png';
+import damacBanner from '../assets/images/regenerated_image_1779822350943.png';
 import damacDetail2 from '../assets/images/regenerated_image_1778846673192.jpg';
 import damacCover from '../assets/images/regenerated_image_1778846676083.png';
 
