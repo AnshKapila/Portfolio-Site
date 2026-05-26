@@ -45,7 +45,8 @@ export function AnimatedHeading({
       style={{ letterSpacing: '-0.04em' }}
       variants={container}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true }}
     >
       {lines.map((line, lineIndex) => (
         <div key={lineIndex} className="whitespace-nowrap overflow-visible flex items-end min-h-[1.2em]">

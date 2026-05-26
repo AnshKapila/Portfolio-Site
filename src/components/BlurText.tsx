@@ -12,7 +12,7 @@ interface BlurTextProps {
 
 export function BlurText({ text, className, delay = 100, staggerMs = 200 }: BlurTextProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const isInView = useInView(ref, { once: true, margin: "0px" });
 
   const words = text.split(' ');
 
