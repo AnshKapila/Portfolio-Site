@@ -80,6 +80,7 @@ export function WorkPage() {
                  <div className="w-full aspect-[4/3] bg-zinc-900 overflow-hidden relative">
                    <img 
                      src={project.coverImage} 
+                     referrerPolicy="no-referrer"
                      alt={project.title} 
                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                    />

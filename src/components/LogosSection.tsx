@@ -31,6 +31,7 @@ export function LogosSection() {
                 <div key={`${set}-${logo.name}-${idx}`} className="flex justify-center items-center w-40 sm:w-48 md:w-56 shrink-0">
                   <img 
                     src={logo.src} 
+                    referrerPolicy="no-referrer"
                     alt={logo.name} 
                     className="h-12 sm:h-14 md:h-16 w-auto max-w-[140px] md:max-w-[180px] object-contain opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300 pointer-events-auto"
                   />

@@ -79,6 +79,7 @@ export function ServicesSection() {
                 <div
                   key={i}
                   className="relative cursor-pointer group py-6"
+                  onMouseEnter={() => setActiveIndex(i)}
                   onClick={() => setActiveIndex(i)}
                 >
                   <Link to={`/services/${service.slug}`} className="block">

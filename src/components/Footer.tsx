@@ -22,10 +22,11 @@ export function Footer() {
           <div>
             &copy; {new Date().getFullYear()} Intent Studios. All rights reserved.
           </div>
-          <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">Twitter</a>
-            <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-white transition-colors">Dribbble</a>
+          <div className="flex flex-wrap gap-x-8 gap-y-2 justify-center">
+            <a href="https://www.linkedin.com/in/anshkapila/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://www.behance.net/anshkapila" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Behance</a>
+            <a href="https://www.instagram.com/anshkapila.ux/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
+            <a href="https://contra.com/anshkapila/work" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Contra</a>
           </div>
         </div>
       </div>

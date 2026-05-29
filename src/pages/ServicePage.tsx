@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
@@ -28,17 +29,43 @@ export function ServicePage() {
     )
   );
 
-  // Extract unique images from related projects for the visual showcase
-  const showcaseImages = Array.from(
-    new Set(
-      relatedProjects.flatMap((project) => [
-        project.coverImage,
-        project.detailImage1,
-        project.detailImage2,
-        project.bannerImage,
-      ])
-    )
-  ).filter(Boolean);
+  // Compute final showcase images, merge additions/exclusions, and shuffle them on load
+  const showcaseImages = useMemo(() => {
+    const dynamicImages = Array.from(
+      new Set(
+        relatedProjects.flatMap((project) => [
+          project.coverImage,
+          project.detailImage1,
+          project.detailImage2,
+          project.bannerImage,
+        ])
+      )
+    ).filter(Boolean);
+
+    let images = dynamicImages;
+
+    if (service.excludeImages && service.excludeImages.length > 0) {
+      images = images.filter((img) => !service.excludeImages?.includes(img));
+    }
+
+    if (service.additionalShowcaseImages && service.additionalShowcaseImages.length > 0) {
+      images = [...images, ...service.additionalShowcaseImages];
+    }
+
+    if (service.customShowcaseImages && service.customShowcaseImages.length > 0) {
+      images = service.customShowcaseImages;
+    }
+
+    // Shuffle the images statically per-mount
+    const shuffled = [...images];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = shuffled[i];
+      shuffled[i] = shuffled[j];
+      shuffled[j] = temp;
+    }
+    return shuffled;
+  }, [slug]);
 
   return (
     <>
@@ -78,7 +105,7 @@ export function ServicePage() {
                   </span>
                   <div className="h-px bg-white/10 flex-grow" />
                 </div>
-                <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
                   {showcaseImages.map((img, i) => (
                     <motion.div
                       key={i}
@@ -86,10 +113,11 @@ export function ServicePage() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: '-50px' }}
                       transition={{ delay: (i % 3) * 0.1, duration: 0.8 }}
-                      className="break-inside-avoid relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900"
+                      className="break-inside-avoid mb-6 relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900"
                     >
                       <img
                         src={img}
+                        referrerPolicy="no-referrer"
                         alt={`${service.title} Portfolio Image ${i + 1}`}
                         className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                       />
@@ -149,6 +177,7 @@ export function ServicePage() {
                     <div className="w-full aspect-[4/3] bg-zinc-900 overflow-hidden relative">
                       <img
                         src={project.coverImage}
+                        referrerPolicy="no-referrer"
                         alt={project.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />

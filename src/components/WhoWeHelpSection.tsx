@@ -38,7 +38,7 @@ export function WhoWeHelpSection() {
               
               {/* Slide background from bottom to top */}
               <div className="absolute inset-0 w-full h-full transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] z-0">
-                <img src={pillar.image} alt={pillar.title} className="absolute inset-0 w-full h-full object-cover object-center" />
+                <img src={pillar.image} referrerPolicy="no-referrer" alt={pillar.title} className="absolute inset-0 w-full h-full object-cover object-center" />
                 {/* Darker black fill separating background and foreground */}
                 <div className="absolute inset-0 bg-black/75" />
               </div>

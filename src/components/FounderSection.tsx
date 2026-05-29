@@ -22,6 +22,7 @@ export function FounderSection() {
             >
                <img 
                  src="https://ik.imagekit.io/anshkapila/IMG-20250501-WA0010.jpg" 
+                 referrerPolicy="no-referrer"
                  alt="Ansh Kapila - Founder and Product Designer" 
                  className="absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms]" 
                />

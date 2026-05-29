@@ -68,7 +68,7 @@ export function ProjectPage() {
 
         {/* Main Visual */}
         <FadeIn delayMs={400} durationMs={800} className="mb-24 rounded-[40px] overflow-hidden border border-white/10 shadow-2xl bg-zinc-900">
-          <img src={project.coverImage} alt={project.title} className="w-full h-auto block" />
+          <img src={project.coverImage} referrerPolicy="no-referrer" alt={project.title} className="w-full h-auto block" />
         </FadeIn>
 
         {/* Content Structure */}
@@ -107,17 +107,17 @@ export function ProjectPage() {
         <div className="space-y-12 mb-32">
           {project.detailImage1 && (
             <div className="w-full rounded-[2rem] overflow-hidden border border-white/5 bg-zinc-900 shadow-xl">
-               <img src={project.detailImage1} alt="Project detail 1" className="w-full h-auto" />
+               <img src={project.detailImage1} referrerPolicy="no-referrer" alt="Project detail 1" className="w-full h-auto" />
             </div>
           )}
           {project.detailImage2 && (
             <div className="w-full rounded-[2rem] overflow-hidden border border-white/5 bg-zinc-900 shadow-xl">
-               <img src={project.detailImage2} alt="Project detail 2" className="w-full h-auto" />
+               <img src={project.detailImage2} referrerPolicy="no-referrer" alt="Project detail 2" className="w-full h-auto" />
             </div>
           )}
           {project.bannerImage && (
             <div className="w-full rounded-[2rem] overflow-hidden border border-white/5 bg-zinc-900 shadow-xl">
-               <img src={project.bannerImage} alt="Project banner" className="w-full h-auto" />
+               <img src={project.bannerImage} referrerPolicy="no-referrer" alt="Project banner" className="w-full h-auto" />
             </div>
           )}
         </div>

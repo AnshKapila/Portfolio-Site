@@ -59,6 +59,7 @@ export function WorkSection() {
                   <div className="absolute inset-0 block lg:hidden z-0">
                     <img
                       src={project.coverImage}
+                      referrerPolicy="no-referrer"
                       alt={project.title}
                       className="w-full h-full object-cover opacity-20 grayscale transition-opacity duration-700 blur-[2px]"
                     />
@@ -118,6 +119,7 @@ export function WorkSection() {
                 <motion.img
                   key={activeIndex}
                   src={featuredProjects[activeIndex]?.coverImage}
+                  referrerPolicy="no-referrer"
                   alt="Project visualization"
                   initial={{ opacity: 0, scale: 1.1 }}
                   animate={{ opacity: 1, scale: 1 }}

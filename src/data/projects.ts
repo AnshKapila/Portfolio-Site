@@ -1,6 +1,7 @@
 import bergariaCover from '../assets/images/regenerated_image_1778648802440.jpg';
 import bergariaDetail1 from '../assets/images/regenerated_image_1778648472194.jpg';
 import bergariaDetail2 from '../assets/images/regenerated_image_1778648465172.png';
+import bergariaBanner from '../assets/images/regenerated_image_1779824720726.png';
 
 import fintrackCover from '../assets/images/regenerated_image_1778698805205.png';
 import fintrackDetail1 from '../assets/images/regenerated_image_1778692162081.png';
@@ -10,12 +11,14 @@ import fintrackBanner from '../assets/images/regenerated_image_1778692171500.png
 import sulipsaCover from '../assets/images/regenerated_image_1778674254290.png';
 import sulipsaDetail1 from '../assets/images/regenerated_image_1778674258010.png';
 import sulipsaDetail2 from '../assets/images/regenerated_image_1778700280861.png';
-// import sulipsaBanner from '../assets/images/regenerated_image_1778700284946.png';
-const sulipsaBanner = "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=2000&auto=format&fit=crop";
+import sulipsaBanner from '../assets/images/regenerated_image_1779823569035.png';
 
-import damacBanner from '../assets/images/regenerated_image_1779822350943.png';
+import damacBanner from '../assets/images/regenerated_image_1778870277428.png';
+import damacDetail1 from '../assets/images/regenerated_image_1779823421524.png';
 import damacDetail2 from '../assets/images/regenerated_image_1778846673192.jpg';
 import damacCover from '../assets/images/regenerated_image_1778846676083.png';
+
+export { damacBanner, damacDetail1, damacDetail2, damacCover, bergariaBanner };
 
 export interface Project {
   slug: string;
@@ -53,7 +56,7 @@ const allProjects: Project[] = [
     strategyDescription1: "One of the biggest strategic decisions was intentionally rejecting common fintech UX patterns—avoiding real-time trading behavior, addictive analytics loops, and notification-driven engagement. Instead, the focus was on predictable interactions, reflection-first behavior, and intentional manual entry. The navigation system remained flat and cognitively lightweight across Home, Wealth, Goals, and Spendings, avoiding deep nested structures to preserve contextual consistency.",
     strategyDescription2: "A major challenge was the investment entry flow. Instead of fragmented 'Add' flows, a hybrid global investment model was introduced with a centralized entry point. The mental model was shifted to 'I already invested, I am simply recording it', which fundamentally changed the tone. Additionally, Goals and Spendings were designed as awareness systems rather than control systems—removing gamification from Goals and avoiding daily micro-tracking in Spendings to preserve the overall calmness.",
     detailImage1: fintrackDetail1,
-    detailImage2: fintrackDetail2,
+    detailImage2: "https://framerusercontent.com/images/GynWZRD3AlGfqlOmrGDLUtAUYc0.png", // Fallback placeholder if empty
     outcomeHeading: "Architecture & Outcome",
     outcomeDescription: "Built with scalable architecture in mind using Next.js, Supabase, and Tailwind CSS, the project followed a phased roadmap to separate UX validation from technical scaling.\n\nThe final product direction positioned Fintrack as a calmer alternative to traditional finance apps. Rather than maximizing engagement frequency, the experience focused on helping users understand where their money exists, why it exists there, and what long-term goals it supports, demonstrating how intentional UX systems can create stronger emotional trust.",
     buttonText: "Coming Soon",
@@ -99,7 +102,7 @@ const allProjects: Project[] = [
     outcomeDescription: "Process: Detailed structured prompt development, AI image generation via Google Nano Banana Pro, Photoshop refinement, and Campaign & Catalogue Design.\n\nOutput: 80+ campaign visuals, Instagram creatives, Website carousel banners, Perfume catalogue system, Product showcase imagery, Luxury campaign assets. All completed within 6 days. Creative posters and campaign creative direction were enhanced in collaboration with Priyanka Kaim.",
     buttonText: "View Website",
     buttonLink: "https://bergarialuxury.com/",
-    bannerImage: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2000&auto=format&fit=crop"
+    bannerImage: bergariaBanner
   },
   {
     slug: "fityard",
@@ -233,13 +236,13 @@ const allProjects: Project[] = [
     strategyHeading: "Design Strategy & UX Execution",
     strategyDescription1: "The primary challenge was translating a high-end lifestyle offering into a compelling online experience that resonates with international buyers. I structured the landing page to balance emotional appeal and rational clarity, using visual hierarchy, immersive hero imagery, and seamless navigation to guide users toward conversion.",
     strategyDescription2: "The design showcased amenities from lush community spaces to premium interior details in an engaging, larger-than-life format. This elevated user perception while optimizing layout and interface elements for fast engagement and clear decision-paths.",
-    detailImage1: "https://framerusercontent.com/images/ldlBpF3V0dXynrFgvTTPwtpA.jpg",
-    detailImage2: damacDetail2,
+    detailImage1: damacDetail1,
+    detailImage2: "", // Hidden for now per user instruction, was: damacDetail2
     outcomeHeading: "Outcome",
     outcomeDescription: "The final landing page serves as a high-converting, top-of-funnel marketing asset that captures the imagination of luxury property buyers and investors. By elegantly combining the allure of an exclusive Dubai lifestyle with a frictionless user journey, the digital experience effectively turns high-intent traffic into qualified leads. This sophisticated approach to real estate digital marketing establishes prestige and trust, driving meaningful engagement and measurable interest in the Violet Damac Hills 2 townhouses.",
     buttonText: "Live Project",
     buttonLink: "https://www.behance.net/gallery/219778095/Violet-Damac-Hills-2-Landing-Page",
-    bannerImage: damacBanner
+    bannerImage: "" // Hidden for now per user instruction, was: damacBanner
   }
 ];
 
