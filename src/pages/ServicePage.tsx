@@ -120,6 +120,22 @@ export function ServicePage() {
                         referrerPolicy="no-referrer"
                         alt={`${service.title} Portfolio Image ${i + 1}`}
                         className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                        onError={(e) => {
+                          const fallbackImages = [
+                            "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+                            "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?auto=format&fit=crop&w=1200&q=80",
+                            "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1200&q=80",
+                            "https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1200&q=80",
+                            "https://images.unsplash.com/photo-1618005198143-e5283b519a7f?auto=format&fit=crop&w=1200&q=80",
+                            "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1200&q=80",
+                            "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80",
+                            "https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?auto=format&fit=crop&w=1200&q=80",
+                            "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=format&fit=crop&w=1200&q=80",
+                            "https://images.unsplash.com/photo-1634973357973-f2ed255753e1?auto=format&fit=crop&w=1200&q=80"
+                          ];
+                          e.currentTarget.onerror = null; // Prevent infinite fallback loops
+                          e.currentTarget.src = fallbackImages[i % fallbackImages.length];
+                        }}
                       />
                       <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
                     </motion.div>

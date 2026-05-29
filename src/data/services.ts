@@ -1,26 +1,16 @@
 import { projects, damacBanner, damacDetail2, damacCover, bergariaBanner } from "./projects";
-import image99107 from '../assets/images/regenerated_image_1780080099107.png';
-import image05503 from '../assets/images/regenerated_image_1780079005503.png';
-import image10429 from '../assets/images/regenerated_image_1780079010429.png';
-import image14887 from '../assets/images/regenerated_image_1780079014887.png';
-import image17837 from '../assets/images/regenerated_image_1780079017837.png';
-import image21155 from '../assets/images/regenerated_image_1780079021155.png';
-import image24376 from '../assets/images/regenerated_image_1780079024376.png';
-import image27414 from '../assets/images/regenerated_image_1780079027414.png';
-import image31148 from '../assets/images/regenerated_image_1780079031148.png';
-import image34547 from '../assets/images/regenerated_image_1780079034547.png';
 
-// Use the local  reconstructed/regenerated images as part of our showcase portfolio
-const stillExtra1 = image99107;
-const stillExtra2 = image05503;
-const stillExtra3 = image10429;
-const stillExtra4 = image14887;
-const stillExtra5 = image17837;
-const stillExtra6 = image21155;
-const stillExtra7 = image24376;
-const stillExtra8 = image27414;
-const stillExtra9 = image31148;
-const stillExtra10 = image34547;
+// Use absolute string paths to allow build success even if assets aren't yet pushed to GitHub/Vercel
+const stillExtra1 = "/src/assets/images/regenerated_image_1780080099107.png";
+const stillExtra2 = "/src/assets/images/regenerated_image_1780079005503.png";
+const stillExtra3 = "/src/assets/images/regenerated_image_1780079010429.png";
+const stillExtra4 = "/src/assets/images/regenerated_image_1780079014887.png";
+const stillExtra5 = "/src/assets/images/regenerated_image_1780079017837.png";
+const stillExtra6 = "/src/assets/images/regenerated_image_1780079021155.png";
+const stillExtra7 = "/src/assets/images/regenerated_image_1780079024376.png";
+const stillExtra8 = "/src/assets/images/regenerated_image_1780079027414.png";
+const stillExtra9 = "/src/assets/images/regenerated_image_1780079031148.png";
+const stillExtra10 = "/src/assets/images/regenerated_image_1780079034547.png";
 
 export interface Service {
   slug: string;
