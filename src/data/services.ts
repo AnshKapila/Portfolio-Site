@@ -1,5 +1,5 @@
 import { projects, damacBanner, damacDetail2, damacCover, bergariaBanner } from "./projects";
-import image00646 from '../assets/images/regenerated_image_1780079000646.png';
+import image99107 from '../assets/images/regenerated_image_1780080099107.png';
 import image05503 from '../assets/images/regenerated_image_1780079005503.png';
 import image10429 from '../assets/images/regenerated_image_1780079010429.png';
 import image14887 from '../assets/images/regenerated_image_1780079014887.png';
@@ -10,8 +10,8 @@ import image27414 from '../assets/images/regenerated_image_1780079027414.png';
 import image31148 from '../assets/images/regenerated_image_1780079031148.png';
 import image34547 from '../assets/images/regenerated_image_1780079034547.png';
 
-// Use the local reconstructed/regenerated images as part of our showcase portfolio
-const stillExtra1 = image00646;
+// Use the local  reconstructed/regenerated images as part of our showcase portfolio
+const stillExtra1 = image99107;
 const stillExtra2 = image05503;
 const stillExtra3 = image10429;
 const stillExtra4 = image14887;
