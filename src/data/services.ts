@@ -1,16 +1,26 @@
 import { projects, damacBanner, damacDetail2, damacCover, bergariaBanner } from "./projects";
+import image00646 from '../assets/images/regenerated_image_1780079000646.png';
+import image21155 from '../assets/images/regenerated_image_1780079021155.png';
+import image24376 from '../assets/images/regenerated_image_1780079024376.png';
+import image27414 from '../assets/images/regenerated_image_1780079027414.png';
+import image31148 from '../assets/images/regenerated_image_1780079031148.png';
+import image34547 from '../assets/images/regenerated_image_1780079034547.png';
+import image58487 from '../assets/images/regenerated_image_1778692158487.png';
+import image68115 from '../assets/images/regenerated_image_1778868145615.png';
+import image68612 from '../assets/images/regenerated_image_1778846668612.jpg';
+import image50943 from '../assets/images/regenerated_image_1779822350943.png';
 
-// Use absolute string paths to allow build success even if assets aren't yet pushed to GitHub/Vercel
-const stillExtra1 = "/src/assets/images/regenerated_image_1780080099107.png";
-const stillExtra2 = "/src/assets/images/regenerated_image_1780079005503.png";
-const stillExtra3 = "/src/assets/images/regenerated_image_1780079010429.png";
-const stillExtra4 = "/src/assets/images/regenerated_image_1780079014887.png";
-const stillExtra5 = "/src/assets/images/regenerated_image_1780079017837.png";
-const stillExtra6 = "/src/assets/images/regenerated_image_1780079021155.png";
-const stillExtra7 = "/src/assets/images/regenerated_image_1780079024376.png";
-const stillExtra8 = "/src/assets/images/regenerated_image_1780079027414.png";
-const stillExtra9 = "/src/assets/images/regenerated_image_1780079031148.png";
-const stillExtra10 = "/src/assets/images/regenerated_image_1780079034547.png";
+// Use the local reconstructed/regenerated images as part of our showcase portfolio
+const stillExtra1 = image00646;
+const stillExtra2 = image21155;
+const stillExtra3 = image24376;
+const stillExtra4 = image27414;
+const stillExtra5 = image31148;
+const stillExtra6 = image34547;
+const stillExtra7 = image58487;
+const stillExtra8 = image68115;
+const stillExtra9 = image68612;
+const stillExtra10 = image50943;
 
 export interface Service {
   slug: string;

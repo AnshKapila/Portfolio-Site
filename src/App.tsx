@@ -4,7 +4,7 @@
  */
 
 import { useState } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { HomePage } from "./pages/HomePage";
@@ -18,7 +18,7 @@ export default function App() {
   const [isHeroBright, setIsHeroBright] = useState(false);
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="relative w-full min-h-screen bg-black flex flex-col font-sans selection:bg-white/30 text-white">
         <Navbar isHeroBright={isHeroBright} />
 
@@ -38,6 +38,6 @@ export default function App() {
 
         <Footer />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }

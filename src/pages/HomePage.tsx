@@ -4,7 +4,7 @@ import { WorkSection } from '../components/WorkSection';
 import { WhoWeHelpSection } from '../components/WhoWeHelpSection';
 import { LogosSection } from '../components/LogosSection';
 import { ServicesSection } from '../components/ServicesSection';
-// import { TestimonialsSection } from '../components/TestimonialsSection';
+import { TestimonialsSection } from '../components/TestimonialsSection';
 import { DreamShipSection } from '../components/DreamShipSection';
 import { FaqSection } from '../components/FaqSection';
 import { FounderSection } from '../components/FounderSection';
@@ -24,8 +24,8 @@ export function HomePage({ setIsHeroBright }: HomePageProps) {
       <LogosSection />
       <ServicesSection />
       <FounderSection />
-      {/* <SocialPresenceSection /> */}
-      {/* <TestimonialsSection /> */}
+      <SocialPresenceSection />
+      <TestimonialsSection />
       <DreamShipSection />
       <FaqSection />
     </>
