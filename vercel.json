@@ -3,9 +3,10 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!assets|images|favicon.svg|static|api).*)",
       "destination": "/index.html"
     }
   ]
