@@ -70,8 +70,10 @@ export function ServicePage() {
   return (
     <>
       <SEO
-        title={`${service.title} | Intent Studios`}
-        description={service.overview}
+        title={`${service.title} — ${service.positioning} | Intent Studios`}
+        description={`${service.overview} Capabilities include: ${service.capabilities.join(', ')}.`}
+        keywords={`${service.title}, ${service.capabilities.join(', ')}, ${service.positioning}, Web & Product Design Services, Intent Studios`}
+        image={showcaseImages[0] || "/favicon.svg"}
         url={`https://intentstudios.com/services/${service.slug}`}
       />
       <div className="pt-32 pb-48 md:pt-40 px-6 md:px-12 lg:px-16 min-h-screen">

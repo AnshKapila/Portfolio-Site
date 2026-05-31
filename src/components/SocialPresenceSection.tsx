@@ -7,6 +7,8 @@ import vigorxCover from '../assets/images/vigorxCover_downloaded.jpg';
 import clickpickCover from '../assets/images/clickpickCover_downloaded.jpg';
 import spatialdigestCover from '../assets/images/spatialdigestCover_downloaded.png';
 import metlineCover from '../assets/images/metlineCover_downloaded.png';
+import imagePng from '../assets/images/image.png';
+import citySkylineInstagram from '../assets/images/regenerated_image_1780194540313.png';
 
 export function SocialPresenceSection() {
   return (
@@ -62,56 +64,75 @@ export function SocialPresenceSection() {
             {/* Subtle overlay accent */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/[0.01] to-transparent pointer-events-none" />
             
-            <div>
-              {/* Header Meta */}
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-zinc-900 border border-white/15 flex items-center justify-center shrink-0">
-                    <Linkedin className="w-4 h-4 text-white/90" />
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-stretch w-full h-full">
+              {/* Left Column (Content) */}
+              <div className="md:col-span-3 flex flex-col justify-between h-full">
+                <div>
+                  {/* Header Meta */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-zinc-900 border border-white/15 flex items-center justify-center shrink-0">
+                        <Linkedin className="w-4 h-4 text-white/90" />
+                      </div>
+                      <div>
+                        <span className="text-xs text-white/50 uppercase tracking-widest font-semibold block">Primary Perspective</span>
+                        <span className="text-sm font-medium text-white">Ansh Kapila</span>
+                      </div>
+                    </div>
+                    <span className="text-xs text-white/40 font-mono tracking-wider bg-white/5 px-3 py-1 rounded-full">
+                      Weekly reflections
+                    </span>
                   </div>
-                  <div>
-                    <span className="text-xs text-white/50 uppercase tracking-widest font-semibold block">Primary Perspective</span>
-                    <span className="text-sm font-medium text-white">Ansh Kapila</span>
+
+                  {/* Curated Post Preview without distinct heading and paragraph */}
+                  <div className="mb-8">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-xs font-mono text-[#F24E1E]">POST REfLECTION</span>
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#F24E1E]/80 animate-pulse" />
+                    </div>
+                    <p className="text-gray-300 font-light text-sm md:text-base leading-relaxed">
+                      In complex enterprise software platforms, features and processing speeds are baseline metrics. Real adoption, however, happens in the micro-interaction margins. When we reduce mental drag during high-stakes actions, we directly prevent operational fatigue and build organic, lasting trust.
+                    </p>
                   </div>
                 </div>
-                <span className="text-xs text-white/40 font-mono tracking-wider bg-white/5 px-3 py-1 rounded-full">
-                  Weekly reflections
-                </span>
+
+                {/* Bottom Descriptive / CTA Row */}
+                <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pt-6 border-t border-white/5 relative z-10 mt-auto">
+                  <div className="max-w-xs">
+                    <p className="text-xs text-gray-400 font-medium leading-relaxed">
+                      Thoughts on UX systems, design thinking, startups, and product design.
+                    </p>
+                  </div>
+                  
+                  <a
+                    href="https://www.linkedin.com/in/anshkapila/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-black hover:bg-neutral-200 transition-colors duration-300 rounded-xl font-medium text-xs text-center shrink-0 shadow-lg"
+                  >
+                    Read Insights
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
               </div>
 
-              {/* Curated Post Preview */}
-              <div className="mb-10 max-w-xl">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-xs font-mono text-[#F24E1E]">POST REfLECTION</span>
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#F24E1E]/80 animate-pulse" />
+              {/* Right Column (Aesthetic Image) */}
+              <div className="md:col-span-2 hidden md:block relative w-full h-full min-h-[180px] rounded-2xl overflow-hidden bg-zinc-900 border border-white/10 group-hover:border-[#F24E1E]/20 transition-all duration-500">
+                <img
+                  src={clickpickCover}
+                  alt="Aesthetic Design Showcase"
+                  className="absolute inset-0 w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1000ms] ease-out"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4">
+                  <div className="flex items-center gap-2 bg-black/60 backdrop-blur-md border border-white/5 px-2.5 py-1 rounded-lg">
+                    <Briefcase className="w-3.5 h-3.5 text-white/70" />
+                    <span className="text-[10px] uppercase font-mono tracking-wider text-white/90">Curated Work</span>
+                  </div>
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight leading-snug mb-4">
-                  Why micro-copy and small tactile feedback loops dictate adoption in elite B2B platforms.
-                </h3>
-                <p className="text-gray-400 font-light text-sm md:text-base leading-relaxed">
-                  "In complex enterprise software, features and processing speeds are baseline metrics. Real adoption, however, happens in the micro-interaction margins. When we reduce mental drag during high-stakes actions, we directly prevent operational fatigue."
-                </p>
               </div>
             </div>
 
-            {/* Bottom Descriptive / CTA Row */}
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pt-6 border-t border-white/5 relative z-10">
-              <div className="max-w-xs">
-                <p className="text-sm text-gray-400 font-medium leading-relaxed">
-                  Thoughts on UX systems, design thinking, startups, and product design.
-                </p>
-              </div>
-              
-              <a
-                href="https://www.linkedin.com/in/anshkapila/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-black hover:bg-neutral-200 transition-colors duration-300 rounded-xl font-medium text-sm text-center shrink-0 shadow-lg"
-              >
-                Read Insights
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
-            </div>
           </motion.div>
 
           {/* 2. BEHANCE CARD: Visual-first showcasing design showcases */}
@@ -125,9 +146,10 @@ export function SocialPresenceSection() {
             {/* Embedded Visual Preview Container */}
             <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-zinc-900 border border-white/10 group-hover:border-white/20 transition-colors">
               <img
-                src={vigorxCover}
+                src={imagePng}
                 alt="Selected Visual Showcase"
                 className="absolute inset-0 w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1000ms] ease-out-quint"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4">
                 <div className="flex items-center gap-2 bg-black/60 backdrop-blur-md border border-white/5 px-2.5 py-1 rounded-lg">
@@ -196,38 +218,41 @@ export function SocialPresenceSection() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-[#F24E1E] hover:text-white font-medium transition-colors"
                 >
-                  Explore Experiments
+                  Explore More on Instagram
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </a>
               </div>
 
               {/* Right Side Visual Grid (Micro-Gallery Showcase) */}
               <div className="md:col-span-3 grid grid-cols-2 gap-4">
-                <div className="relative aspect-square rounded-xl overflow-hidden bg-zinc-900 border border-white/5 group/img">
+                <div className="relative aspect-square rounded-xl overflow-hidden bg-zinc-905 border border-white/5 group/img">
                   <img
-                    src={clickpickCover}
+                    src={citySkylineInstagram}
                     alt="Creative experiment 1"
                     className="absolute inset-0 w-full h-full object-cover hover:scale-110 grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden bg-zinc-900 border border-white/5 group/img">
+                <div className="relative aspect-square rounded-xl overflow-hidden bg-zinc-905 border border-white/5 group/img">
                   <img
                     src={spatialdigestCover}
                     alt="Creative experiment 2"
                     className="absolute inset-0 w-full h-full object-cover hover:scale-110 grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden bg-zinc-900 border border-white/5 group/img">
+                <div className="relative aspect-square rounded-xl overflow-hidden bg-zinc-905 border border-white/5 group/img">
                   <img
                     src={metlineCover}
                     alt="Creative experiment 3"
                     className="absolute inset-0 w-full h-full object-cover hover:scale-110 grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
                 {/* Accent Grid Box for Experimental feeling */}
                 <div className="aspect-square rounded-xl bg-zinc-900/40 border border-dashed border-white/10 flex flex-col items-center justify-center p-4 text-center">
                   <Sparkles className="w-5 h-5 text-[#F24E1E] mb-2 shrink-0 animate-pulse" />
-                  <span className="text-[10px] font-mono tracking-widest text-white/50 uppercase">GenAI System</span>
+                  <span className="text-[10px] font-mono tracking-widest text-white/50 uppercase">The Journey</span>
                 </div>
               </div>
             </div>

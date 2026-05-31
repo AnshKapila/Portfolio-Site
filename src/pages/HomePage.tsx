@@ -24,8 +24,8 @@ export function HomePage({ setIsHeroBright }: HomePageProps) {
       <LogosSection />
       <ServicesSection />
       <FounderSection />
-      <SocialPresenceSection />
-      <TestimonialsSection />
+      {/* <SocialPresenceSection /> */}
+      {/* <TestimonialsSection /> */}
       <DreamShipSection />
       <FaqSection />
     </>

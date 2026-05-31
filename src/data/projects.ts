@@ -18,6 +18,38 @@ import damacDetail1 from '../assets/images/regenerated_image_1779823421524.png';
 import damacDetail2 from '../assets/images/regenerated_image_1778846673192.jpg';
 import damacCover from '../assets/images/regenerated_image_1778846676083.png';
 
+// Import remaining local images
+import clickpickCover from '../assets/images/clickpickCover_downloaded.jpg';
+import clickpickDetail1 from '../assets/images/clickpickDetail1_downloaded.jpg';
+import clickpickDetail2 from '../assets/images/clickpickDetail2_downloaded.jpg';
+import clickpickBanner from '../assets/images/clickpickBanner_downloaded.jpg';
+
+import spatialdigestCover_img from '../assets/images/spatialdigestCover_downloaded.png';
+import spatialdigestDetail1 from '../assets/images/spatialdigestDetail1_downloaded.png';
+import spatialdigestDetail2 from '../assets/images/spatialdigestDetail2_downloaded.png';
+import spatialdigestBanner from '../assets/images/spatialdigestBanner_downloaded.png';
+import spatialdigestCitySkyline from '../assets/images/regenerated_image_1780194061369.png';
+
+import metlineCover from '../assets/images/metlineCover_downloaded.png';
+import metlineDetail1 from '../assets/images/metlineDetail1_downloaded.png';
+import metlineDetail2 from '../assets/images/metlineDetail2_downloaded.png';
+import metlineBanner from '../assets/images/metlineBanner_downloaded.png';
+
+import fityardCover from '../assets/images/fityardCover_downloaded.png';
+import fityardDetail1 from '../assets/images/fityardDetail1_downloaded.png';
+import fityardDetail2 from '../assets/images/fityardDetail2_downloaded.png';
+import fityardBanner from '../assets/images/fityardBanner_downloaded.png';
+
+import vigorxCover from '../assets/images/vigorxCover_downloaded.jpg';
+import vigorxDetail1 from '../assets/images/vigorxDetail1_downloaded.png';
+import vigorxDetail2 from '../assets/images/vigorxDetail2_downloaded.png';
+import vigorxBanner from '../assets/images/vigorxBanner_downloaded.jpg';
+
+import ezinoreCover from '../assets/images/ezinoreCover_downloaded.jpg';
+import ezinoreDetail1 from '../assets/images/ezinoreDetail1_downloaded.jpg';
+import ezinoreDetail2 from '../assets/images/ezinoreDetail2_downloaded.png';
+import ezinoreBanner from '../assets/images/ezinoreBanner_downloaded.png';
+
 export { damacBanner, damacDetail1, damacDetail2, damacCover, bergariaBanner };
 
 export interface Project {
@@ -108,7 +140,7 @@ const allProjects: Project[] = [
     slug: "fityard",
     title: "FitYard",
     tags: ["Web Design", "SEO Optimization", "AI Product Imagery"],
-    coverImage: "https://framerusercontent.com/images/BbeAUIzxJ0ZFa1p95vixRj5YH2Y.png",
+    coverImage: fityardCover,
     listTitle: "Web • SEO • AI",
     listSubtitle: "",
     overviewHeading: "Project Overview",
@@ -116,19 +148,19 @@ const allProjects: Project[] = [
     strategyHeading: "Strategy, Design & SEO Execution",
     strategyDescription1: "The main goal was to create a website that clearly communicates FitYard's philosophy of community first fitness. The design focuses on simplicity, approachable visuals, and strong messaging that resonates with students, beginners, and families looking for a supportive fitness environment.",
     strategyDescription2: "To elevate the visual presentation, existing gym photos were enhanced using AI based image refinement. This allowed the brand to present professional quality imagery without organizing an expensive production shoot.\n\nThe website structure was built with technical SEO foundations including optimized page hierarchy, search friendly content structure, and fast loading performance to improve discoverability for local fitness related searches.",
-    detailImage1: "https://framerusercontent.com/images/GynWZRD3AlGfqlOmrGDLUtAUYc0.png",
-    detailImage2: "https://framerusercontent.com/images/inO0dY7PtTkJmSLgB9352svI4P4.png",
+    detailImage1: fityardDetail1,
+    detailImage2: fityardDetail2,
     outcomeHeading: "Outcome & Current Progress",
     outcomeDescription: "The FitYard Gym website now provides a structured digital presence that introduces the gym's values, services, and community culture to new visitors. The platform is designed to support member inquiries, improve local visibility, and strengthen the brand's credibility online.\n\nThe project is currently in the final refinement stage. Customer reviews, some design system updates, and final launch adjustments are being prepared before the public rollout.",
     buttonText: "View Website Preview",
     buttonLink: "https://fityard-web.vercel.app/",
-    bannerImage: "https://framerusercontent.com/images/CtkIcf3AiKXbWMEWoXp1QNg3oCU.png"
+    bannerImage: fityardBanner
   },
   {
     slug: "clickpick",
     title: "Clickpic",
     tags: ["Case Study", "App UI/UX", "Lovable", "Dashboard"],
-    coverImage: "https://framerusercontent.com/images/pjuOW03Tgplmb2XbyC5lFrvBg.jpg",
+    coverImage: clickpickCover,
     listTitle: "Campus Printouts under 60 Seconds",
     listSubtitle: "",
     overviewHeading: "INTRODUCTION",
@@ -136,19 +168,19 @@ const allProjects: Project[] = [
     strategyHeading: "The Team",
     strategyDescription1: "Our team primarily consisted of students from my college, most of whom were my juniors. We brought together a mix of skills, a graphic designer for visuals, Android and web developers for execution, and a machine learning enthusiast exploring advanced possibilities. As the most experienced member, I led this cross-functional group, ensuring we built something realistic, scalable, and grounded in real-world constraints. Our goal was to collaborate like an actual product team, not just a college project group.",
     strategyDescription2: "As the sole UX designer, I owned the end-to-end product experience from research and user insights to information architecture, wireframes, UI, prototypes, and developer handoffs. I guided the visual direction alongside our graphic designer and ensured every design decision aligned with student and merchant needs while staying technically feasible for the team.\n\nAs project manager, my responsibility was to keep the team aligned, remove roadblocks, prioritize the right features, and maintain momentum. I coordinated with developers, planned timelines, balanced constraints, and ensured everyone worked harmoniously. My focus was building a culture of clarity and collaboration while guiding juniors through a realistic, industry-style workflow.",
-    detailImage1: "https://framerusercontent.com/images/2tCaIy9UzUcnz4PDim3JvRhc.jpg",
-    detailImage2: "https://framerusercontent.com/images/a1esIpwxvfbpTtDIc8C2rOQhCSo.jpg",
+    detailImage1: clickpickDetail1,
+    detailImage2: clickpickDetail2,
     outcomeHeading: "FINAL PERFORMANCE",
     outcomeDescription: "The result of the transformation were immediately visible both in perception and performance studio Vibe reported a 60% increase in client inquiries within the 3 months post-launch. Their social channels saw greater engagements due to the consistent and striking visual language Internally, their team reported a renewed sense of pride and ownership are finally had a brand reflected their passion and ambition. Their pitch decks looked sharper, their proposals more cohesive. The brand now speaks with clarity.",
     buttonText: "Full Case Study (Ongoing)",
     buttonLink: "https://www.behance.net/gallery/240796063/Clickpic-(Ongoing)-College-App-for-Print-Campus",
-    bannerImage: "https://framerusercontent.com/images/2tCaIy9UzUcnz4PDim3JvRhc.jpg"
+    bannerImage: clickpickBanner
   },
   {
     slug: "metline",
     title: "Metline",
     tags: ["Web Design", "SEO Optimization", "AI Product Imagery"],
-    coverImage: "https://framerusercontent.com/images/sqU6ucKBTjBVVNT1xSKfwMR6lpI.png",
+    coverImage: metlineCover,
     listTitle: "Strategy • UX • SEO • AI",
     listSubtitle: "",
     overviewHeading: "Project Overview",
@@ -156,19 +188,19 @@ const allProjects: Project[] = [
     strategyHeading: "Approach & Execution",
     strategyDescription1: "The challenge was to translate an offline-first business into a structured digital experience. I designed a clean, user-friendly website, streamlined the information architecture, and used AI tools to accelerate content and visual workflows. The platform was custom-built with performance and scalability in mind, ensuring both usability for customers and long-term flexibility for the business.",
     strategyDescription2: "Beyond design, I established core SEO practices, optimized site speed, and ensured the experience was mobile-ready. Every decision focused on clarity, discoverability, and reducing friction helping the brand present itself professionally while preparing it for consistent online growth.",
-    detailImage1: "https://framerusercontent.com/images/JdknZiRzy2TCUNV5CCZKkMYs7w.png",
-    detailImage2: "https://framerusercontent.com/images/7lLRwZmkDsKhMhFKRK54RksOf4U.png",
+    detailImage1: metlineDetail1,
+    detailImage2: metlineDetail2,
     outcomeHeading: "Outcome and Impact",
     outcomeDescription: "Metline Houseware now operates with a credible digital presence that strengthens trust and improves visibility. The website positions the brand for customer acquisition, supports search discoverability, and creates a reliable foundation for future marketing efforts transforming the business from locally recognized to digitally accessible.",
     buttonText: "Check Out Website",
     buttonLink: "https://metlinehouseware.com/",
-    bannerImage: "https://framerusercontent.com/images/eWulEa8TTQ5vXMgpepjH1arUUkU.png"
+    bannerImage: metlineBanner
   },
   {
     slug: "vigorx",
     title: "VigorX",
     tags: ["Case Study", "App UI/UX", "Figma", "Fitness"],
-    coverImage: "https://framerusercontent.com/images/JqTzyJQ7gRbg4CSjpnMfaavoQLw.jpg",
+    coverImage: vigorxCover,
     listTitle: "UX • Product • Mobile",
     listSubtitle: "",
     overviewHeading: "PROJECT OVERVIEW",
@@ -176,19 +208,19 @@ const allProjects: Project[] = [
     strategyHeading: "APPROACH & PRODUCT THINKING",
     strategyDescription1: "The challenge was designing for users who often start fitness journeys with motivation but struggle with consistency. I mapped key behaviors, reduced decision fatigue, and structured the experience around guided actions helping users focus less on planning and more on progress.",
     strategyDescription2: "From onboarding to workout tracking, every interaction was designed to feel supportive rather than overwhelming. The interface prioritizes clarity, quick navigation, and positive reinforcement encouraging repeat engagement while making the app approachable for beginners.",
-    detailImage1: "https://framerusercontent.com/images/byKaUpsyIexj9icSQ3aJ0ydzKQ.png",
-    detailImage2: "https://framerusercontent.com/images/AvA3qahLdBfFXJQTMidn7dGs.png",
+    detailImage1: vigorxDetail1,
+    detailImage2: vigorxDetail2,
     outcomeHeading: "FINAL PERFORMANCE",
     outcomeDescription: "VigorX demonstrates how thoughtful product design can transform complex goals into achievable routines. The app establishes a strong foundation for user retention, scalable feature growth, and long-term engagement, positioning it as a meaningful companion in a user’s fitness journey.",
     buttonText: "Protoype",
     buttonLink: "http://vigorxtest.lovable.app/",
-    bannerImage: "https://framerusercontent.com/images/2NnQPpNMlAftFdgGArnE5wlUNo.jpg"
+    bannerImage: vigorxBanner
   },
   {
     slug: "spatialdigest",
     title: "Spatial Digest",
     tags: ["Web Design", "Framer", "SEO Optimization"],
-    coverImage: "https://framerusercontent.com/images/N9gMOPyp7LwcBOvwiWFJEUexaXs.png",
+    coverImage: spatialdigestCover_img,
     listTitle: "Framer • SEO • Web",
     listSubtitle: "",
     overviewHeading: "Project Overview",
@@ -196,19 +228,19 @@ const allProjects: Project[] = [
     strategyHeading: "Strategy, Build & SEO Foundation",
     strategyDescription1: "The objective was to create a clean, high-impact website that positions the studio as premium while remaining simple to update internally. Using Framer allowed rapid deployment, responsive layouts, and flexible CMS capabilities ensuring the client can scale content, add projects, and maintain the site without technical dependency.",
     strategyDescription2: "I structured the site architecture around SEO best practices, optimized page hierarchy, and improved content discoverability to help the studio rank for relevant interior design searches. Every element from layout to metadata readiness was designed to support sustained organic visibility.",
-    detailImage1: "https://framerusercontent.com/images/YWrDhWR6xZQ9NyJl7mskMBR7DU.png",
-    detailImage2: "https://framerusercontent.com/images/8AyMyuyzSU66T9q7QFpoTu05F4.png",
+    detailImage1: spatialdigestDetail1,
+    detailImage2: spatialdigestDetail2,
     outcomeHeading: "Outcome & Impact",
     outcomeDescription: "Spatial Digest now operates with a professional digital presence that strengthens brand authority, improves search potential, and supports client acquisition. The scalable Framer infrastructure ensures the website can evolve alongside the studio’s growth without requiring constant redevelopment.",
     buttonText: "Live Website",
     buttonLink: "https://www.spatialdigest.com/",
-    bannerImage: "https://framerusercontent.com/images/FGVJUMzku6HKLTA02Iz382yuJA.png"
+    bannerImage: spatialdigestCitySkyline
   },
   {
     slug: "ezinore",
     title: "Ezinore ",
     tags: ["Web Design", "Landing Page", "Dashboard"],
-    coverImage: "https://framerusercontent.com/images/6Nf9RlXo7YfBtFkM2iu8eQSQgT4.jpg",
+    coverImage: ezinoreCover,
     listTitle: "SaaS • UX • Landing Page",
     listSubtitle: "",
     overviewHeading: "Project Overview",
@@ -216,13 +248,13 @@ const allProjects: Project[] = [
     strategyHeading: "Product Strategy & UX Transformation",
     strategyDescription1: "The core challenge was translating a highly technical energy product into an interface that felt approachable without losing depth. I restructured the information architecture, clarified product messaging, and designed user flows that guide decision-makers toward understanding capabilities, applications, and long-term value.",
     strategyDescription2: "For the dashboard, the focus was usability and operational clarity. Complex data points were organized into digestible views, enabling faster interpretation and supporting real-world business workflows critical for B2B environments where efficiency drives adoption.",
-    detailImage1: "https://framerusercontent.com/images/P59hR0mszDQOVJhMSbhyGBVdQNM.jpg",
-    detailImage2: "https://framerusercontent.com/images/uV01N6QTY24bHh4QTdfr5owxDas.png",
+    detailImage1: ezinoreDetail1,
+    detailImage2: ezinoreDetail2,
     outcomeHeading: "Outcome & Impact",
     outcomeDescription: "Ezinore now presents its technology through a structured, credibility-focused digital experience that strengthens investor confidence, supports enterprise conversations, and prepares the platform for scalable growth within the competitive clean-energy sector.",
     buttonText: "Full Case Study",
     buttonLink: "https://www.behance.net/gallery/224369929/UX-Design-Case-Study-Ezinore-Landing-Page-Dashboard",
-    bannerImage: "https://framerusercontent.com/images/jPzat5jt5aV407kj8iEDKjJnyWE.png"
+    bannerImage: ezinoreBanner
   },
   {
     slug: "damacviolet",
