@@ -2,11 +2,8 @@ import { motion } from 'motion/react';
 import { ArrowUpRight, Linkedin, Instagram, Briefcase, Layers, ArrowRight, Sparkles } from 'lucide-react';
 import { cn } from '../lib/utils';
 
-// Import local assets securely for curation previews
-import vigorxCover from '../assets/images/vigorxCover_downloaded.jpg';
-import clickpickCover from '../assets/images/clickpickCover_downloaded.jpg';
-import spatialdigestCover from '../assets/images/spatialdigestCover_downloaded.png';
-import metlineCover from '../assets/images/metlineCover_downloaded.png';
+// Import manual placeholders and local assets securely
+import { vigorxCover, clickpickCover, spatialdigestCover, metlineCover } from '../data/projects';
 import imagePng from '../assets/images/image.png';
 import citySkylineInstagram from '../assets/images/regenerated_image_1780194540313.png';
 

@@ -31,29 +31,12 @@ export function ServicePage() {
 
   // Compute final showcase images, merge additions/exclusions, and shuffle them on load
   const showcaseImages = useMemo(() => {
-    const dynamicImages = Array.from(
-      new Set(
-        relatedProjects.flatMap((project) => [
-          project.coverImage,
-          project.detailImage1,
-          project.detailImage2,
-          project.bannerImage,
-        ])
-      )
-    ).filter(Boolean);
-
-    let images = dynamicImages;
-
-    if (service.excludeImages && service.excludeImages.length > 0) {
-      images = images.filter((img) => !service.excludeImages?.includes(img));
-    }
-
-    if (service.additionalShowcaseImages && service.additionalShowcaseImages.length > 0) {
-      images = [...images, ...service.additionalShowcaseImages];
-    }
+    let images: string[] = [];
 
     if (service.customShowcaseImages && service.customShowcaseImages.length > 0) {
       images = service.customShowcaseImages;
+    } else if (service.additionalShowcaseImages && service.additionalShowcaseImages.length > 0) {
+      images = service.additionalShowcaseImages;
     }
 
     // Shuffle the images statically per-mount
@@ -153,71 +136,6 @@ export function ServicePage() {
               </div>
             </div>
           </FadeIn>
-
-          {/* Selected Projects */}
-          {relatedProjects.length > 0 && (
-            <div className="mb-32">
-              <FadeIn delayMs={100}>
-                <div className="flex items-center gap-4 mb-10">
-                  <span className="text-xs uppercase tracking-widest text-[#FFD1C2]/60 font-semibold">
-                    Related Projects
-                  </span>
-                  <div className="h-px bg-white/10 flex-grow" />
-                </div>
-              </FadeIn>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                {relatedProjects.map((project, i) => (
-                  <motion.div
-                    key={project.slug}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1, duration: 0.8 }}
-                    className="group flex flex-col items-start bg-zinc-950/50 border border-white/5 rounded-3xl overflow-hidden shadow-2xl hover:border-white/10 transition-colors"
-                  >
-                    <div className="w-full aspect-[4/3] bg-zinc-900 overflow-hidden relative">
-                      <img
-                        src={project.coverImage}
-                        referrerPolicy="no-referrer"
-                        alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-
-                    <div className="p-8 md:p-10 flex flex-col flex-grow w-full border-t border-white/5">
-                      <div className="flex flex-wrap gap-2 mb-6 text-xs font-semibold tracking-wide text-[#FFD1C2]/90">
-                        {project.tags.map((t) => (
-                          <span
-                            key={t}
-                            className="px-3 py-1.5 rounded-md bg-[#F24E1E]/10 border border-[#F24E1E]/20"
-                          >
-                            {t}
-                          </span>
-                        ))}
-                      </div>
-
-                      <h3 className="text-3xl font-heading tracking-tight mb-4">
-                        {project.title}
-                      </h3>
-                      <p className="text-gray-400 font-light leading-relaxed mb-10 flex-grow line-clamp-3">
-                        {project.overviewDescription}
-                      </p>
-
-                      <Link
-                        to={`/work/${project.slug}`}
-                        className="mt-auto px-6 py-3 bg-white text-black rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors inline-flex items-center gap-2 group/btn self-start"
-                      >
-                        View Project
-                        <ArrowUpRight className="w-4 h-4 opacity-70 group-hover/btn:opacity-100 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                      </Link>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          )}
 
           {/* Final CTA */}
           <FadeIn delayMs={300} durationMs={800}>

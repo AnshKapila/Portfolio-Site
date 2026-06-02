@@ -9,6 +9,7 @@ import image58487 from '../assets/images/regenerated_image_1778692158487.png';
 import image68115 from '../assets/images/regenerated_image_1778868145615.png';
 import image68612 from '../assets/images/regenerated_image_1778846668612.jpg';
 import image50943 from '../assets/images/regenerated_image_1779822350943.png';
+import spatialdigestCover_old from '../assets/images/spatialdigestCover_downloaded.png';
 
 // Use the local reconstructed/regenerated images as part of our showcase portfolio
 const stillExtra1 = image00646;
@@ -21,6 +22,7 @@ const stillExtra7 = image58487;
 const stillExtra8 = image68115;
 const stillExtra9 = image68612;
 const stillExtra10 = image50943;
+const stillExtra11 = spatialdigestCover_old;
 
 export interface Service {
   slug: string;
@@ -144,6 +146,7 @@ export const services: Service[] = [
       stillExtra8,
       stillExtra9,
       stillExtra10,
+      stillExtra11,
     ],
   },
 ];

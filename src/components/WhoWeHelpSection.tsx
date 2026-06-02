@@ -1,19 +1,23 @@
+import foundersImg from '../assets/images/regenerated_image_1780410884007.webp';
+import growingBusinessesImg from '../assets/images/regenerated_image_1780410885816.webp';
+import teamsLackingDirectionImg from '../assets/images/regenerated_image_1780410886810.webp';
+
 export function WhoWeHelpSection() {
   const pillars = [
     {
       title: "Founders",
       content: "You have the vision, but need a partner to translate it into a digital product that actually converts.",
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800"
+      image: foundersImg
     },
     {
       title: "Growing Businesses",
       content: "Your existing platform is holding you back. You need a scalable system to handle your next phase of growth.",
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800"
+      image: growingBusinessesImg
     },
     {
       title: "Teams lacking direction",
       content: "You have internal resources but lack a cohesive strategy. We provide the blueprint and lead the execution.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
+      image: teamsLackingDirectionImg
     }
   ];
 

@@ -13,44 +13,113 @@ import sulipsaDetail1 from '../assets/images/regenerated_image_1778674258010.png
 import sulipsaDetail2 from '../assets/images/regenerated_image_1778700280861.png';
 import sulipsaBanner from '../assets/images/regenerated_image_1779823569035.png';
 
-import damacBanner from '../assets/images/regenerated_image_1778870277428.png';
-import damacDetail1 from '../assets/images/regenerated_image_1779823421524.png';
-import damacDetail2 from '../assets/images/regenerated_image_1778846673192.jpg';
-import damacCover from '../assets/images/regenerated_image_1778846676083.png';
+import clickpickCover from '../assets/images/regenerated_image_1780424180194.webp';
+import clickpickDetail1 from '../assets/images/regenerated_image_1780424181782.webp';
+import clickpickDetail2 from '../assets/images/regenerated_image_1780424182903.webp';
+import clickpickBanner from '../assets/images/regenerated_image_1780424183987.webp';
 
-// Import remaining local images
-import clickpickCover from '../assets/images/clickpickCover_downloaded.jpg';
-import clickpickDetail1 from '../assets/images/clickpickDetail1_downloaded.jpg';
-import clickpickDetail2 from '../assets/images/clickpickDetail2_downloaded.jpg';
-import clickpickBanner from '../assets/images/clickpickBanner_downloaded.jpg';
+import spatialdigestCover_img from '../assets/images/regenerated_image_1780425763348.webp';
+const spatialdigestCover = spatialdigestCover_img;
+import spatialdigestDetail1 from '../assets/images/regenerated_image_1780425764604.webp';
+import spatialdigestDetail2 from '../assets/images/regenerated_image_1780425765904.webp';
+import spatialdigestBanner from '../assets/images/regenerated_image_1780425767332.webp';
+const spatialdigestCitySkyline = spatialdigestBanner;
 
-import spatialdigestCover_img from '../assets/images/spatialdigestCover_downloaded.png';
-import spatialdigestDetail1 from '../assets/images/spatialdigestDetail1_downloaded.png';
-import spatialdigestDetail2 from '../assets/images/spatialdigestDetail2_downloaded.png';
-import spatialdigestBanner from '../assets/images/spatialdigestBanner_downloaded.png';
-import spatialdigestCitySkyline from '../assets/images/regenerated_image_1780194061369.png';
+import metlineCover from '../assets/images/regenerated_image_1780423712546.webp';
+import metlineDetail1 from '../assets/images/regenerated_image_1780425190651.avif';
+import metlineDetail2 from '../assets/images/regenerated_image_1780425192103.avif';
+import metlineBanner from '../assets/images/regenerated_image_1780425193584.avif';
 
-import metlineCover from '../assets/images/metlineCover_downloaded.png';
-import metlineDetail1 from '../assets/images/metlineDetail1_downloaded.png';
-import metlineDetail2 from '../assets/images/metlineDetail2_downloaded.png';
-import metlineBanner from '../assets/images/metlineBanner_downloaded.png';
+import fityardCover from '../assets/images/regenerated_image_1780395889552.webp';
+import fityardDetail1 from '../assets/images/regenerated_image_1780395891494.webp';
+import fityardDetail2 from '../assets/images/regenerated_image_1780395893007.webp';
+import fityardBanner from '../assets/images/regenerated_image_1780395894556.webp';
 
-import fityardCover from '../assets/images/fityardCover_downloaded.png';
-import fityardDetail1 from '../assets/images/fityardDetail1_downloaded.png';
-import fityardDetail2 from '../assets/images/fityardDetail2_downloaded.png';
-import fityardBanner from '../assets/images/fityardBanner_downloaded.png';
+import vigorxCover from '../assets/images/regenerated_image_1780425438095.webp';
+import vigorxDetail1 from '../assets/images/regenerated_image_1780425440368.webp';
+import vigorxDetail2 from '../assets/images/regenerated_image_1780425442290.webp';
+import vigorxBanner from '../assets/images/regenerated_image_1780425444260.webp';
 
-import vigorxCover from '../assets/images/vigorxCover_downloaded.jpg';
-import vigorxDetail1 from '../assets/images/vigorxDetail1_downloaded.png';
-import vigorxDetail2 from '../assets/images/vigorxDetail2_downloaded.png';
-import vigorxBanner from '../assets/images/vigorxBanner_downloaded.jpg';
+import ezinoreCover from '../assets/images/regenerated_image_1780409171684.webp';
+import ezinoreDetail1 from '../assets/images/regenerated_image_1780409541184.webp';
+import ezinoreDetail2 from '../assets/images/regenerated_image_1780409542689.webp';
+import ezinoreBanner from '../assets/images/regenerated_image_1780409543658.webp';
 
-import ezinoreCover from '../assets/images/ezinoreCover_downloaded.jpg';
-import ezinoreDetail1 from '../assets/images/ezinoreDetail1_downloaded.jpg';
-import ezinoreDetail2 from '../assets/images/ezinoreDetail2_downloaded.png';
-import ezinoreBanner from '../assets/images/ezinoreBanner_downloaded.png';
+import ezinoreLogo from '../assets/images/logoEzinore_downloaded.png';
+import spatialDigestLogo from '../assets/images/logoSpatialDigest_downloaded.avif';
+import metlineLogo from '../assets/images/logoMetline_downloaded.webp';
 
-export { damacBanner, damacDetail1, damacDetail2, damacCover, bergariaBanner };
+// SVG Placeholder Generator for clean, robust manual replacements (Zero broken image paths)
+const createPlaceholder = (title: string, subtitle: string, bgColor: string, accentColor: string) => {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+    <rect width="1200" height="800" fill="${bgColor}"/>
+    <circle cx="600" cy="400" r="350" fill="${accentColor}" fill-opacity="0.04"/>
+    <circle cx="200" cy="200" r="200" fill="${accentColor}" fill-opacity="0.02"/>
+    <circle cx="1000" cy="600" r="250" fill="${accentColor}" fill-opacity="0.02"/>
+    <rect x="40" y="40" width="1120" height="720" fill="none" stroke="${accentColor}" stroke-opacity="0.15" stroke-width="2" rx="24"/>
+    <g transform="translate(600, 400)">
+      <text font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" text-anchor="middle" fill="#ffffff" letter-spacing="3">${title.toUpperCase()}</text>
+      <text font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="400" text-anchor="middle" fill="#ffffff" fill-opacity="0.6" dy="50">${subtitle}</text>
+      <rect x="-280" y="100" width="560" height="36" fill="black" fill-opacity="0.3" rx="8"/>
+      <text font-family="monospace" font-size="11" font-weight="500" text-anchor="middle" fill="${accentColor}" dy="122">[ Manual Asset Placeholder - Edit in src/data/projects.ts ]</text>
+    </g>
+  </svg>`;
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+};
+
+const createLogoPlaceholder = (name: string, bgColor: string, accentColor: string) => {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="150" viewBox="0 0 400 150">
+    <rect width="400" height="150" fill="${bgColor}" rx="16" stroke="${accentColor}" stroke-opacity="0.2" stroke-width="1.5"/>
+    <circle cx="70" cy="75" r="25" fill="${accentColor}" fill-opacity="0.1"/>
+    <circle cx="70" cy="75" r="10" fill="${accentColor}"/>
+    <text x="210" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="700" text-anchor="middle" fill="#ffffff" letter-spacing="1.5">${name.toUpperCase()}</text>
+  </svg>`;
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+};
+
+// 7. DAMAC VIOLET (Luxurious Midnight Violet Theme)
+const damacCover = createPlaceholder("Damac Violet", "Premium Townhouse Real Estate Showcase - Cover", "#1e1b4b", "#d946ef");
+const damacDetail1 = createPlaceholder("Damac Violet", "Opulent Arabian Luxury Living Amenities", "#1e1b4b", "#ec4899");
+const damacDetail2 = createPlaceholder("Damac Violet", "Exclusive Real Estate Campaign Landscape", "#0f172a", "#d946ef");
+const damacBanner = createPlaceholder("Damac Violet", "Dubai Residential Project Presentation", "#1e1b4b", "#f43f5e");
+
+export {
+  damacBanner,
+  damacDetail1,
+  damacDetail2,
+  damacCover,
+  bergariaBanner,
+  // Export new manual SVG placeholders to make them easily referenceable/replaceable
+  clickpickCover,
+  clickpickDetail1,
+  clickpickDetail2,
+  clickpickBanner,
+  spatialdigestCover_img,
+  spatialdigestCover,
+  spatialdigestDetail1,
+  spatialdigestDetail2,
+  spatialdigestBanner,
+  spatialdigestCitySkyline,
+  metlineCover,
+  metlineDetail1,
+  metlineDetail2,
+  metlineBanner,
+  fityardCover,
+  fityardDetail1,
+  fityardDetail2,
+  fityardBanner,
+  vigorxCover,
+  vigorxDetail1,
+  vigorxDetail2,
+  vigorxBanner,
+  ezinoreCover,
+  ezinoreDetail1,
+  ezinoreDetail2,
+  ezinoreBanner,
+  ezinoreLogo,
+  spatialDigestLogo,
+  metlineLogo
+};
 
 export interface Project {
   slug: string;
@@ -88,7 +157,7 @@ const allProjects: Project[] = [
     strategyDescription1: "One of the biggest strategic decisions was intentionally rejecting common fintech UX patterns—avoiding real-time trading behavior, addictive analytics loops, and notification-driven engagement. Instead, the focus was on predictable interactions, reflection-first behavior, and intentional manual entry. The navigation system remained flat and cognitively lightweight across Home, Wealth, Goals, and Spendings, avoiding deep nested structures to preserve contextual consistency.",
     strategyDescription2: "A major challenge was the investment entry flow. Instead of fragmented 'Add' flows, a hybrid global investment model was introduced with a centralized entry point. The mental model was shifted to 'I already invested, I am simply recording it', which fundamentally changed the tone. Additionally, Goals and Spendings were designed as awareness systems rather than control systems—removing gamification from Goals and avoiding daily micro-tracking in Spendings to preserve the overall calmness.",
     detailImage1: fintrackDetail1,
-    detailImage2: "https://framerusercontent.com/images/GynWZRD3AlGfqlOmrGDLUtAUYc0.png", // Fallback placeholder if empty
+    detailImage2: fintrackDetail2,
     outcomeHeading: "Architecture & Outcome",
     outcomeDescription: "Built with scalable architecture in mind using Next.js, Supabase, and Tailwind CSS, the project followed a phased roadmap to separate UX validation from technical scaling.\n\nThe final product direction positioned Fintrack as a calmer alternative to traditional finance apps. Rather than maximizing engagement frequency, the experience focused on helping users understand where their money exists, why it exists there, and what long-term goals it supports, demonstrating how intentional UX systems can create stronger emotional trust.",
     buttonText: "Coming Soon",

@@ -70,7 +70,7 @@ export function TestimonialsSection() {
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <div className="flex items-center gap-3">
-                    <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full object-cover border border-white/10" />
+                    <img src={t.avatar} referrerPolicy="no-referrer" alt={t.name} className="w-10 h-10 rounded-full object-cover border border-white/10" />
                     <div>
                       <p className="text-white text-sm font-medium">{t.name}</p>
                       <p className="text-gray-500 text-xs">{t.role}</p>
@@ -94,6 +94,7 @@ export function TestimonialsSection() {
           {/* Mockup Project Background Image */}
           <img 
             src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&h=1600&auto=format&fit=crop" 
+            referrerPolicy="no-referrer"
             alt="Featured Project Website Mockup" 
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105" 
           />

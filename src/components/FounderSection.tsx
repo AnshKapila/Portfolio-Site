@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowUpRight, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import founderAvatar from '../assets/images/regenerated_image_1780423517302.jpg';
 
 export function FounderSection() {
   return (
@@ -21,7 +22,7 @@ export function FounderSection() {
               className="w-56 h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-[2rem] overflow-hidden shrink-0 shadow-[0_8px_30px_rgb(0,0,0,0.2)] border border-white/20 relative"
             >
                <img 
-                 src="https://ik.imagekit.io/anshkapila/IMG-20250501-WA0010.jpg" 
+                 src={founderAvatar} 
                  referrerPolicy="no-referrer"
                  alt="Ansh Kapila - Founder and Product Designer" 
                  className="absolute inset-0 w-full h-full object-cover transition-all duration-[1500ms]" 

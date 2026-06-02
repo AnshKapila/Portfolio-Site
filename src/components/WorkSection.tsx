@@ -57,12 +57,14 @@ export function WorkSection() {
                 >
                   {/* Mobile Background Image (Only visible heavily masked on small screens) */}
                   <div className="absolute inset-0 block lg:hidden z-0">
-                    <img
-                      src={project.coverImage}
-                      referrerPolicy="no-referrer"
-                      alt={project.title}
-                      className="w-full h-full object-cover opacity-20 grayscale transition-opacity duration-700 blur-[2px]"
-                    />
+                    {!project.coverImage.startsWith("data:image/") && (
+                      <img
+                        src={project.coverImage}
+                        referrerPolicy="no-referrer"
+                        alt={project.title}
+                        className="w-full h-full object-cover opacity-20 grayscale transition-opacity duration-700 blur-[2px]"
+                      />
+                    )}
                   </div>
 
                   {/* Card Gradient Background */}
@@ -116,17 +118,42 @@ export function WorkSection() {
           <div className="hidden lg:block relative w-full h-full">
             <div className="sticky top-24 h-[calc(100vh-120px)] w-full rounded-[2.5rem] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.4)]">
               <AnimatePresence>
-                <motion.img
-                  key={activeIndex}
-                  src={featuredProjects[activeIndex]?.coverImage}
-                  referrerPolicy="no-referrer"
-                  alt="Project visualization"
-                  initial={{ opacity: 0, scale: 1.1 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
+                {featuredProjects[activeIndex]?.coverImage.startsWith("data:image/") ? (
+                  <motion.div
+                    key={activeIndex}
+                    initial={{ opacity: 0, scale: 1.1 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
+                    className="absolute inset-0 w-full h-full flex flex-col justify-between p-12 text-white relative overflow-hidden"
+                    style={{ background: `radial-gradient(circle at center, #111 0%, #050505 100%)` }}
+                  >
+                    <div className="absolute inset-0 opacity-15" style={{ backgroundImage: `radial-gradient(#F24E1E 1px, transparent 1px)`, backgroundSize: '24px 24px' }} />
+                    <div className="relative z-10 flex justify-between items-start w-full">
+                      <span className="text-xs font-mono uppercase tracking-widest text-white/50 bg-white/5 px-3 py-1 rounded-full border border-white/10 font-bold">Featured Case Concept</span>
+                      <span className="text-xs font-mono uppercase tracking-widest text-[#F24E1E] font-bold">[ Draft Placeholder ]</span>
+                    </div>
+                    <div className="relative z-10 text-center my-auto flex flex-col items-center">
+                      <h4 className="text-4xl md:text-5xl font-heading italic tracking-tight text-white mb-4 leading-tight">{featuredProjects[activeIndex]?.title}</h4>
+                      <p className="text-sm text-gray-400 font-light max-w-md leading-relaxed">{featuredProjects[activeIndex]?.listTitle || 'Web & Brand Strategy'}</p>
+                    </div>
+                    <div className="relative z-10 text-center text-xs font-mono text-gray-500">
+                      [ Manual Asset Placeholder — Edit in src/data/projects.ts ]
+                    </div>
+                  </motion.div>
+                ) : (
+                  <motion.img
+                    key={activeIndex}
+                    src={featuredProjects[activeIndex]?.coverImage}
+                    referrerPolicy="no-referrer"
+                    alt="Project visualization"
+                    initial={{ opacity: 0, scale: 1.1 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                )}
               </AnimatePresence>
 
               {/* Subtle inner shadow overlays */}

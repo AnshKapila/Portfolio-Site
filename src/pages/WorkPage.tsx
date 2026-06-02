@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { projects } from '../data/projects';
 import { Link } from 'react-router-dom';
 import { cn } from '../lib/utils';
@@ -17,7 +17,7 @@ export function WorkPage() {
     if (filter === 'Products' && project.tags.some(t => t.toLowerCase().includes('app') || t.toLowerCase().includes('dashboard') || t.toLowerCase().includes('saas'))) return true;
     if (filter === 'Visual Work' && project.tags.some(t => t.toLowerCase().includes('ui/ux') || t.toLowerCase().includes('imagery') || t.toLowerCase().includes('design'))) return true;
     if (filter === 'Case Studies' && project.tags.some(t => t.toLowerCase().includes('case study'))) return true;
-    return false; // Fallback mapping based on simple keyword search in tags
+    return false;
   });
 
   return (
@@ -78,12 +78,28 @@ export function WorkPage() {
                  className="group flex flex-col items-start bg-zinc-950/50 border border-white/5 rounded-3xl overflow-hidden shadow-2xl hover:border-white/10 transition-colors"
                >
                  <div className="w-full aspect-[4/3] bg-zinc-900 overflow-hidden relative">
-                   <img 
-                     src={project.coverImage} 
-                     referrerPolicy="no-referrer"
-                     alt={project.title} 
-                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                   />
+                    {project.coverImage.startsWith("data:image/") ? (
+                      <div className="w-full h-full flex flex-col justify-between p-6 text-white relative overflow-hidden" style={{ background: `radial-gradient(circle at center, #111 0%, #050505 100%)` }}>
+                        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `radial-gradient(#F24E1E 1px, transparent 1px)`, backgroundSize: '16px 16px' }} />
+                        <div className="relative z-10 flex justify-between items-start w-full">
+                          <span className="text-[10px] font-mono uppercase tracking-widest text-white/50 bg-white/5 px-2.5 py-1 rounded-full border border-white/10">Project Showcase</span>
+                          <span className="text-[10px] font-mono uppercase tracking-widest text-[#F24E1E]">[ Draft ]</span>
+                        </div>
+                        <div className="relative z-10 text-center my-auto flex flex-col items-center">
+                          <h4 className="text-2xl font-heading italic tracking-tight text-white mb-1 leading-tight">{project.title}</h4>
+                        </div>
+                        <div className="relative z-10 text-center text-[10px] font-mono text-gray-500">
+                          [ Manual Asset Placeholder ]
+                        </div>
+                      </div>
+                    ) : (
+                      <img 
+                        src={project.coverImage} 
+                        referrerPolicy="no-referrer"
+                        alt={project.title} 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    )}
                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                  </div>
                  

@@ -1,13 +1,15 @@
 import petaraLogo from '../assets/images/regenerated_image_1778647625524.png';
 import bergariaLogo from '../assets/images/regenerated_image_1778647627895.avif';
+import { ezinoreLogo, spatialDigestLogo, metlineLogo } from '../data/projects';
+import petaraOriginalLogo from '../assets/images/logoPetaraOriginal_downloaded.png';
 
 export function LogosSection() {
   const logos = [
-    { name: 'Ezinore', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Ezinore_Logo_uepkie.png' },
-    { name: 'Spatial Digest', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Spatial_Digest_Logo_h3kc8h.avif' },
+    { name: 'Ezinore', src: ezinoreLogo },
+    { name: 'Spatial Digest', src: spatialDigestLogo },
     { name: 'Bergaria', src: bergariaLogo },
-    { name: 'Metline', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777180739/Metline_logo_stksnk.webp' },
-    { name: 'Petara Original', src: 'https://res.cloudinary.com/dquynstnf/image/upload/v1777187149/Asset_14_3x_m2sumv.png' },
+    { name: 'Metline', src: metlineLogo },
+    { name: 'Petara Original', src: petaraOriginalLogo },
     { name: 'Petara New', src: petaraLogo },
   ];
 
