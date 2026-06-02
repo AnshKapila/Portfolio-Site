@@ -343,7 +343,8 @@ const allProjects: Project[] = [
     outcomeDescription: "The final landing page serves as a high-converting, top-of-funnel marketing asset that captures the imagination of luxury property buyers and investors. By elegantly combining the allure of an exclusive Dubai lifestyle with a frictionless user journey, the digital experience effectively turns high-intent traffic into qualified leads. This sophisticated approach to real estate digital marketing establishes prestige and trust, driving meaningful engagement and measurable interest in the Violet Damac Hills 2 townhouses.",
     buttonText: "Live Project",
     buttonLink: "https://www.behance.net/gallery/219778095/Violet-Damac-Hills-2-Landing-Page",
-    bannerImage: "" // Hidden for now per user instruction, was: damacBanner
+    bannerImage: "", // Hidden for now per user instruction, was: damacBanner
+    hidden: true
   }
 ];
 
