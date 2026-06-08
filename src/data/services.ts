@@ -38,15 +38,20 @@ import dupEzinoreDetail2 from '../assets/images/service_web_dup_regenerated_imag
 import dupEzinoreBanner from '../assets/images/service_web_dup_regenerated_image_1780409543658.webp';
 
 // Duplicated product/UX design project images to ensure separation/isolation
-import dupClickpickCover from '../assets/images/service_ux_dup_regenerated_image_1780424180194.webp';
-import dupClickpickDetail1 from '../assets/images/service_ux_dup_regenerated_image_1780424181782.webp';
-import dupClickpickDetail2 from '../assets/images/service_ux_dup_regenerated_image_1780424182903.webp';
-import dupClickpickBanner from '../assets/images/service_ux_dup_regenerated_image_1780424183987.webp';
+import dupClickpickCover from '../assets/images/regenerated_image_1780923577104.webp';
+import dupClickpickDetail1 from '../assets/images/regenerated_image_1780923579262.webp';
+import dupClickpickDetail2 from '../assets/images/regenerated_image_1780923580832.webp';
+import dupClickpickBanner from '../assets/images/regenerated_image_1780923582664.webp';
 
-import dupVigorxCover from '../assets/images/service_ux_dup_regenerated_image_1780425438095.webp';
-import dupVigorxDetail1 from '../assets/images/service_ux_dup_regenerated_image_1780425440368.webp';
-import dupVigorxDetail2 from '../assets/images/service_ux_dup_regenerated_image_1780425442290.webp';
-import dupVigorxBanner from '../assets/images/service_ux_dup_regenerated_image_1780425444260.webp';
+import dupVigorxCover from '../assets/images/regenerated_image_1780923584403.webp';
+import dupVigorxDetail1 from '../assets/images/regenerated_image_1780923585783.webp';
+import dupVigorxDetail2 from '../assets/images/regenerated_image_1780923586768.webp';
+import dupVigorxBanner from '../assets/images/regenerated_image_1780923591895.png';
+
+import dupEzinoreCoverManual from '../assets/images/ezinoreCover_downloaded.jpg';
+import dupEzinoreDetail1Manual from '../assets/images/regenerated_image_1780923595353.png';
+import dupEzinoreDetail2Manual from '../assets/images/regenerated_image_1780923599203.webp';
+import dupEzinoreBannerManual from '../assets/images/ezinoreBanner_downloaded.png';
 
 // Use the local reconstructed/regenerated images as part of our showcase portfolio
 const stillExtra1 = image00646;
@@ -155,6 +160,10 @@ export const services: Service[] = [
       dupVigorxDetail1,
       dupVigorxDetail2,
       dupVigorxBanner,
+      dupEzinoreCoverManual,
+      dupEzinoreDetail1Manual,
+      dupEzinoreDetail2Manual,
+      dupEzinoreBannerManual,
     ],
   },
   {

@@ -9,8 +9,9 @@ export function ContactPage() {
     return (
       <>
         <SEO 
-          title="Contact Us | Intent Studios" 
-          description="Get in touch with Intent Studios to discuss your next web design, product design, or visual system project."
+          title="Contact Us — Let's Build Something Exceptional | Intent Studios" 
+          description="Reach out to Intent Studios to start a design project. Let's collaborate on high-performance websites, SaaS interfaces, and custom visual systems."
+          keywords="Contact Intent Studios, Hire Web Designer, App Design Inquiry, Startup Website Build, Product Designer Consultant"
           url="https://intentstudios.com/contact"
         />
         <div className="pt-32 pb-48 px-6 md:px-12 lg:px-16 min-h-screen flex items-center justify-center">
@@ -32,8 +33,9 @@ export function ContactPage() {
   return (
     <>
       <SEO 
-        title="Contact Us | Intent Studios" 
-        description="Get in touch with Intent Studios to discuss your next web design, product design, or visual system project."
+        title="Contact Us — Let's Build Something Exceptional | Intent Studios" 
+        description="Reach out to Intent Studios to start a design project. Let's collaborate on high-performance websites, SaaS interfaces, and custom visual systems."
+        keywords="Contact Intent Studios, Hire Web Designer, App Design Inquiry, Startup Website Build, Product Designer Consultant"
         url="https://intentstudios.com/contact"
       />
       <div className="pt-32 pb-48 px-6 md:px-12 lg:px-16 min-h-screen flex items-center justify-center">

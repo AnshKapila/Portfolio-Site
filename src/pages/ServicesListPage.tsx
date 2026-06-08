@@ -9,8 +9,9 @@ export function ServicesListPage() {
   return (
     <>
       <SEO
-        title="Services | Intent Studios"
-        description="Explore our core services including Web & Product Design, AI Visuals, Brand Systems, and Content Growth Systems."
+        title="Our Services — Design, Platforms & AI Brands | Intent Studios"
+        description="Discover our specialised design and development capabilities: Web & Platform Engineering, Product & UX Design, AI-Enhanced Product Visuals, and Interactive Brand Systems."
+        keywords="Web Design Services, UX Design Services, AI Product Imagery, Brand Systems, Interactive Web Development, SaaS Interface Design"
         url="https://intentstudios.com/services"
       />
       <div className="pt-32 pb-48 md:pt-40 px-6 md:px-12 lg:px-16 min-h-screen bg-black text-white">

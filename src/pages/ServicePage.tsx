@@ -36,7 +36,7 @@ export function ServicePage() {
       return projects.filter(p => allowedSlugs.includes(p.slug));
     }
     if (service.slug === 'product-ux-design') {
-      const allowedSlugs = ["clickpick", "vigorx"];
+      const allowedSlugs = ["clickpick", "vigorx", "ezinore"];
       return projects.filter(p => allowedSlugs.includes(p.slug));
     }
     return [];
@@ -52,13 +52,15 @@ export function ServicePage() {
       images = service.additionalShowcaseImages;
     }
 
-    // Shuffle the images statically per-mount
+    // Shuffle the images statically per-mount (skip for product-ux-design to preserve manual alignment of CSS selectors)
     const shuffled = [...images];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      const temp = shuffled[i];
-      shuffled[i] = shuffled[j];
-      shuffled[j] = temp;
+    if (service.slug !== 'product-ux-design') {
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = shuffled[i];
+        shuffled[i] = shuffled[j];
+        shuffled[j] = temp;
+      }
     }
     return shuffled;
   }, [slug]);
