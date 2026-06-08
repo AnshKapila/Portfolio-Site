@@ -12,20 +12,20 @@ import image50943 from '../assets/images/regenerated_image_1779822350943.png';
 import spatialdigestCover_old from '../assets/images/spatialdigestCover_downloaded.png';
 
 // Duplicated website development project images to ensure separation/isolation
-import dupSulipsaCover from '../assets/images/service_web_dup_regenerated_image_1778674254290.png';
-import dupSulipsaDetail1 from '../assets/images/service_web_dup_regenerated_image_1778674258010.png';
-import dupSulipsaDetail2 from '../assets/images/service_web_dup_regenerated_image_1778700280861.png';
-import dupSulipsaBanner from '../assets/images/service_web_dup_regenerated_image_1779823569035.png';
+import dupSulipsaCover from '../assets/images/regenerated_image_1780894480849.png';
+import dupSulipsaDetail1 from '../assets/images/regenerated_image_1780894484494.png';
+import dupSulipsaDetail2 from '../assets/images/regenerated_image_1780894487976.png';
+import dupSulipsaBanner from '../assets/images/regenerated_image_1780894495892.png';
 
-import dupFityardCover from '../assets/images/service_web_dup_regenerated_image_1780395889552.webp';
-import dupFityardDetail1 from '../assets/images/service_web_dup_regenerated_image_1780395891494.webp';
+import dupFityardCover from '../assets/images/regenerated_image_1780894499916.webp';
+import dupFityardDetail1 from '../assets/images/regenerated_image_1780894501264.webp';
 import dupFityardDetail2 from '../assets/images/service_web_dup_regenerated_image_1780395893007.webp';
 import dupFityardBanner from '../assets/images/service_web_dup_regenerated_image_1780395894556.webp';
 
-import dupMetlineCover from '../assets/images/service_web_dup_regenerated_image_1780423712546.webp';
-import dupMetlineDetail1 from '../assets/images/service_web_dup_regenerated_image_1780425190651.avif';
-import dupMetlineDetail2 from '../assets/images/service_web_dup_regenerated_image_1780425192103.avif';
-import dupMetlineBanner from '../assets/images/service_web_dup_regenerated_image_1780425193584.avif';
+import dupMetlineCover from '../assets/images/regenerated_image_1780894471900.webp';
+import dupMetlineDetail1 from '../assets/images/regenerated_image_1780894472934.avif';
+import dupMetlineDetail2 from '../assets/images/regenerated_image_1780894473847.avif';
+import dupMetlineBanner from '../assets/images/regenerated_image_1780894476850.webp';
 
 import dupSpatialdigestCover from '../assets/images/service_web_dup_regenerated_image_1780425763348.webp';
 import dupSpatialdigestDetail1 from '../assets/images/service_web_dup_regenerated_image_1780425764604.webp';

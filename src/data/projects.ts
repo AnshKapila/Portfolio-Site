@@ -9,7 +9,7 @@ import fintrackDetail2 from '../assets/images/regenerated_image_1778692166248.pn
 import fintrackBanner from '../assets/images/regenerated_image_1778692171500.png';
 
 import sulipsaCover from '../assets/images/regenerated_image_1778674254290.png';
-import sulipsaDetail1 from '../assets/images/regenerated_image_1778674258010.png';
+import sulipsaDetail1 from '../assets/images/regenerated_image_1780802612848.png';
 import sulipsaDetail2 from '../assets/images/regenerated_image_1778700280861.png';
 import sulipsaBanner from '../assets/images/regenerated_image_1779823569035.png';
 
