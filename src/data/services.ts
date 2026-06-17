@@ -10,6 +10,7 @@ import image68115 from '../assets/images/regenerated_image_1778868145615.png';
 import image68612 from '../assets/images/regenerated_image_1778846668612.jpg';
 import image50943 from '../assets/images/regenerated_image_1779822350943.png';
 import spatialdigestCover_old from '../assets/images/spatialdigestCover_downloaded.png';
+import uploadedChatImage from '../assets/images/regenerated_image_1781636336813.png';
 
 // Duplicated website development project images to ensure separation/isolation
 import dupSulipsaCover from '../assets/images/regenerated_image_1780894480849.png';
@@ -114,15 +115,15 @@ export const services: Service[] = [
       dupSulipsaBanner,
       dupFityardCover,
       dupFityardDetail1,
-      dupFityardDetail2,
-      dupFityardBanner,
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
       dupMetlineCover,
       dupMetlineDetail1,
       dupMetlineDetail2,
       dupMetlineBanner,
-      dupSpatialdigestCover,
+      uploadedChatImage,
       dupSpatialdigestDetail1,
-      dupSpatialdigestDetail2,
+      "https://images.unsplash.com/photo-1541462608141-ad4979e408c9?auto=format&fit=crop&w=800&q=80",
       dupSpatialdigestBanner,
       dupEzinoreCover,
       dupEzinoreDetail1,
