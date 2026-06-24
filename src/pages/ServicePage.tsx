@@ -144,6 +144,7 @@ export function ServicePage() {
 
   const [openFaqIdx, setOpenFaqIdx] = useState<number | null>(null);
   const [activeLightboxImg, setActiveLightboxImg] = useState<string | null>(null);
+  const [activeLightboxVideo, setActiveLightboxVideo] = useState<boolean>(false);
   const [activeSegmentTab, setActiveSegmentTab] = useState<'all' | 'curated'>('all');
 
   if (!service) {
@@ -467,8 +468,33 @@ export function ServicePage() {
               {/* Showcase Grid Layout */}
               <FadeIn delayMs={200} durationMs={1000}>
                 <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
+                  {service.slug === 'ai-content-growth-systems' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: '-50px' }}
+                      transition={{ duration: 0.8 }}
+                      className="break-inside-avoid mb-6 relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900 cursor-pointer"
+                      onClick={() => setActiveLightboxVideo(true)}
+                      id="video-gallery-item-first"
+                    >
+                      <video
+                        src="https://assets.mixkit.co/videos/preview/mixkit-girl-holding-a-yellow-bag-of-chips-42289-large.mp4"
+                        autoPlay
+                        muted
+                        playsInline
+                        loop
+                        className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 block"
+                        id="showcase-video-player"
+                      />
+                    </motion.div>
+                  )}
+
                   {showcaseImages.map((img, i) => {
                     if (i === 6 || i === 7 || i === 14 || i === 17 || i === 18) {
+                      return null;
+                    }
+                    if (service.slug === 'ai-content-growth-systems' && i === 9) {
                       return null;
                     }
                     return (
@@ -795,19 +821,22 @@ export function ServicePage() {
 
       {/* Luxury Lightbox Overlay Modal */}
       <AnimatePresence>
-        {activeLightboxImg && (
+        {(activeLightboxImg || activeLightboxVideo) && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4" id="lightbox-wrapper">
             {/* Backdrop layer */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              onClick={() => setActiveLightboxImg(null)}
+              onClick={() => {
+                setActiveLightboxImg(null);
+                setActiveLightboxVideo(false);
+              }}
               className="fixed inset-0 bg-black/95 backdrop-blur-sm cursor-zoom-out"
               id="lightbox-backdrop"
             />
             
-            {/* Image display container */}
+            {/* Display container */}
             <motion.div
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -818,7 +847,10 @@ export function ServicePage() {
             >
               {/* Close marker */}
               <button
-                onClick={() => setActiveLightboxImg(null)}
+                onClick={() => {
+                  setActiveLightboxImg(null);
+                  setActiveLightboxVideo(false);
+                }}
                 className="absolute top-4 right-4 p-2 bg-black/60 border border-white/15 text-white hover:bg-[#F24E1E] hover:border-[#F24E1E] transition-all rounded-full z-20"
                 aria-label="Close Lightbox"
                 id="lightbox-close-btn"
@@ -826,13 +858,24 @@ export function ServicePage() {
                 <X size={18} />
               </button>
 
-              <img 
-                src={activeLightboxImg}
-                referrerPolicy="no-referrer"
-                alt="Enlarged Portfolio Detail"
-                className="w-full h-auto max-h-[85vh] object-contain block"
-                id="lightbox-expanded-img"
-              />
+              {activeLightboxVideo ? (
+                <video
+                  src="https://assets.mixkit.co/videos/preview/mixkit-girl-holding-a-yellow-bag-of-chips-42289-large.mp4"
+                  autoPlay
+                  controls
+                  playsInline
+                  className="w-full h-auto max-h-[85vh] object-contain block bg-black"
+                  id="lightbox-expanded-video"
+                />
+              ) : (
+                <img 
+                  src={activeLightboxImg!}
+                  referrerPolicy="no-referrer"
+                  alt="Enlarged Portfolio Detail"
+                  className="w-full h-auto max-h-[85vh] object-contain block"
+                  id="lightbox-expanded-img"
+                />
+              )}
             </motion.div>
           </div>
         )}

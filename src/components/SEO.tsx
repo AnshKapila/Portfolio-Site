@@ -13,8 +13,16 @@ export function SEO({
   description = "A web and product design studio building launch-ready digital experiences and scalable AI-powered visual systems. Specialized in startup websites and SaaS/Product experiences.",
   keywords = "Web Design Studio, Product Design Studio, UX Design, Startup Websites, Launch Websites, SaaS Experiences",
   image = "/favicon.svg",
-  url = "https://intentstudios.com/"
+  url = "https://intentstudio.vercel.app/"
 }: SEOProps) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Intent Studios",
+    "alternateName": ["Intent Studio", "IntentStudio"],
+    "url": "https://intentstudio.vercel.app/"
+  };
+
   return (
     <Helmet>
       <title>{title}</title>
@@ -23,6 +31,7 @@ export function SEO({
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Intent Studios" />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -34,6 +43,11 @@ export function SEO({
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
+
+      {/* Google Site Name Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(jsonLd)}
+      </script>
     </Helmet>
   );
 }
