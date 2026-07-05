@@ -274,7 +274,7 @@ export function ServicePage() {
         description={`${service.overview} Capabilities include: ${service.capabilities.join(', ')}.`}
         keywords={`${service.title}, ${service.capabilities.join(', ')}, ${service.positioning}, Web & Product Design Services, Intent Studios`}
         image={showcaseImages[0] || "/favicon.svg"}
-        url={`https://intentstudios.com/services/${service.slug}`}
+        url={`https://intentstudios.in/services/${service.slug}`}
       />
 
       {/* Decorative ambient background glows */}

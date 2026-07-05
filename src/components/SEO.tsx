@@ -13,14 +13,14 @@ export function SEO({
   description = "A web and product design studio building launch-ready digital experiences and scalable AI-powered visual systems. Specialized in startup websites and SaaS/Product experiences.",
   keywords = "Web Design Studio, Product Design Studio, UX Design, Startup Websites, Launch Websites, SaaS Experiences",
   image = "/favicon.svg",
-  url = "https://intentstudio.vercel.app/"
+  url = "https://intentstudios.in/"
 }: SEOProps) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Intent Studios",
     "alternateName": ["Intent Studio", "IntentStudio"],
-    "url": "https://intentstudio.vercel.app/"
+    "url": "https://intentstudios.in/"
   };
 
   return (

@@ -12,7 +12,7 @@ export function ServicesListPage() {
         title="Our Services — Design, Platforms & AI Brands | Intent Studios"
         description="Discover our specialised design and development capabilities: Web & Platform Engineering, Product & UX Design, AI-Enhanced Product Visuals, and Interactive Brand Systems."
         keywords="Web Design Services, UX Design Services, AI Product Imagery, Brand Systems, Interactive Web Development, SaaS Interface Design"
-        url="https://intentstudios.com/services"
+        url="https://intentstudios.in/services"
       />
       <div className="pt-32 pb-48 md:pt-40 px-6 md:px-12 lg:px-16 min-h-screen bg-black text-white">
         <div className="max-w-7xl mx-auto">

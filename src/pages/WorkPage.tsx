@@ -26,7 +26,7 @@ export function WorkPage() {
         title="Selected Work — Portfolio of Startup & SaaS Projects | Intent Studios" 
         description="Browse the Intent Studios work showcase featuring premium web design, user experience systems, custom brand applications, and case studies for high-growth startups."
         keywords="Design Portfolio, Web Design Showcase, Product Design Case Studies, UX Portfolio, Intent Studios Projects, SaaS Dashboard Interface Design"
-        url="https://intentstudios.com/work"
+        url="https://intentstudios.in/work"
       />
       <div className="pt-32 pb-48 px-6 md:px-12 lg:px-16 min-h-screen">
         <div className="max-w-7xl mx-auto">

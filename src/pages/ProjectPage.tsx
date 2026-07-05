@@ -30,7 +30,7 @@ export function ProjectPage() {
         description={`${project.overviewDescription.slice(0, 155).trim()}... Explore the full case study on design strategy and outcomes.`}
         keywords={`${project.title}, ${project.tags.join(', ')}, Intent Studios Case Study, UX Design Portfolio`}
         image={project.coverImage || "/favicon.svg"}
-        url={`https://intentstudios.com/work/${project.slug}`}
+        url={`https://intentstudios.in/work/${project.slug}`}
       />
       <div className="pt-32 pb-48 px-6 md:px-12 lg:px-16 min-h-screen">
       <div className="max-w-4xl mx-auto">

@@ -30,7 +30,7 @@ export function ContactPage() {
         title="Contact Us — Let's Build Something Exceptional | Intent Studios" 
         description="Reach out to Intent Studios to start a design project. Let's collaborate on high-performance websites, SaaS interfaces, and custom visual systems."
         keywords="Contact Intent Studios, Hire Web Designer, App Design Inquiry, Startup Website Build, Product Designer Consultant"
-        url="https://intentstudios.com/contact"
+        url="https://intentstudios.in/contact"
       />
       <div className="pt-32 pb-48 px-6 md:px-12 lg:px-16 min-h-screen flex items-center justify-center">
         <div className="max-w-xl w-full">

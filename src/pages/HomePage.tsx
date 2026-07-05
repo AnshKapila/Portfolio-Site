@@ -21,7 +21,7 @@ export function HomePage({ setIsHeroBright }: HomePageProps) {
         title="Web & Product Design Studio for Startups | Intent Studios"
         description="Intent Studios is an elite web and product design studio building launch-ready digital experiences, bespoke SaaS platforms, and scalable interactive brand systems."
         keywords="Web Design Studio, Product Design Studio, UX Design, Startup Websites, Launch Websites, SaaS Experiences, Intent Studios"
-        url="https://intentstudios.com/"
+        url="https://intentstudios.in/"
       />
       <Hero onBrightnessChange={setIsHeroBright} />
       <WorkSection />
