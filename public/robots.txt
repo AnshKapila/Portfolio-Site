@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://intentstudios.com/sitemap.xml
+Sitemap: https://intentstudios.in/sitemap.xml
