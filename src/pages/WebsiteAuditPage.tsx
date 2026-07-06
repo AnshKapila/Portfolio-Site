@@ -145,7 +145,7 @@ export function WebsiteAuditPage() {
     },
     {
       name: "Experience Blueprint",
-      price: "₹4,999",
+      price: "₹5,000",
       description: "Our premium tier. A complete manual UX architecture blueprint and strategic wireframe roadmap.",
       uncovers: "Maps out the exact structural redesign and strategy needed for ultimate trust and conversions.",
       features: [
@@ -225,35 +225,8 @@ export function WebsiteAuditPage() {
       <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-[#F24E1E]/3 rounded-full blur-[100px] pointer-events-none" />
 
       {/* SECTION 1: HERO */}
-      <section className="pt-32 pb-20 px-6 md:pt-40 md:pb-28 md:px-12 lg:px-16 border-b border-white/5 bg-[#111111] relative z-10 overflow-hidden" id="audit-hero-section">
-        {/* Brand Warm Gradient Base (#080504 / #1F100B) for rich depth */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#080504] to-[#1F100B] opacity-80 pointer-events-none select-none z-0" />
-
-        {/* Ambient Sunlight Orange Reflection - Starts at 50% near the component, gradually fades to 0% at the left end of the viewport */}
-        <div 
-          className="absolute inset-0 pointer-events-none select-none z-0 mix-blend-screen hidden lg:block"
-          style={{
-            background: 'radial-gradient(circle at 75% 50%, rgba(242, 78, 30, 0.5) 0%, rgba(242, 78, 30, 0.22) 25%, rgba(242, 78, 30, 0.05) 60%, rgba(242, 78, 30, 0) 95%)',
-          }}
-        />
-
-        {/* Linear/Conic ray accent to emulate warm sunlight beams emanating outward */}
-        <div 
-          className="absolute inset-0 pointer-events-none select-none z-0 opacity-25 mix-blend-screen hidden lg:block"
-          style={{
-            backgroundImage: 'radial-gradient(circle at 75% 50%, rgba(255, 131, 84, 0.20) 0%, rgba(242, 78, 30, 0.04) 50%, transparent 85%), repeating-conic-gradient(from 45deg at 75% 50%, transparent 0deg 15deg, rgba(242, 78, 30, 0.03) 20deg 25deg, transparent 30deg 360deg)',
-          }}
-        />
-
-        {/* Mobile Sunlight Orange Reflection - centered for mobile view */}
-        <div 
-          className="absolute inset-0 pointer-events-none select-none z-0 mix-blend-screen lg:hidden"
-          style={{
-            background: 'radial-gradient(circle at 50% 80%, rgba(242, 78, 30, 0.5) 0%, rgba(242, 78, 30, 0.20) 30%, rgba(242, 78, 30, 0.04) 70%, rgba(242, 78, 30, 0) 100%)',
-          }}
-        />
-
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
+      <section className="pt-32 pb-20 px-6 md:pt-40 md:pb-28 md:px-12 lg:px-16 border-b border-white/5 relative z-10" id="audit-hero-section">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Hero Left Content */}
           <div className="lg:col-span-7 text-left">
             <motion.div
