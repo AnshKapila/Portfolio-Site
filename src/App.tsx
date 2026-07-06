@@ -13,6 +13,9 @@ import { ProjectPage } from "./pages/ProjectPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ServicePage } from "./pages/ServicePage";
 import { ServicesListPage } from "./pages/ServicesListPage";
+import { WebsiteAuditPage } from "./pages/WebsiteAuditPage";
+import { PrivacyPage } from "./pages/PrivacyPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 
 export default function App() {
   const [isHeroBright, setIsHeroBright] = useState(false);
@@ -33,6 +36,9 @@ export default function App() {
             <Route path="/services" element={<ServicesListPage />} />
             <Route path="/services/:slug" element={<ServicePage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/audit" element={<WebsiteAuditPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
 

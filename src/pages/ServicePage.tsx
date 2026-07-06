@@ -806,11 +806,10 @@ export function ServicePage() {
                 </p>
                 <Link 
                   to="/contact" 
-                  className="bg-[#F24E1E] text-white px-8 py-4 rounded-xl font-medium text-base hover:bg-[#FF6A4D] transition-colors inline-flex items-center gap-2.5 shadow-lg shadow-[#F24E1E]/20"
+                  className="bg-white text-black px-6 py-3 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors inline-flex items-center shadow-lg"
                   id="final-cta-inquire-btn"
                 >
                   <span>{service.ctaText}</span>
-                  <ArrowUpRight className="w-4 h-4 opacity-70" />
                 </Link>
               </div>
             </div>

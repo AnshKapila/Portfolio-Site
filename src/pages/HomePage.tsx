@@ -9,6 +9,7 @@ import { DreamShipSection } from '../components/DreamShipSection';
 import { FaqSection } from '../components/FaqSection';
 import { FounderSection } from '../components/FounderSection';
 import { SocialPresenceSection } from '../components/SocialPresenceSection';
+import { WebsiteAuditTeaser } from '../components/WebsiteAuditTeaser';
 
 interface HomePageProps {
   setIsHeroBright: (isBright: boolean) => void;
@@ -28,6 +29,7 @@ export function HomePage({ setIsHeroBright }: HomePageProps) {
       <WhoWeHelpSection />
       <LogosSection />
       <ServicesSection />
+      <WebsiteAuditTeaser />
       <FounderSection />
       {/* <SocialPresenceSection /> */}
       {/* <TestimonialsSection /> */}

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { HlsVideo } from './HlsVideo';
 
 export function CtaFooter() {
@@ -22,10 +23,10 @@ export function CtaFooter() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-4 px-4 sm:px-0">
-          <button className="liquid-glass-strong rounded-lg w-full sm:w-[240px] px-8 py-4 text-white font-medium text-base hover:bg-white/10 transition-colors">
+          <button className="liquid-glass-strong rounded-lg w-full sm:w-[240px] px-6 py-3 text-white font-medium text-sm hover:bg-white/10 transition-colors">
             Book a Call
           </button>
-          <button className="bg-white text-black rounded-lg w-full sm:w-[240px] px-8 py-4 font-medium text-base hover:bg-white/90 transition-colors">
+          <button className="bg-white text-black rounded-lg w-full sm:w-[240px] px-6 py-3 font-medium text-sm hover:bg-white/90 transition-colors">
             View Pricing
           </button>
         </div>
@@ -38,9 +39,9 @@ export function CtaFooter() {
         </span>
         
         <div className="flex items-center gap-6">
-          <a href="#" className="text-white/40 text-xs font-body hover:text-white transition-colors">Privacy</a>
+          <Link to="/privacy" className="text-white/40 text-xs font-body hover:text-white transition-colors">Privacy</Link>
           <a href="#" className="text-white/40 text-xs font-body hover:text-white transition-colors">Terms</a>
-          <a href="#" className="text-white/40 text-xs font-body hover:text-white transition-colors">Contact</a>
+          <Link to="/contact" className="text-white/40 text-xs font-body hover:text-white transition-colors">Contact</Link>
         </div>
       </div>
     </section>

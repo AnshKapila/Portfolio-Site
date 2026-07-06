@@ -95,9 +95,8 @@ export function FounderSection() {
                </div>
              </div>
              
-             <a href="https://wa.me/919821687437" target="_blank" rel="noopener noreferrer" className="w-full bg-white text-black py-4 rounded-lg font-medium text-base hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 group shadow-lg mt-8">
+             <a href="https://wa.me/919821687437" target="_blank" rel="noopener noreferrer" className="w-full bg-white text-black px-6 py-3 rounded-lg font-medium text-sm hover:bg-gray-200 transition-colors flex items-center justify-center group shadow-lg mt-8">
                Book your call
-               <ArrowUpRight className="w-4 h-4 opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
              </a>
           </motion.div>
 

@@ -306,10 +306,9 @@ export function SocialPresenceSection() {
               href="https://contra.com/anshkapila/work"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#F24E1E] hover:bg-[#ff5d2e] transition-colors rounded-xl font-medium text-sm text-white shadow-lg"
+              className="w-full inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-zinc-200 text-black rounded-lg font-medium text-sm transition-colors shadow-lg"
             >
               <span>Consult on Contra</span>
-              <ArrowUpRight className="w-4 h-4 shrink-0 text-white/90" />
             </a>
           </motion.div>
 

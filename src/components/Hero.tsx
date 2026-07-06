@@ -96,7 +96,7 @@ export function Hero({ onBrightnessChange }: HeroProps) {
 
               <FadeIn delayMs={1200} durationMs={1000}>
                 <div className="flex flex-col sm:flex-row gap-4 mb-2">
-                  <a href="https://wa.me/919821687437" target="_blank" rel="noopener noreferrer" className={cn("inline-flex items-center justify-center w-full sm:w-[240px] px-8 py-4 rounded-lg text-base font-medium transition-colors duration-1000", isBright ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-gray-200")}>
+                  <a href="https://wa.me/919821687437" target="_blank" rel="noopener noreferrer" className={cn("inline-flex items-center justify-center w-full sm:w-[240px] px-6 py-3 rounded-lg text-sm font-medium transition-colors duration-1000", isBright ? "bg-black text-white hover:bg-gray-800" : "bg-white text-black hover:bg-gray-200")}>
                     Book a Call
                   </a>
                 </div>
