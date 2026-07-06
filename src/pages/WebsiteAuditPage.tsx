@@ -124,7 +124,7 @@ export function WebsiteAuditPage() {
         "Explains how to accomplish and fix issues properly"
       ],
       cta: "Get Leak Check",
-      whatsappUrl: "https://wa.me/919821687437?text=Hi%20Team%20Intent,%20I'd%20like%20to%20get%20the%20Leak%20Check%20audit%20for%20my%20business.",
+      formUrl: "https://forms.gle/3pEHXKAY5WWDfftm8",
       popular: false
     },
     {
@@ -140,7 +140,7 @@ export function WebsiteAuditPage() {
         "UX & layout responsiveness testing"
       ],
       cta: "Get Leak Analysis",
-      whatsappUrl: "https://wa.me/919821687437?text=Hi%20Team%20Intent,%20I'd%20like%20to%20get%20the%20Leak%20Analysis%20audit%20for%20my%20business.",
+      formUrl: "https://forms.gle/3pEHXKAY5WWDfftm8",
       popular: false
     },
     {
@@ -158,7 +158,7 @@ export function WebsiteAuditPage() {
         "Call 2: For sharing solutions & walkthrough discussion"
       ],
       cta: "Get Full Blueprint",
-      whatsappUrl: "https://wa.me/919821687437?text=Hi%20Team%20Intent,%20I'd%20like%20to%20get%20the%20Experience%20Blueprint%20audit%20for%20my%20business.",
+      formUrl: "https://forms.gle/3pEHXKAY5WWDfftm8",
       popular: true
     }
   ];
@@ -263,16 +263,18 @@ export function WebsiteAuditPage() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-start items-start"
             >
-              {/* TODO: Google Form integration URL */}
-              <a 
-                href={GOOGLE_FORM_URL} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-zinc-200 text-black text-sm font-medium rounded-lg transition-colors duration-300 group w-full sm:w-auto"
+              <button 
+                onClick={() => {
+                  const target = document.getElementById('audit-options-pricing');
+                  if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-zinc-200 text-black text-sm font-medium rounded-lg transition-colors duration-300 group w-full sm:w-auto cursor-pointer"
                 id="hero-audit-cta-primary"
               >
                 <span>Start My Audit</span>
-              </a>
+              </button>
             </motion.div>
           </div>
 
@@ -691,7 +693,7 @@ export function WebsiteAuditPage() {
 
               {/* TODO: Link to checkout or Google Form */}
               <a 
-                href={opt.whatsappUrl}
+                href={opt.formUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`w-full px-6 py-3 rounded-lg text-center text-sm font-medium transition-colors duration-300 block ${opt.popular ? 'bg-white hover:bg-zinc-200 text-black' : 'bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white'}`}
