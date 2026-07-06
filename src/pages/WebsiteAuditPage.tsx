@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { TestimonialsSection } from '../components/TestimonialsSection';
+import { WebsiteAuditHeroHud } from '../components/WebsiteAuditHeroHud';
 
 function MonitorSearchIcon({ className, size = 16 }: { className?: string; size?: number }) {
   return (
@@ -144,7 +145,7 @@ export function WebsiteAuditPage() {
     },
     {
       name: "Experience Blueprint",
-      price: "₹5,000",
+      price: "₹4,999",
       description: "Our premium tier. A complete manual UX architecture blueprint and strategic wireframe roadmap.",
       uncovers: "Maps out the exact structural redesign and strategy needed for ultimate trust and conversions.",
       features: [
@@ -224,52 +225,65 @@ export function WebsiteAuditPage() {
       <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-[#F24E1E]/3 rounded-full blur-[100px] pointer-events-none" />
 
       {/* SECTION 1: HERO */}
-      <section className="pt-36 pb-24 px-6 md:pt-44 md:pb-32 md:px-12 lg:px-16 border-b border-white/5 relative z-10" id="audit-hero-section">
-        <div className="max-w-4xl text-left">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/5 mb-6 text-white"
-          >
-            <MonitorSearchIcon className="w-4 h-4 text-zinc-400" />
-            <span className="text-[11px] font-bold uppercase tracking-widest text-zinc-300">Performance & Conversion Audit</span>
-          </motion.div>
-
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading italic tracking-tight leading-tight mb-8"
-          >
-            See what's quietly <span className="text-[#F24E1E] font-sans not-italic font-medium">costing your business.</span>
-          </motion.h1>
-
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl font-light text-zinc-400 leading-relaxed max-w-2xl mb-12"
-          >
-            Every website has opportunities that are easy to overlook but expensive to ignore. We manually review your website to uncover the trust, messaging, UX, and conversion issues that may be holding back enquiries, sales, and long-term growth.
-          </motion.p>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-start items-start"
-          >
-            {/* TODO: Google Form integration URL */}
-            <a 
-              href={GOOGLE_FORM_URL} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-zinc-200 text-black text-sm font-medium rounded-lg transition-colors duration-300 group w-full sm:w-auto"
-              id="hero-audit-cta-primary"
+      <section className="pt-32 pb-20 px-6 md:pt-40 md:pb-28 md:px-12 lg:px-16 border-b border-white/5 relative z-10" id="audit-hero-section">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Hero Left Content */}
+          <div className="lg:col-span-7 text-left">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/5 mb-6 text-white"
             >
-              <span>Start My Audit</span>
-            </a>
+              <MonitorSearchIcon className="w-4 h-4 text-zinc-400" />
+              <span className="text-[11px] font-bold uppercase tracking-widest text-zinc-300">Performance & Conversion Audit</span>
+            </motion.div>
+
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading italic tracking-tight leading-tight mb-8"
+            >
+              See what's quietly <span className="text-[#F24E1E] font-sans not-italic font-medium">costing your business.</span>
+            </motion.h1>
+
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg md:text-xl font-light text-zinc-400 leading-relaxed max-w-2xl mb-12"
+            >
+              Every website has opportunities that are easy to overlook but expensive to ignore. We manually review your website to uncover the trust, messaging, UX, and conversion issues that may be holding back enquiries, sales, and long-term growth.
+            </motion.p>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 justify-start items-start"
+            >
+              {/* TODO: Google Form integration URL */}
+              <a 
+                href={GOOGLE_FORM_URL} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-zinc-200 text-black text-sm font-medium rounded-lg transition-colors duration-300 group w-full sm:w-auto"
+                id="hero-audit-cta-primary"
+              >
+                <span>Start My Audit</span>
+              </a>
+            </motion.div>
+          </div>
+
+          {/* Hero Right HUD Image Reference Recreation */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="lg:col-span-5 flex items-center justify-center relative"
+          >
+            <WebsiteAuditHeroHud />
           </motion.div>
         </div>
       </section>
