@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  AlertTriangle, 
   ArrowRight, 
   CheckCircle, 
   FileText, 
@@ -24,6 +23,29 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { TestimonialsSection } from '../components/TestimonialsSection';
+
+function MonitorSearchIcon({ className, size = 16 }: { className?: string; size?: number }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <rect width="20" height="14" x="2" y="3" rx="2" />
+      <line x1="12" x2="12" y1="17" y2="21" />
+      <line x1="8" x2="16" y1="21" y2="21" />
+      <circle cx="15" cy="11" r="3.5" fill="black" stroke="currentColor" strokeWidth="2" />
+      <line x1="17.5" x2="21" y1="13.5" y2="17" />
+    </svg>
+  );
+}
 
 export function WebsiteAuditPage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
@@ -57,45 +79,33 @@ export function WebsiteAuditPage() {
   }, [location]);
 
   // TODO: Replace with actual Google Form and WhatsApp URLs when available
-  const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfYourPlaceholderFormID/viewform"; 
-  const WHATSAPP_URL = "https://wa.me/1234567890?text=Hi%20Intent%20Studios,%20I'd%20like%20to%20get%20a%20website%20audit%20for%20my%20business.";
+  const GOOGLE_FORM_URL = "https://wa.me/919821687437?text=Hi%20Team%20Intent,%20I'd%20like%20to%20get%20a%20website%20audit%20for%20my%20business."; 
+  const WHATSAPP_URL = "https://wa.me/919821687437?text=Hi%20Team%20Intent,%20I'd%20like%20to%20get%20a%20website%20audit%20for%20my%20business.";
 
   const leaks = [
     {
+      title: "Vague Value Messaging",
+      description: "If users cannot understand what you do and who you serve within 3 seconds of loading, they will close the tab.",
+      tip: "Use crisp, bold, benefit-driven headlines to retain visitor attention immediately.",
+      metric: "Boosts immediate retention by up to 40%"
+    },
+    {
       title: "Weak Trust Elements",
-      description: "Generic testimonials without full names, missing client logos, or lack of concrete proof statements can make prospects leave instantly.",
-      tip: "Include headshots, full names, job titles, and real results to build ironclad credibility.",
+      description: "Generic testimonials without photos, missing client logos, or lack of proof can cause prospects to leave instantly.",
+      tip: "Include real headshots, client names, and verified business outcomes to build trust.",
       metric: "Reduces bounce rates by up to 28%"
     },
     {
-      title: "Confusing or Unclear Messaging",
-      description: "If a visitor cannot tell exactly what you do and who you do it for within 3 seconds of loading your page, they will close the tab.",
-      tip: "Use simple, bold, human-centric language. Avoid pseudo-intellectual jargon.",
-      metric: "Increases initial engagement by 40%"
-    },
-    {
-      title: "Hidden or Complex Navigation",
-      description: "Users should never have to search for how to take action. Multi-tiered drop-downs and hidden links frustrate prospects.",
-      tip: "Keep a simple 4-to-5 item menu bar with a single prominent call to action.",
+      title: "Friction-Filled Navigation",
+      description: "Complex menu drop-downs and hidden links frustrate buyers who just want to book or inquire.",
+      tip: "Implement a clean, simple header navigation containing a single high-contrast action.",
       metric: "Speeds up user path-to-goal by 35%"
     },
     {
-      title: "Unresponsive & Poor UX Layouts",
-      description: "Misaligned text, tiny clickable elements on mobile, or elements overlap during window resizing cause user frustration.",
-      tip: "Adopt absolute fluid design standards with touch-targets of at least 44px.",
-      metric: "Directly lowers mobile drop-offs"
-    },
-    {
-      title: "Missing or Invisible CTAs",
-      description: "A website without clear directives feels like a maze. Blending buttons into the background color reduces clicks.",
-      tip: "Contrast your action buttons heavily with your primary theme colors.",
-      metric: "Boosts overall CTR by 15%+"
-    },
-    {
-      title: "Inconsistent Visual Branding",
-      description: "Using too many fonts, conflicting accent colors, and mismatched image styles signals an unprofessional operation.",
-      tip: "Stick to a single visual constitution: 2 font families, 1 primary brand color.",
-      metric: "Retains brand recall"
+      title: "Broken Mobile UX Layouts",
+      description: "Overlapping elements, tiny text, and hard-to-tap buttons on mobile trigger high bounce rates.",
+      tip: "Optimize layouts for all viewport resizes and ensure touch target bounds are 44px.",
+      metric: "Directly lowers mobile customer drop-offs"
     }
   ];
 
@@ -103,46 +113,51 @@ export function WebsiteAuditPage() {
     {
       name: "Leak Check",
       price: "₹199",
-      description: "An essential manual health check focusing on high-level friction points on your homepage.",
-      uncovers: "Uncovers 3-5 critical structural/trust deficits.",
+      description: "A professional manual 5-minute Loom video audit highlighting critical homepage gaps.",
+      uncovers: "Delivers rapid user mapping & clear actionable recommendations.",
       features: [
-        "Homepage-only manual review",
-        "Trust & credibility assessment",
-        "Headline clarity analysis",
-        "Primary action contrast check",
-        "Emailed PDF summary report"
+        "5-Minute Custom Loom Audit Video",
+        "Explains what the user is experiencing",
+        "Pinpoints core homepage messaging & layout issues",
+        "Focus on mapping user behavior with business goals",
+        "Explains how to accomplish and fix issues properly"
       ],
       cta: "Get Leak Check",
+      whatsappUrl: "https://wa.me/919821687437?text=Hi%20Team%20Intent,%20I'd%20like%20to%20get%20the%20Leak%20Check%20audit%20for%20my%20business.",
       popular: false
     },
     {
       name: "Leak Analysis",
       price: "₹299",
-      description: "A comprehensive deep dive covering your primary landing page or full checkout/lead conversion funnel.",
-      uncovers: "Exposes critical UX and messaging leaks across up to 3 core pages.",
+      description: "A detailed manual walkthrough across up to 3 core pages, combined with structured action steps.",
+      uncovers: "Deep dive conversion audit with custom video + key action PDF.",
       features: [
-        "Up to 3 key pages audited",
-        "Detailed conversion funnel walkthrough",
-        "UX & layout responsiveness testing",
-        "Content & value proposition review",
-        "Emailed PDF with actionable scorecards"
+        "Detailed UX & copy suggestions video",
+        "Actionable minor PDF report to help you understand & act",
+        "Covers up to 3 key customer-facing pages",
+        "Conversion funnel flow & checkout walkthrough",
+        "UX & layout responsiveness testing"
       ],
       cta: "Get Leak Analysis",
+      whatsappUrl: "https://wa.me/919821687437?text=Hi%20Team%20Intent,%20I'd%20like%20to%20get%20the%20Leak%20Analysis%20audit%20for%20my%20business.",
       popular: false
     },
     {
       name: "Experience Blueprint",
-      price: "₹4,999",
+      price: "₹5,000",
       description: "Our premium tier. A complete manual UX architecture blueprint and strategic wireframe roadmap.",
       uncovers: "Maps out the exact structural redesign and strategy needed for ultimate trust and conversions.",
       features: [
         "Full website UX architecture audit",
         "Navigation tree & information flow map",
         "Custom copywriting & messaging matrix",
-        "High-fidelity visual wireframe wireup recommendations",
-        "30-minute 1-on-1 walkthrough video call"
+        "High-fidelity visual wireframe recommendations",
+        "Two separate 1-on-1 strategy & discussion calls",
+        "Call 1: For taking inputs & understanding your problem",
+        "Call 2: For sharing solutions & walkthrough discussion"
       ],
       cta: "Get Full Blueprint",
+      whatsappUrl: "https://wa.me/919821687437?text=Hi%20Team%20Intent,%20I'd%20like%20to%20get%20the%20Experience%20Blueprint%20audit%20for%20my%20business.",
       popular: true
     }
   ];
@@ -175,7 +190,7 @@ export function WebsiteAuditPage() {
     },
     {
       question: "Do I need a complete redesign to fix these?",
-      answer: "No, absolutely not. Most website leaks can be plugged with simple, surgical modifications—such as adjusting a headline, swapping background colors on critical buttons, or changing section orders."
+      answer: "No, absolutely not. Most website leaks can be plugged with simple, surgical modifications, such as adjusting a headline, swapping background colors on critical buttons, or changing section orders."
     },
     {
       question: "Can I implement these fixes myself?",
@@ -183,7 +198,7 @@ export function WebsiteAuditPage() {
     },
     {
       question: "How long does it take to receive my audit?",
-      answer: "Because we do not use automated scrapers, each audit is conducted manually by our design team. You will receive your complete audit report within 3 to 5 business days."
+      answer: "We deliver our smaller audits (Leak Check & Leak Analysis) within 6 to 7 hours, and the full Experience Blueprint within 4 to 5 business days, as each is conducted manually by our design team."
     },
     {
       question: "Can I upgrade my audit option later?",
@@ -215,10 +230,10 @@ export function WebsiteAuditPage() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-red-500/20 bg-red-950/15 mb-6 text-red-500"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/5 mb-6 text-white"
           >
-            <AlertTriangle className="w-4 h-4" />
-            <span className="text-[11px] font-bold uppercase tracking-widest">Performance & Conversion Audit</span>
+            <MonitorSearchIcon className="w-4 h-4 text-zinc-400" />
+            <span className="text-[11px] font-bold uppercase tracking-widest text-zinc-300">Performance & Conversion Audit</span>
           </motion.div>
 
           <motion.h1 
@@ -281,46 +296,128 @@ export function WebsiteAuditPage() {
                 <span className="ml-2 text-zinc-400">YOUR-WEBSITE.COM/HOMEPAGE_MOCKUP</span>
               </div>
 
-              {/* Mockup Header */}
-              <div className="flex justify-between items-center mb-10 opacity-60">
-                <div className="h-6 w-20 bg-zinc-800 rounded" />
-                <div className="flex gap-4">
-                  <div className="h-4 w-12 bg-zinc-800 rounded" />
-                  <div className="h-4 w-12 bg-zinc-800 rounded" />
-                </div>
-              </div>
+              {/* Context-wise interactive leak visualization */}
+              <div className="min-h-[260px] flex flex-col justify-center my-6">
+                <AnimatePresence mode="wait">
+                  {((activeLeak !== null ? activeLeak : 0) === 0) && (
+                    <motion.div
+                      key="vague-messaging"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.3 }}
+                      className="space-y-4"
+                    >
+                      <div className="border border-red-500/30 bg-red-950/10 p-4 rounded-xl relative">
+                        <span className="absolute top-2 right-2 text-[9px] bg-red-500/20 text-red-400 px-2 py-0.5 rounded font-mono font-semibold">LEAK: UNCONSCIOUS BOUNCE</span>
+                        <h4 className="text-xs text-zinc-500 font-mono mb-1">Before: Headline is abstract</h4>
+                        <p className="text-sm text-red-400 font-medium font-serif italic">"We elevate synergetic paradigms to coordinate potential."</p>
+                      </div>
+                      
+                      <div className="border border-green-500/30 bg-green-950/10 p-4 rounded-xl relative">
+                        <span className="absolute top-2 right-2 text-[9px] bg-green-500/20 text-green-400 px-2 py-0.5 rounded font-mono font-semibold">FIX: HIGH CONVERSION</span>
+                        <h4 className="text-xs text-zinc-500 font-mono mb-1">After: Human, high-intent headline</h4>
+                        <p className="text-sm text-green-400 font-medium font-sans">"Web & Product Design Studio for High-Growth Startups."</p>
+                      </div>
+                    </motion.div>
+                  )}
 
-              {/* Mockup Hero */}
-              <div className="space-y-4 mb-8">
-                <div className="relative group/ann font-sans">
-                  <div className="absolute -left-2 -top-2 w-4 h-4 bg-red-500 rounded-full animate-ping pointer-events-none" />
-                  <div className={`border-2 p-3 rounded-xl transition-all duration-300 ${activeLeak === 1 ? 'border-red-500 bg-red-950/10' : 'border-dashed border-red-500/30'}`}>
-                    <div className="flex justify-between items-start">
-                      <div className="h-8 w-[80%] bg-zinc-800 rounded" />
-                      <span className="text-[10px] bg-red-500/20 text-red-400 px-2 py-0.5 rounded font-mono font-semibold">LEAK 02</span>
-                    </div>
-                    <p className="text-xs text-zinc-500 mt-2 font-mono">Headline: "We provide orbit alignment options..."</p>
-                  </div>
-                </div>
+                  {((activeLeak !== null ? activeLeak : 0) === 1) && (
+                    <motion.div
+                      key="weak-trust"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.3 }}
+                      className="space-y-4"
+                    >
+                      <div className="border border-red-500/30 bg-red-950/10 p-4 rounded-xl relative">
+                        <span className="absolute top-2 right-2 text-[9px] bg-red-500/20 text-red-400 px-2 py-0.5 rounded font-mono font-semibold">LEAK: ZERO TRUST</span>
+                        <h4 className="text-xs text-zinc-500 font-mono mb-1">Before: No full name, photo, or proof</h4>
+                        <p className="text-xs text-zinc-400 italic mb-2">"The project went well and they were nice."</p>
+                        <span className="text-[10px] text-zinc-500 font-mono">- John</span>
+                      </div>
 
-                {/* Grid leaks */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className={`border-2 p-3 rounded-xl transition-all duration-300 ${activeLeak === 0 ? 'border-red-500 bg-red-950/10' : 'border-dashed border-red-500/30'}`}>
-                    <div className="flex justify-between items-start">
-                      <div className="h-6 w-16 bg-zinc-800 rounded" />
-                      <span className="text-[10px] bg-red-500/20 text-red-400 px-2 py-0.5 rounded font-mono font-semibold">LEAK 01</span>
-                    </div>
-                    <p className="text-xs text-zinc-500 mt-2 font-mono">"Working with them was fine." - John</p>
-                  </div>
+                      <div className="border border-green-500/30 bg-green-950/10 p-4 rounded-xl relative flex gap-3 items-center">
+                        <span className="absolute top-2 right-2 text-[9px] bg-green-500/20 text-green-400 px-2 py-0.5 rounded font-mono font-semibold">FIX: VERIFIED OUTCOME</span>
+                        <div className="w-10 h-10 rounded-full bg-zinc-800 border border-green-500/30 shrink-0 flex items-center justify-center font-bold text-xs text-green-400">AK</div>
+                        <div>
+                          <h4 className="text-xs text-zinc-500 font-mono">After: Complete proof & context</h4>
+                          <p className="text-xs text-white font-medium">"Delivered our custom platform on time. Conversions rose +40%."</p>
+                          <span className="text-[10px] text-green-400 font-mono font-medium">Ansh Kapila, Founder, Intent Studio</span>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
 
-                  <div className={`border-2 p-3 rounded-xl transition-all duration-300 ${activeLeak === 4 ? 'border-red-500 bg-red-950/10' : 'border-dashed border-red-500/30'}`}>
-                    <div className="flex justify-between items-start">
-                      <div className="h-6 w-24 bg-zinc-800 rounded" />
-                      <span className="text-[10px] bg-red-500/20 text-red-400 px-2 py-0.5 rounded font-mono font-semibold">LEAK 05</span>
-                    </div>
-                    <p className="text-xs text-zinc-500 mt-2 font-mono">Button: Submit (matches background color)</p>
-                  </div>
-                </div>
+                  {((activeLeak !== null ? activeLeak : 0) === 2) && (
+                    <motion.div
+                      key="navigation"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.3 }}
+                      className="space-y-4"
+                    >
+                      <div className="border border-red-500/30 bg-red-950/10 p-4 rounded-xl relative">
+                        <span className="absolute top-2 right-2 text-[9px] bg-red-500/20 text-red-400 px-2 py-0.5 rounded font-mono font-semibold">LEAK: FRICTION PATH</span>
+                        <h4 className="text-xs text-zinc-500 font-mono mb-2">Before: 6 navigation items with dropdowns</h4>
+                        <div className="flex flex-wrap gap-2 text-[10px] text-red-400 font-mono">
+                          <span className="border border-red-500/20 px-2 py-1 rounded">About Us</span>
+                          <span className="border border-red-500/20 px-2 py-1 rounded">Careers</span>
+                          <span className="border border-red-500/20 px-2 py-1 rounded">Resources</span>
+                          <span className="border border-red-500/20 px-2 py-1 rounded">Solutions</span>
+                        </div>
+                      </div>
+
+                      <div className="border border-green-500/30 bg-green-950/10 p-4 rounded-xl relative">
+                        <span className="absolute top-2 right-2 text-[9px] bg-green-500/20 text-green-400 px-2 py-0.5 rounded font-mono font-semibold">FIX: SINGLE GOAL</span>
+                        <h4 className="text-xs text-zinc-500 font-mono mb-2">After: Focused user path</h4>
+                        <div className="flex justify-between items-center bg-zinc-950 p-2 rounded-lg border border-white/5">
+                          <span className="text-xs font-serif italic text-white">Intent Studio</span>
+                          <div className="flex items-center gap-3 text-[10px] text-zinc-400">
+                            <span>Work</span>
+                            <span>Services</span>
+                            <span className="bg-white text-black px-2 py-1 rounded text-[9px] font-medium">Book a Call</span>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {((activeLeak !== null ? activeLeak : 0) === 3) && (
+                    <motion.div
+                      key="broken-mobile"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.3 }}
+                      className="space-y-4"
+                    >
+                      <div className="border border-red-500/30 bg-red-950/10 p-4 rounded-xl relative">
+                        <span className="absolute top-2 right-2 text-[9px] bg-red-500/20 text-red-400 px-2 py-0.5 rounded font-mono font-semibold">LEAK: TINY TARGETS</span>
+                        <h4 className="text-xs text-zinc-500 font-mono mb-2">Before: Text overlaps, 24px buttons</h4>
+                        <div className="flex items-center gap-2">
+                          <div className="h-6 w-1/2 bg-zinc-800 rounded relative overflow-hidden flex items-center justify-center text-[9px] text-red-400">
+                            OVERLAPPING
+                          </div>
+                          <button className="bg-zinc-800 text-[8px] text-zinc-500 px-2 py-0.5 rounded">CTA</button>
+                        </div>
+                      </div>
+
+                      <div className="border border-green-500/30 bg-green-950/10 p-4 rounded-xl relative">
+                        <span className="absolute top-2 right-2 text-[9px] bg-green-500/20 text-green-400 px-2 py-0.5 rounded font-mono font-semibold">FIX: MOBILE FLUIDITY</span>
+                        <h4 className="text-xs text-zinc-500 font-mono mb-2">After: Full spacing & 44px safe touch targets</h4>
+                        <div className="space-y-2">
+                          <div className="h-4 w-2/3 bg-zinc-800 rounded" />
+                          <button className="w-full bg-white text-black py-2 rounded-lg text-[10px] font-medium hover:bg-zinc-200 transition-colors">
+                            Book a Call (44px target)
+                          </button>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
               {/* Highlight Overlay Detail */}
@@ -330,10 +427,10 @@ export function WebsiteAuditPage() {
                   <span className="text-xs font-semibold uppercase tracking-wider font-sans">Interactive Leak Highlight</span>
                 </div>
                 <h4 className="text-sm font-medium text-white mb-1">
-                  {activeLeak !== null ? leaks[activeLeak].title : "Inspect Website Leaks"}
+                  {activeLeak !== null ? leaks[activeLeak].title : leaks[0].title}
                 </h4>
                 <p className="text-xs text-zinc-400 font-light leading-relaxed">
-                  {activeLeak !== null ? leaks[activeLeak].description : "Hover over any item on the right to analyze potential leak points on your current layout."}
+                  {activeLeak !== null ? leaks[activeLeak].description : leaks[0].description}
                 </p>
               </div>
             </div>
@@ -341,7 +438,7 @@ export function WebsiteAuditPage() {
             {/* List of Leak Categories */}
             <div 
               className="lg:col-span-5 flex flex-col" 
-              onMouseLeave={() => setActiveLeak(null)}
+              onMouseLeave={() => setActiveLeak(0)}
             >
               {leaks.map((leak, idx) => {
                 const isActive = activeLeak === idx;
@@ -377,7 +474,7 @@ export function WebsiteAuditPage() {
                               className="overflow-hidden"
                             >
                               <p className="text-sm text-zinc-400 font-light mt-2 leading-relaxed">
-                                {leak.description} <strong className="text-green-400 font-normal ml-1.5">{leak.metric}</strong>
+                                {leak.description} <strong className="text-green-400 font-medium ml-1.5">{leak.metric}</strong>
                               </p>
                             </motion.div>
                           )}
@@ -490,13 +587,12 @@ export function WebsiteAuditPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-8 rounded-2xl border border-white/5 bg-zinc-900/40 relative">
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-xs bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full font-mono">LEVEL 01</span>
               <h3 className="text-lg font-medium">Leak Check</h3>
             </div>
             <p className="text-zinc-400 text-sm font-light leading-relaxed mb-6">
               A streamlined manual diagnostic focused on structural problems. We check your main homepage copy, main call to action elements, and key trust sections to reveal fast, high-impact fixes.
             </p>
-            <div className="flex items-center gap-2 text-green-400 text-xs font-mono">
+            <div className="flex items-center gap-2 text-white text-xs font-mono">
               <CheckCircle className="w-4 h-4 shrink-0" />
               Great for basic conversion checks
             </div>
@@ -504,13 +600,12 @@ export function WebsiteAuditPage() {
 
           <div className="p-8 rounded-2xl border border-white/5 bg-zinc-900/40 relative">
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-xs bg-zinc-800 text-zinc-300 px-3 py-1 rounded-full font-mono">LEVEL 02</span>
               <h3 className="text-lg font-medium">Leak Analysis</h3>
             </div>
             <p className="text-zinc-400 text-sm font-light leading-relaxed mb-6">
               A comprehensive review targeting up to 3 major pages. Ideal for checking service paths, checkout flows, or subscription conversion funnels. We analyze touch layouts, form friction, and clarity.
             </p>
-            <div className="flex items-center gap-2 text-green-400 text-xs font-mono">
+            <div className="flex items-center gap-2 text-white text-xs font-mono">
               <CheckCircle className="w-4 h-4 shrink-0" />
               Best for conversion funnel reviews
             </div>
@@ -521,13 +616,12 @@ export function WebsiteAuditPage() {
               <Sparkles className="w-5 h-5" />
             </div>
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-xs bg-[#F24E1E]/20 text-[#F24E1E] px-3 py-1 rounded-full font-mono">LEVEL 03</span>
               <h3 className="text-lg font-medium">Experience Blueprint</h3>
             </div>
             <p className="text-zinc-400 text-sm font-light leading-relaxed mb-6">
               Our ultimate experience map. We reconstruct your user-flows, craft a optimized copywriting outline, map precise typography rules, and deliver annotated blueprint wires for redesigning your pages.
             </p>
-            <div className="flex items-center gap-2 text-[#F24E1E] text-xs font-mono">
+            <div className="flex items-center gap-2 text-green-400 text-xs font-mono">
               <CheckCircle className="w-4 h-4 shrink-0" />
               Complete visual wireframe mapping
             </div>
@@ -563,9 +657,9 @@ export function WebsiteAuditPage() {
                 <h3 className="text-xl font-heading mb-2">{opt.name}</h3>
                 <p className="text-zinc-500 text-xs font-light mb-6 leading-relaxed">{opt.description}</p>
                 
-                <div className="flex items-baseline gap-2 mb-8 border-b border-white/5 pb-6">
+                <div className="flex flex-col gap-1 mb-8 border-b border-white/5 pb-6">
                   <span className="text-4xl md:text-5xl font-medium tracking-tight text-white">{opt.price}</span>
-                  <span className="text-zinc-500 text-xs uppercase tracking-wider font-mono">One-Time</span>
+                  <span className="text-zinc-500 text-xs uppercase tracking-wider font-mono">one time</span>
                 </div>
 
                 <div className="space-y-4 mb-8">
@@ -583,7 +677,7 @@ export function WebsiteAuditPage() {
 
               {/* TODO: Link to checkout or Google Form */}
               <a 
-                href={GOOGLE_FORM_URL}
+                href={opt.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`w-full px-6 py-3 rounded-lg text-center text-sm font-medium transition-colors duration-300 block ${opt.popular ? 'bg-white hover:bg-zinc-200 text-black' : 'bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white'}`}
@@ -614,15 +708,15 @@ export function WebsiteAuditPage() {
           {[
             {
               title: "Submit Your Website",
-              desc: "Provide your URL and share brief business goals via our initial Google Form survey."
+              desc: "Provide your URL and share brief business goals via WhatsApp message."
             },
             {
               title: "Manual Expert Review",
               desc: "Our design professionals manually walk through your user journeys, copy matrices, and layout elements."
             },
             {
-              title: "Receive Your Audit",
-              desc: "Get an actionable, beautifully structured PDF report scoring copy flow, trust, and structural usability."
+              title: "Receive Your Audit & Video",
+              desc: "Get a personalized Loom video walkthrough pointing out critical user experience friction points alongside your actionable, beautifully organized report."
             },
             {
               title: "Decide Next Steps",
@@ -684,9 +778,9 @@ export function WebsiteAuditPage() {
 
               <div className="p-6 rounded-2xl border border-white/5 bg-[#050505] space-y-3">
                 <Check className="w-5 h-5 text-green-400" />
-                <h4 className="font-semibold text-sm">No Artificial Reports</h4>
+                <h4 className="font-semibold text-sm">Structured AI-Assisted Reports</h4>
                 <p className="text-zinc-500 text-xs font-light leading-relaxed">
-                  We deliver clear, actionable points written for humans rather than machine-generated telemetry data.
+                  While we use Claude AI to structure our thoughts and write beautifully organized final reports, every single observation is manually audited by real design experts.
                 </p>
               </div>
             </div>

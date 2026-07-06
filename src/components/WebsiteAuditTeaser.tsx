@@ -1,6 +1,29 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Check, ArrowRight, ClipboardList } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
+
+function MonitorSearchIcon({ className, size = 16 }: { className?: string; size?: number }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <rect width="20" height="14" x="2" y="3" rx="2" />
+      <line x1="12" x2="12" y1="17" y2="21" />
+      <line x1="8" x2="16" y1="21" y2="21" />
+      <circle cx="15" cy="11" r="3.5" fill="black" stroke="currentColor" strokeWidth="2" />
+      <line x1="17.5" x2="21" y1="13.5" y2="17" />
+    </svg>
+  );
+}
 
 export function WebsiteAuditTeaser() {
   const highlights = [
@@ -25,7 +48,7 @@ export function WebsiteAuditTeaser() {
             transition={{ duration: 0.8 }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-zinc-300 text-xs font-semibold tracking-wider uppercase font-mono"
           >
-            <ClipboardList className="w-3.5 h-3.5 text-zinc-400" />
+            <MonitorSearchIcon className="w-3.5 h-3.5 text-zinc-400" />
             Website Audit
           </motion.div>
 
