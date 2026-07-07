@@ -1,9 +1,8 @@
 export const metadata = {
   title: "Services | Intent Studio",
 };
-import { ServicesListPage } from "../../src/pages/ServicesListPage";
+import { ServicesListPage } from "../../src/views/ServicesListPage";
 
-export default async function Page(props) {
-  const searchParams = await props.searchParams;
+export default function Page() {
   return <ServicesListPage />;
 }

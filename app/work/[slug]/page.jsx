@@ -1,4 +1,4 @@
-import { ProjectPage } from "../../../src/pages/ProjectPage";
+import { ProjectPage } from "../../../src/views/ProjectPage";
 import { projects } from "../../../src/data/projects";
 
 export function generateStaticParams() {

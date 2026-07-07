@@ -1,4 +1,4 @@
-import { ServicePage } from "../../../src/pages/ServicePage";
+import { ServicePage } from "../../../src/views/ServicePage";
 import { services } from "../../../src/data/services";
 
 export function generateStaticParams() {

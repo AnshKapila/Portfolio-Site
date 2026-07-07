@@ -1,9 +1,8 @@
 export const metadata = {
   title: "Work | Intent Studio",
 };
-import { WorkPage } from "../../src/pages/WorkPage";
+import { WorkPage } from "../../src/views/WorkPage";
 
-export default async function Page(props) {
-  const searchParams = await props.searchParams;
+export default function Page() {
   return <WorkPage />;
 }
