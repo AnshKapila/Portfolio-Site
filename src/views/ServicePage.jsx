@@ -137,15 +137,15 @@ export function ServicePage() {
     // Filter projects dynamically based on whitelists for a true bespoke feel
     const serviceProjects = useMemo(() => {
         if (service.slug === 'websites-platforms') {
-            const allowedSlugs = ["sulipsa-choudhury-personal-website", "fityard", "metline", "spatialdigest", "ezinore"];
+            const allowedSlugs = ["sulipsa-choudhury-personal-website", "fityard", "metline", "spatialdigest", "ezinore", "eqologiq"];
             return projects.filter(p => allowedSlugs.includes(p.slug));
         }
         if (service.slug === 'product-ux-design') {
-            const allowedSlugs = ["clickpick", "vigorx", "ezinore"];
+            const allowedSlugs = ["clickpick", "vigorx", "ezinore", "eqologiq"];
             return projects.filter(p => allowedSlugs.includes(p.slug));
         }
         if (service.slug === 'brand-visual-identity') {
-            const allowedSlugs = ["bergaria-luxury", "sulipsa-choudhury-personal-website"];
+            const allowedSlugs = ["bergaria-luxury", "sulipsa-choudhury-personal-website", "eqologiq"];
             return projects.filter(p => allowedSlugs.includes(p.slug));
         }
         if (service.slug === 'ai-content-growth-systems') {
