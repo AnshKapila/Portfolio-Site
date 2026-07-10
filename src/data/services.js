@@ -190,6 +190,11 @@ export const services = [
             "content direction",
         ],
         customShowcaseImages: [
+            stillExtra1,
+            stillExtra2,
+            stillExtra3,
+            stillExtra4,
+            stillExtra5,
             aiGrowthImg1,
             aiGrowthImg2,
             aiGrowthImg3,
