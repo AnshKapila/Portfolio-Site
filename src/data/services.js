@@ -4,6 +4,7 @@ import brandImg1 from '../assets/images/brand_identity_1.png';
 import brandImg2 from '../assets/images/brand_identity_2.png';
 import brandImg3 from '../assets/images/brand_identity_3.jpg';
 import brandImg4 from '../assets/images/brand_identity_4.png';
+import brandAiNewImg from '../assets/images/brand_ai_new.jpg';
 import aiGrowthImg1 from '../assets/images/ai_growth_1.jpg';
 import aiGrowthImg2 from '../assets/images/ai_growth_2.jpg';
 import aiGrowthImg3 from '../assets/images/ai_growth_3.jpg';
@@ -148,6 +149,7 @@ export const services = [
             brandImg2,
             brandImg3,
             brandImg4,
+            brandAiNewImg,
         ],
         capabilities: [
             "Brand Identity",
@@ -199,6 +201,7 @@ export const services = [
             aiGrowthImg2,
             aiGrowthImg3,
             aiGrowthImg4,
+            brandAiNewImg,
         ],
         additionalShowcaseImages: [
             stillExtra1,
