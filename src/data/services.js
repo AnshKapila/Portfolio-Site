@@ -93,7 +93,6 @@ export const services = [
             dupMetlineDetail1,
             dupMetlineDetail2,
             dupMetlineBanner,
-            uploadedChatImage,
             dupSpatialdigestDetail1,
             "https://images.unsplash.com/photo-1541462608141-ad4979e408c9?auto=format&fit=crop&w=800&q=80",
             dupSpatialdigestBanner,
@@ -196,6 +195,7 @@ export const services = [
         customShowcaseImages: [
             stillExtra1,
             stillExtra2,
+            stillExtra3,
             stillExtra4,
             stillExtra5,
             stillExtra6,
@@ -209,7 +209,6 @@ export const services = [
             aiGrowthImg3,
             aiGrowthImg4,
             brandAiNewImg,
-            brandAiNewImg2,
         ],
         additionalShowcaseImages: [
             stillExtra1,

@@ -379,12 +379,12 @@ export function ServicePage() {
               {/* Showcase Grid Layout */}
               <FadeIn delayMs={200} durationMs={1000}>
                 <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
-                  {service.slug === 'ai-content-growth-systems' && (<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-50px' }} transition={{ duration: 0.8 }} className="break-inside-avoid mb-6 relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900 cursor-pointer" onClick={() => setActiveLightboxVideo(true)} id="video-gallery-item-first">
+                  {service.slug === 'ai-content-growth-systems' && (<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-50px' }} transition={{ duration: 0.8 }} className="break-inside-avoid w-[80%] mx-auto mb-6 relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900 cursor-pointer" onClick={() => setActiveLightboxVideo(true)} id="video-gallery-item-first">
                       <video src="https://assets.mixkit.co/videos/preview/mixkit-girl-holding-a-yellow-bag-of-chips-42289-large.mp4" autoPlay muted playsInline loop className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 block" id="showcase-video-player"/>
                     </motion.div>)}
 
                   {showcaseImages.map((img, i) => {
-                return (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-50px' }} transition={{ delay: (i % 3) * 0.1, duration: 0.8 }} className="break-inside-avoid mb-6 relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900 cursor-pointer" onClick={() => setActiveLightboxImg(img)} id={`gallery-item-${i}`}>
+                return (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-50px' }} transition={{ delay: (i % 3) * 0.1, duration: 0.8 }} className="break-inside-avoid w-[80%] mx-auto mb-6 relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900 cursor-pointer" onClick={() => setActiveLightboxImg(img)} id={`gallery-item-${i}`}>
                         <img src={img?.src || img} referrerPolicy="no-referrer" alt={`${service.title} Portfolio Item ${i + 1}`} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" id={`gallery-image-${i}`}/>
                         
                         {/* Smooth luxury hovering frame overlay */}
