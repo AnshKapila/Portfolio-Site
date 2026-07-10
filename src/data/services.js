@@ -37,10 +37,10 @@ import dupVigorxCover from '../assets/images/regenerated_image_1780923584403.web
 import dupVigorxDetail1 from '../assets/images/regenerated_image_1780923585783.webp';
 import dupVigorxDetail2 from '../assets/images/regenerated_image_1780923586768.webp';
 import dupVigorxBanner from '../assets/images/regenerated_image_1780923591895.png';
-const dupEzinoreCoverManual = 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221200%22%20height%3D%22800%22%20viewBox%3D%220%200%201200%20800%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23ffffff%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2224%22%20fill%3D%22%23000000%22%3EReplacement%20Needed%3C%2Ftext%3E%3C%2Fsvg%3E'; // Replaced corrupted image: ezinoreCover_downloaded.jpg
-import dupEzinoreDetail1Manual from '../assets/images/regenerated_image_1780923595353.png';
-import dupEzinoreDetail2Manual from '../assets/images/regenerated_image_1780923599203.webp';
-const dupEzinoreBannerManual = 'data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221200%22%20height%3D%22800%22%20viewBox%3D%220%200%201200%20800%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23ffffff%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20font-family%3D%22sans-serif%22%20font-size%3D%2224%22%20fill%3D%22%23000000%22%3EReplacement%20Needed%3C%2Ftext%3E%3C%2Fsvg%3E'; // Replaced corrupted image: ezinoreBanner_downloaded.png
+import dupEzinoreCoverManual from '../assets/images/product_ux_replace_1.png';
+import dupEzinoreDetail1Manual from '../assets/images/product_ux_replace_2.jpg';
+import dupEzinoreDetail2Manual from '../assets/images/product_ux_replace_3.jpg';
+import dupEzinoreBannerManual from '../assets/images/product_ux_replace_4.jpg';
 import oneFinancialImg from '../assets/images/product_ux_one_financial.png';
 import mutualFundsImg from '../assets/images/product_ux_mutual_funds.png';
 // Use the local reconstructed/regenerated images as part of our showcase portfolio
