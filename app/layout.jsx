@@ -5,6 +5,9 @@ import { ClientLayout } from "../src/components/ClientLayout";
 export const metadata = {
   title: "Intent Studios",
   description: "Web & Product Design Studio building launch-ready digital experiences and visual systems for founders, startups, and growing brands.",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({ children }) {

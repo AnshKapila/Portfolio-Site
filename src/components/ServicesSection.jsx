@@ -57,11 +57,11 @@ export function ServicesSection() {
             const isExpanded = isActive;
             return (<div key={i} className="relative cursor-pointer group py-6" onMouseEnter={() => setActiveIndex(i)} onClick={() => setActiveIndex(i)}>
                   <Link href={`/services/${service.slug}`} className="block">
-                    <h2 className={cn("text-4xl md:text-5xl lg:text-6xl font-heading italic tracking-tight transition-colors duration-300", isActive
+                    <h3 className={cn("text-3xl md:text-4xl lg:text-5xl font-heading italic tracking-tight transition-colors duration-300", isActive
                     ? "text-white"
                     : "text-white/40 group-[&:not(:hover)]:text-white/40 group-hover:text-white/70")}>
                       {service.title}
-                    </h2>
+                    </h3>
                   </Link>
 
                   <AnimatePresence>
