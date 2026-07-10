@@ -404,7 +404,7 @@ export function ServicePage() {
                     return null;
                 }
                 return (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-50px' }} transition={{ delay: (i % 3) * 0.1, duration: 0.8 }} className="break-inside-avoid mb-6 relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900 cursor-pointer" onClick={() => setActiveLightboxImg(img)} id={`gallery-item-${i}`}>
-                        <img src={img?.src || img} referrerPolicy="no-referrer" alt={`${service.title} Portfolio Item ${i + 1}`} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" id={`gallery-image-${i}`}/>
+                        <img src={img?.src || img} referrerPolicy="no-referrer" alt={`${service.title} Portfolio Item ${i + 1}`} className={`w-full h-auto object-cover transition-transform duration-700 ${service.slug === 'ai-content-growth-systems' ? 'scale-110 group-hover:scale-115' : 'group-hover:scale-105'}`} id={`gallery-image-${i}`}/>
                         
                         {/* Smooth luxury hovering frame overlay */}
                         {i !== 1 && (<div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

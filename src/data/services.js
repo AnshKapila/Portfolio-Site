@@ -4,6 +4,10 @@ import brandImg1 from '../assets/images/brand_identity_1.png';
 import brandImg2 from '../assets/images/brand_identity_2.png';
 import brandImg3 from '../assets/images/brand_identity_3.jpg';
 import brandImg4 from '../assets/images/brand_identity_4.png';
+import aiGrowthImg1 from '../assets/images/ai_growth_1.jpg';
+import aiGrowthImg2 from '../assets/images/ai_growth_2.jpg';
+import aiGrowthImg3 from '../assets/images/ai_growth_3.jpg';
+import aiGrowthImg4 from '../assets/images/ai_growth_4.jpg';
 import image21155 from '../assets/images/regenerated_image_1780079021155.png';
 import image24376 from '../assets/images/regenerated_image_1780079024376.png';
 import image27414 from '../assets/images/regenerated_image_1780079027414.png';
@@ -184,6 +188,12 @@ export const services = [
             "social media",
             "creative strategy",
             "content direction",
+        ],
+        customShowcaseImages: [
+            aiGrowthImg1,
+            aiGrowthImg2,
+            aiGrowthImg3,
+            aiGrowthImg4,
         ],
         additionalShowcaseImages: [
             stillExtra1,
