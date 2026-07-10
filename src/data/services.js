@@ -10,6 +10,11 @@ import aiGrowthImg1 from '../assets/images/ai_growth_1.jpg';
 import aiGrowthImg2 from '../assets/images/ai_growth_2.jpg';
 import aiGrowthImg3 from '../assets/images/ai_growth_3.jpg';
 import aiGrowthImg4 from '../assets/images/ai_growth_4.jpg';
+import aiGrowthNew1 from '../assets/images/ai_growth_new_1.jpg';
+import aiGrowthNew2 from '../assets/images/ai_growth_new_2.jpg';
+import aiGrowthNew3 from '../assets/images/ai_growth_new_3.jpg';
+import aiGrowthNew4 from '../assets/images/ai_growth_new_4.jpg';
+import aiGrowthNew5 from '../assets/images/ai_growth_new_5.jpg';
 import image21155 from '../assets/images/regenerated_image_1780079021155.png';
 import image24376 from '../assets/images/regenerated_image_1780079024376.png';
 import image27414 from '../assets/images/regenerated_image_1780079027414.png';
@@ -195,10 +200,6 @@ export const services = [
         customShowcaseImages: [
             stillExtra1,
             stillExtra2,
-            stillExtra3,
-            stillExtra4,
-            stillExtra5,
-            stillExtra6,
             stillExtra7,
             stillExtra8,
             stillExtra9,
@@ -209,6 +210,11 @@ export const services = [
             aiGrowthImg3,
             aiGrowthImg4,
             brandAiNewImg,
+            aiGrowthNew1,
+            aiGrowthNew2,
+            aiGrowthNew3,
+            aiGrowthNew4,
+            aiGrowthNew5,
         ],
         additionalShowcaseImages: [
             stillExtra1,
