@@ -1,5 +1,9 @@
 import { damacBanner, damacDetail2, damacCover } from "./projects";
 import image00646 from '../assets/images/regenerated_image_1780079000646.png';
+import brandImg1 from '../assets/images/brand_identity_1.png';
+import brandImg2 from '../assets/images/brand_identity_2.png';
+import brandImg3 from '../assets/images/brand_identity_3.jpg';
+import brandImg4 from '../assets/images/brand_identity_4.png';
 import image21155 from '../assets/images/regenerated_image_1780079021155.png';
 import image24376 from '../assets/images/regenerated_image_1780079024376.png';
 import image27414 from '../assets/images/regenerated_image_1780079027414.png';
@@ -135,6 +139,12 @@ export const services = [
         title: "Brand & Visual Identity",
         positioning: "A brand people can recognize easily",
         overview: "We create a clear and consistent visual identity so your brand looks professional, feels trustworthy, and stays the same across your website and content.",
+        customShowcaseImages: [
+            brandImg1,
+            brandImg2,
+            brandImg3,
+            brandImg4,
+        ],
         capabilities: [
             "Brand Identity",
             "Visual Systems",

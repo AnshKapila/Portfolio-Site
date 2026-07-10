@@ -254,13 +254,6 @@ export function ServicePage() {
               <span>←</span>
               <span>All Services</span>
             </Link>
-            
-            <div className="flex items-center gap-3">
-              <span className="w-2 h-2 rounded-full bg-[#F24E1E] animate-ping"/>
-              <span className="text-xs font-mono text-gray-400 capitalize bg-white/5 px-2.5 py-1 rounded-full border border-white/10">
-                {service.slug.replace(/-/g, ' ')}
-              </span>
-            </div>
           </div>
 
           {/* Hero Section */}
@@ -410,7 +403,9 @@ export function ServicePage() {
                 if (service.slug === 'ai-content-growth-systems' && i === 9) {
                     return null;
                 }
-                return (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-50px' }} transition={{ delay: (i % 3) * 0.1, duration: 0.8 }} className="break-inside-avoid mb-6 relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900 cursor-pointer" onClick={() => setActiveLightboxImg(img)} id={`gallery-item-${i}`}>
+                const isLast = i === showcaseImages.length - 1;
+                const columnSpanStyle = isLast ? { columnSpan: 'all', WebkitColumnSpan: 'all' } : {};
+                return (<motion.div key={i} style={columnSpanStyle} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-50px' }} transition={{ delay: (i % 3) * 0.1, duration: 0.8 }} className={`break-inside-avoid mb-6 relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900 cursor-pointer ${isLast ? 'mt-4' : ''}`} onClick={() => setActiveLightboxImg(img)} id={`gallery-item-${i}`}>
                         <img src={img?.src || img} referrerPolicy="no-referrer" alt={`${service.title} Portfolio Item ${i + 1}`} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" id={`gallery-image-${i}`}/>
                         
                         {/* Smooth luxury hovering frame overlay */}
