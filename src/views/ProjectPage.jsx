@@ -89,9 +89,7 @@ export function ProjectPage() {
           {/* Output / Result */}
           {project.outcomeHeading && project.outcomeDescription && (<section className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
               <h2 className="text-sm uppercase tracking-widest text-gray-500 font-bold md:col-span-1">{project.outcomeHeading}</h2>
-              <div className="md:col-span-2 text-lg font-light leading-relaxed text-gray-300 whitespace-pre-wrap">
-                {project.outcomeDescription}
-              </div>
+              <div className="md:col-span-2 text-lg font-light leading-relaxed text-gray-300 whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: project.outcomeDescription }} />
             </section>)}
 
         </div>

@@ -1,6 +1,10 @@
 
 import eqologiq1 from '../assets/images/eqologiq_1.jpg';
 import eqologiq2 from '../assets/images/eqologiq_2.jpg';
+import eqologiqNew1 from '../assets/images/eqologiq_new_1.jpg';
+import eqologiqNew2 from '../assets/images/eqologiq_new_2.jpg';
+import eqologiqNew3 from '../assets/images/eqologiq_new_3.jpg';
+import eqologiqNew4 from '../assets/images/eqologiq_new_4.jpg';
 import bergariaCover from '../assets/images/regenerated_image_1778648802440.jpg';
 import bergariaDetail1 from '../assets/images/regenerated_image_1778648472194.jpg';
 import bergariaDetail2 from '../assets/images/regenerated_image_1778648465172.png';
@@ -283,7 +287,7 @@ const allProjects = [
         slug: "eqologiq",
         title: "Eqologiq",
         tags: ["UX Design", "Headless Ecommerce", "Technical SEO", "AI Search Optimization"],
-        coverImage: eqologiq2,
+        coverImage: eqologiqNew1,
         listTitle: "Direct-to-Consumer Brand • Headless Ecommerce & SEO",
         listSubtitle: "",
         overviewHeading: "Project Overview",
@@ -291,13 +295,13 @@ const allProjects = [
         strategyHeading: "Strategy, Design, and Execution",
         strategyDescription1: "The first major design decision was the color system. We extracted the two dominant colors directly from the Eqologiq logo: a teal blue (#006B96) and a yellow-green (#99BD05), avoiding a third sky blue (#2AD2FF) for text to maintain strict contrast accessibility. The copywriting strategy focused on stating facts clearly without corporate fluff, landing on the hero headline: 'Built for every day. Made without compromise.'",
         strategyDescription2: "The Qrash Qourse educational section was restructured as a knowledge hub with cited sources rather than a blog, which strengthened both the brand credibility and the SEO signal for informational keywords around plastic and health research.",
-        detailImage1: eqologiq1,
-        detailImage2: eqologiq2,
+        detailImage1: eqologiqNew2,
+        detailImage2: eqologiqNew3,
         outcomeHeading: "Problems, Solutions & Impact",
-        outcomeDescription: "**Hosting & SEO Strategy:** The client's Hostinger shared hosting didn't support Node.js servers, making Server-Side Rendering impossible. To solve this without sacrificing dynamic product SEO, we utilized Next.js static site generation (SSG) with static export. Every product page, sitemap, and schema is pre-rendered at build time from WooCommerce API.\n\n**Image Asset Control:** All prototype images were linked to an external Cloudinary CDN. We audited and downloaded every asset locally into the Next.js public directory to eliminate external dependencies.\n\n**Final Performance:** The new site features dynamic sitemaps, robots configurations, breadcrumb/FAQ schema, and a structured `llms.txt` file for AI crawlers (Perplexity/ChatGPT), providing a robust, headless ecommerce foundation.",
+        outcomeDescription: "<strong>Hosting & SEO Strategy:</strong> The client's Hostinger shared hosting didn't support Node.js servers, making Server-Side Rendering impossible. To solve this without sacrificing dynamic product SEO, we utilized Next.js static site generation (SSG) with static export. Every product page, sitemap, and schema is pre-rendered at build time from WooCommerce API.\n\n<strong>Image Asset Control:</strong> All prototype images were linked to an external Cloudinary CDN. We audited and downloaded every asset locally into the Next.js public directory to eliminate external dependencies.\n\n<strong>Final Performance:</strong> The new site features dynamic sitemaps, robots configurations, breadcrumb/FAQ schema, and a structured `llms.txt` file for AI crawlers (Perplexity/ChatGPT), providing a robust, headless ecommerce foundation.",
         buttonText: "Coming Soon",
         buttonLink: "#",
-        bannerImage: eqologiq1
+        bannerImage: eqologiqNew4
     }
 ];
 export const projects = allProjects.filter(p => !p.hidden);

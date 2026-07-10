@@ -1,11 +1,11 @@
 {
   "/_not-found/page": "/_not-found",
   "/page": "/",
-  "/audit/page": "/audit",
   "/privacy/page": "/privacy",
-  "/work/[slug]/page": "/work/[slug]",
   "/contact/page": "/contact",
-  "/work/page": "/work",
+  "/audit/page": "/audit",
+  "/services/page": "/services",
   "/services/[slug]/page": "/services/[slug]",
-  "/services/page": "/services"
+  "/work/[slug]/page": "/work/[slug]",
+  "/work/page": "/work"
 }

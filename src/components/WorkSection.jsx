@@ -6,7 +6,7 @@ import { projects } from "../data/projects";
 import Link from 'next/link';
 export function WorkSection() {
     const [activeIndex, setActiveIndex] = useState(0);
-    const featuredProjectsSlugs = ["vigorx", "clickpick", "fityard"];
+    const featuredProjectsSlugs = ["eqologiq", "vigorx", "clickpick", "fityard"];
     const featuredProjects = projects.filter((p) => featuredProjectsSlugs.includes(p.slug));
     return (<section id="work" className="w-full relative bg-black text-white px-6 md:px-12 lg:px-16 pt-24 pb-48 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
