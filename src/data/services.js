@@ -26,6 +26,11 @@ import image68612 from '../assets/images/regenerated_image_1778846668612.jpg';
 import image50943 from '../assets/images/regenerated_image_1779822350943.png';
 import spatialdigestCover_old from '../assets/images/spatialdigestCover_downloaded.png';
 import uploadedChatImage from '../assets/images/regenerated_image_1781636336813.png';
+import aiGrowthPerfume from '../assets/images/ai_growth_perfume.jpg';
+import aiGrowthChocolate from '../assets/images/ai_growth_chocolate.jpg';
+import aiGrowthSilverBowl from '../assets/images/ai_growth_silver_bowl.jpg';
+import aiGrowthDogShampoo from '../assets/images/ai_growth_dog_shampoo.jpg';
+import aiGrowthCopperCanister from '../assets/images/ai_growth_copper_canister.jpg';
 // Duplicated website development project images to ensure separation/isolation
 import dupSulipsaCover from '../assets/images/regenerated_image_1780894480849.png';
 import dupSulipsaDetail1 from '../assets/images/regenerated_image_1780894484494.png';
@@ -200,10 +205,7 @@ export const services = [
         customShowcaseImages: [
             stillExtra1,
             stillExtra2,
-            stillExtra7,
-            stillExtra8,
             stillExtra9,
-            stillExtra10,
             stillExtra11,
             aiGrowthImg1,
             aiGrowthImg2,
@@ -215,19 +217,25 @@ export const services = [
             aiGrowthNew3,
             aiGrowthNew4,
             aiGrowthNew5,
+            aiGrowthPerfume,
+            aiGrowthChocolate,
+            aiGrowthSilverBowl,
+            aiGrowthDogShampoo,
+            aiGrowthCopperCanister,
         ],
         additionalShowcaseImages: [
             stillExtra1,
             stillExtra2,
             stillExtra3,
-            stillExtra4,
             stillExtra5,
             stillExtra6,
-            stillExtra7,
-            stillExtra8,
             stillExtra9,
-            stillExtra10,
             stillExtra11,
+            aiGrowthPerfume,
+            aiGrowthChocolate,
+            aiGrowthSilverBowl,
+            aiGrowthDogShampoo,
+            aiGrowthCopperCanister,
         ],
     },
 ];

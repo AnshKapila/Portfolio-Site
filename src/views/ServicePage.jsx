@@ -520,7 +520,7 @@ export function ServicePage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                 {serviceProjects.map((project, i) => (<motion.div key={project.slug} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-50px' }} transition={{ delay: i * 0.1, duration: 0.8 }} className="group flex flex-col items-start bg-zinc-950/30 border border-white/5 rounded-3xl overflow-hidden shadow-2xl hover:border-white/10 transition-colors" id={`project-card-${project.slug}`}>
-                    <div className="w-full aspect-[4/3] bg-zinc-900 overflow-hidden relative border-b border-white/5">
+                    <div className="w-[80%] mx-auto aspect-[4/3] bg-zinc-900 overflow-hidden relative rounded-2xl border border-white/5 mt-6">
                       {(typeof project.coverImage === 'string' ? project.coverImage : project.coverImage?.src || '').startsWith("data:image/") ? (<div className="w-full h-full flex flex-col justify-between p-6 text-white relative overflow-hidden" style={{ background: `radial-gradient(circle at center, #111 0%, #050505 100%)` }}>
                           <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `radial-gradient(#F24E1E 1px, transparent 1px)`, backgroundSize: '16px 16px' }}/>
                           <div className="relative z-10 flex justify-between items-start w-full">
