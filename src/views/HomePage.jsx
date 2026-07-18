@@ -7,6 +7,7 @@ import { DreamShipSection } from '../components/DreamShipSection';
 import { FaqSection } from '../components/FaqSection';
 import { FounderSection } from '../components/FounderSection';
 import { WebsiteAuditTeaser } from '../components/WebsiteAuditTeaser';
+import { TestimonialsSection } from '../components/TestimonialsSection';
 export function HomePage({ setIsHeroBright }) {
     return (<>
       
@@ -18,7 +19,7 @@ export function HomePage({ setIsHeroBright }) {
       <WebsiteAuditTeaser />
       <FounderSection />
       {/* <SocialPresenceSection /> */}
-      {/* <TestimonialsSection /> */}
+      <TestimonialsSection />
       <DreamShipSection />
       <FaqSection />
     </>);

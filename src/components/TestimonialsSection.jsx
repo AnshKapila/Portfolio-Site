@@ -1,31 +1,21 @@
 "use client";
 import { motion } from 'motion/react';
 import { Quote } from 'lucide-react';
+import metlineCover from '../assets/images/regenerated_image_1780423712546.webp';
+
 export function TestimonialsSection() {
     const smallTestimonials = [
         {
-            quote: "Great communication, excellent quality — our product redesign feels flawless and well-crafted.",
-            name: "Jason P.",
-            role: "Los Angeles",
-            avatar: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=150&h=150&auto=format&fit=crop"
+            quote: "The design of the website is excellent. Anyone can easily navigate through the content and it perfectly displays the intended purpose.",
+            name: "Sulipsa Choudhury",
+            company: "Poet",
+            avatarStyles: "bg-purple-500/10 border-purple-500/40 text-purple-400"
         },
         {
-            quote: "Intent was professional, fast, and the final web platform truly blew us away. Fully Satisfied!",
-            name: "Priya R.",
-            role: "Sacramento",
-            avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&h=150&auto=format&fit=crop"
-        },
-        {
-            quote: "They handled everything from complex UX architecture to final build. We just sat back and watched.",
-            name: "Greg T.",
-            role: "Pasadena",
-            avatar: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=150&h=150&auto=format&fit=crop"
-        },
-        {
-            quote: "It's rare to find a team this reliable and skilled — highly recommended to all founders!",
-            name: "Melissa K.",
-            role: "San Diego",
-            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&h=150&auto=format&fit=crop"
+            quote: "Very pleasant experience working with Ansh, definitely knows what he is doing and speaks warmly too! If you are unsure what your customer feels when they open your app or your site, let Intent Studios take a look!",
+            name: "Chetan Natesh",
+            company: "Rozmer",
+            avatarStyles: "bg-yellow-500/10 border-yellow-500/40 text-yellow-400"
         }
     ];
     return (<section id="testimonials" className="py-24 px-6 md:px-12 lg:px-16 bg-black border-t border-white/5">
@@ -55,10 +45,12 @@ export function TestimonialsSection() {
                 </p>
                 <div className="flex items-center justify-between mt-auto">
                   <div className="flex items-center gap-3">
-                    <img src={t.avatar?.src || t.avatar} referrerPolicy="no-referrer" alt={t.name} className="w-10 h-10 rounded-full object-cover border border-white/10"/>
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center border text-sm font-semibold select-none ${t.avatarStyles}`}>
+                      {t.name.charAt(0)}
+                    </div>
                     <div>
                       <p className="text-white text-sm font-medium">{t.name}</p>
-                      <p className="text-gray-500 text-xs">{t.role}</p>
+                      <p className="text-gray-500 text-xs">{t.company}</p>
                     </div>
                   </div>
                   <Quote className="w-6 h-6 text-[#F24E1E] opacity-50 rotate-180"/>
@@ -70,18 +62,18 @@ export function TestimonialsSection() {
         {/* Right Column: Featured Image Testimonial */}
         <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: "easeOut" }} className="w-full lg:w-1/2 relative rounded-3xl overflow-hidden min-h-[500px] lg:min-h-full border border-white/10 flex flex-col justify-end group shadow-[0_0_40px_rgba(242,78,30,0.05)]">
           {/* Mockup Project Background Image */}
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&h=1600&auto=format&fit=crop" referrerPolicy="no-referrer" alt="Featured Project Website Mockup" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105"/>
+          <img src={metlineCover.src || metlineCover} referrerPolicy="no-referrer" alt="Featured Project Website Mockup" className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105 opacity-40"/>
           
-          {/* Deep Gradient for text legibility */}
-          <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-black via-black/80 to-transparent"/>
+          {/* Bottom-up gradient: 100% black at bottom up to 50% height, then fades linearly to 0% at the top */}
+          <div className="absolute inset-0 z-0" style={{ backgroundImage: 'linear-gradient(to top, #000000 0%, #000000 50%, rgba(0, 0, 0, 0) 100%)' }}/>
           
           {/* Featured Content Area */}
-          <div className="relative z-10 p-8 md:p-10 border-t border-white/10 bg-black/40 backdrop-blur-sm">
+          <div className="relative z-10 p-8 md:p-10">
              <p className="text-white md:text-lg lg:text-xl font-medium leading-relaxed tracking-wide mb-6">
-               "From the very first consultation, Intent Studios felt like the right choice. The team was organized, transparent, and truly cared about the details. Our platform feels brand new."
+               "I must say the dedication and creativity this team holds is on another level. They treat your project like they are building their own."
              </p>
              <p className="text-[#F24E1E] font-bold text-sm tracking-wide">
-               - Tanya L., <span className="font-normal text-gray-400">VP Product, ShiftTech</span>
+               - Akshat Jindal, <span className="font-normal text-gray-400">Metline</span>
              </p>
           </div>
         </motion.div>
