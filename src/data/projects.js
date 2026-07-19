@@ -82,6 +82,27 @@ export { damacBanner, damacDetail1, damacDetail2, damacCover, bergariaBanner,
 clickpickCover, clickpickDetail1, clickpickDetail2, clickpickBanner, spatialdigestCover_img, spatialdigestCover, spatialdigestDetail1, spatialdigestDetail2, spatialdigestBanner, spatialdigestCitySkyline, metlineCover, metlineDetail1, metlineDetail2, metlineBanner, fityardCover, fityardDetail1, fityardDetail2, fityardBanner, vigorxCover, vigorxDetail1, vigorxDetail2, vigorxBanner, ezinoreCover, ezinoreDetail1, ezinoreDetail2, ezinoreBanner, ezinoreLogo, spatialDigestLogo, metlineLogo };
 const allProjects = [
     {
+        slug: "eqologiq",
+        title: "Eqologiq",
+        tags: ["UX Design", "Headless Ecommerce", "Technical SEO", "AI Search Optimization"],
+        coverImage: eqologiqNew4,
+        coverImagePosition: "object-right",
+        listTitle: "Direct-to-Consumer Brand • Headless Ecommerce & SEO",
+        listSubtitle: "",
+        overviewHeading: "Project Overview",
+        overviewDescription: "Eqologiq is an Indian direct-to-consumer brand selling plastic-free steel water bottles and vegan oral care products. The founder Vaibhav started the brand with a clear mission: to offer genuinely plastic-free daily essentials at a time when most competitors were using plastic in hidden components like caps, coatings, and seals while marketing themselves as sustainable. When the project came to Intent Studios, Eqologiq had a live WooCommerce store on Hostinger shared hosting and a basic web presence that did not reflect the seriousness of the product or the strength of the brand story. The brief was to build something that looked credible, converted visitors into buyers, and gave the brand a foundation to grow on.\n\nThe scope expanded significantly once we started. What began as a website redesign became a full brand system, a content strategy, a technical SEO implementation, and a headless frontend architecture built on Next.js with WooCommerce as the backend. Our role at Intent Studios covered brand direction, UX, visual design, copywriting, and the full technical SEO layer. The final deliverable is a statically exported Next.js site hosted on Hostinger, pulling live product and blog data from WooCommerce at build time, with complete crawler optimisation and structured data for both traditional search and AI search engines.",
+        strategyHeading: "Strategy, Design, and Execution",
+        strategyDescription1: "The first major design decision was the color system. We extracted the two dominant colors directly from the Eqologiq logo: a teal blue (#006B96) and a yellow-green (#99BD05), avoiding a third sky blue (#2AD2FF) for text to maintain strict contrast accessibility. The copywriting strategy focused on stating facts clearly without corporate fluff, landing on the hero headline: 'Built for every day. Made without compromise.'",
+        strategyDescription2: "The Qrash Qourse educational section was restructured as a knowledge hub with cited sources rather than a blog, which strengthened both the brand credibility and the SEO signal for informational keywords around plastic and health research.",
+        detailImage1: eqologiqNew2,
+        detailImage2: eqologiqNew3,
+        outcomeHeading: "Problems, Solutions & Impact",
+        outcomeDescription: "<strong>Hosting & SEO Strategy:</strong> The client's Hostinger shared hosting didn't support Node.js servers, making Server-Side Rendering impossible. To solve this without sacrificing dynamic product SEO, we utilized Next.js static site generation (SSG) with static export. Every product page, sitemap, and schema is pre-rendered at build time from WooCommerce API.\n\n<strong>Image Asset Control:</strong> All prototype images were linked to an external Cloudinary CDN. We audited and downloaded every asset locally into the Next.js public directory to eliminate external dependencies.\n\n<strong>Final Performance:</strong> The new site features dynamic sitemaps, robots configurations, breadcrumb/FAQ schema, and a structured `llms.txt` file for AI crawlers (Perplexity/ChatGPT), providing a robust, headless ecommerce foundation.",
+        buttonText: "View Website",
+        buttonLink: "https://eqologiq.in/",
+        bannerImage: eqologiqNew1
+    },
+    {
         slug: "fintrack",
         title: "Fintrack",
         tags: ["Product Design", "UX Design", "Finance App", "Dashboard", "Mobile App", "System Design"],
@@ -282,26 +303,6 @@ const allProjects = [
         buttonLink: "https://www.behance.net/gallery/219778095/Violet-Damac-Hills-2-Landing-Page",
         bannerImage: "", // Hidden for now per user instruction, was: damacBanner
         hidden: true
-    },
-    {
-        slug: "eqologiq",
-        title: "Eqologiq",
-        tags: ["UX Design", "Headless Ecommerce", "Technical SEO", "AI Search Optimization"],
-        coverImage: eqologiqNew1,
-        listTitle: "Direct-to-Consumer Brand • Headless Ecommerce & SEO",
-        listSubtitle: "",
-        overviewHeading: "Project Overview",
-        overviewDescription: "Eqologiq is an Indian direct-to-consumer brand selling plastic-free steel water bottles and vegan oral care products. The founder Vaibhav started the brand with a clear mission: to offer genuinely plastic-free daily essentials at a time when most competitors were using plastic in hidden components like caps, coatings, and seals while marketing themselves as sustainable. When the project came to Intent Studios, Eqologiq had a live WooCommerce store on Hostinger shared hosting and a basic web presence that did not reflect the seriousness of the product or the strength of the brand story. The brief was to build something that looked credible, converted visitors into buyers, and gave the brand a foundation to grow on.\n\nThe scope expanded significantly once we started. What began as a website redesign became a full brand system, a content strategy, a technical SEO implementation, and a headless frontend architecture built on Next.js with WooCommerce as the backend. Our role at Intent Studios covered brand direction, UX, visual design, copywriting, and the full technical SEO layer. The final deliverable is a statically exported Next.js site hosted on Hostinger, pulling live product and blog data from WooCommerce at build time, with complete crawler optimisation and structured data for both traditional search and AI search engines.",
-        strategyHeading: "Strategy, Design, and Execution",
-        strategyDescription1: "The first major design decision was the color system. We extracted the two dominant colors directly from the Eqologiq logo: a teal blue (#006B96) and a yellow-green (#99BD05), avoiding a third sky blue (#2AD2FF) for text to maintain strict contrast accessibility. The copywriting strategy focused on stating facts clearly without corporate fluff, landing on the hero headline: 'Built for every day. Made without compromise.'",
-        strategyDescription2: "The Qrash Qourse educational section was restructured as a knowledge hub with cited sources rather than a blog, which strengthened both the brand credibility and the SEO signal for informational keywords around plastic and health research.",
-        detailImage1: eqologiqNew2,
-        detailImage2: eqologiqNew3,
-        outcomeHeading: "Problems, Solutions & Impact",
-        outcomeDescription: "<strong>Hosting & SEO Strategy:</strong> The client's Hostinger shared hosting didn't support Node.js servers, making Server-Side Rendering impossible. To solve this without sacrificing dynamic product SEO, we utilized Next.js static site generation (SSG) with static export. Every product page, sitemap, and schema is pre-rendered at build time from WooCommerce API.\n\n<strong>Image Asset Control:</strong> All prototype images were linked to an external Cloudinary CDN. We audited and downloaded every asset locally into the Next.js public directory to eliminate external dependencies.\n\n<strong>Final Performance:</strong> The new site features dynamic sitemaps, robots configurations, breadcrumb/FAQ schema, and a structured `llms.txt` file for AI crawlers (Perplexity/ChatGPT), providing a robust, headless ecommerce foundation.",
-        buttonText: "Coming Soon",
-        buttonLink: "#",
-        bannerImage: eqologiqNew4
     }
 ];
 export const projects = allProjects.filter(p => !p.hidden);

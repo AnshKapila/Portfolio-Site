@@ -70,7 +70,7 @@ export function WorkPage() {
                         <div className="relative z-10 text-center text-[10px] font-mono text-gray-500">
                           [ Manual Asset Placeholder ]
                         </div>
-                      </div>) : (<img src={project.coverImage?.src || project.coverImage} referrerPolicy="no-referrer" alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>)}
+                      </div>) : (<img src={project.coverImage?.src || project.coverImage} referrerPolicy="no-referrer" alt={project.title} className={cn("w-full h-full object-cover transition-transform duration-700 group-hover:scale-105", project.coverImagePosition)}/>)}
                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
                  </div>
                  

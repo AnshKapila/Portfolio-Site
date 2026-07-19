@@ -96,36 +96,40 @@ export function ProjectPage() {
 
         {/* Visual Section */}
         <div className="space-y-12 mb-32">
-          {project.detailImage1 && (<div className="w-full rounded-[2rem] overflow-hidden border border-white/5 bg-zinc-900 shadow-xl">
-              {(typeof project.detailImage1 === 'string' ? project.detailImage1 : project.detailImage1?.src || '').startsWith("data:image/") ? (<div className="w-full aspect-[16/10] flex flex-col justify-between p-8 md:p-12 text-white relative overflow-hidden" style={{ background: `radial-gradient(circle at center, #1c1917 0%, #0d0c0b 100%)` }}>
-                  <div className="relative z-10 flex justify-between items-start w-full">
-                    <span className="text-xs font-mono uppercase tracking-widest text-white/50 bg-white/5 px-3 py-1 rounded-full border border-white/10">Interface Exploration</span>
-                    <span className="text-xs font-mono uppercase tracking-widest text-[#F24E1E]">[ Detail 1 ]</span>
-                  </div>
-                  <div className="relative z-10 text-center my-auto flex flex-col items-center">
-                    <h3 className="text-3xl font-heading italic tracking-tight text-white mb-2 leading-tight">{project.title}</h3>
-                    <p className="text-sm text-gray-400 font-light max-w-md">Design Strategy & Interface Flow Demonstration</p>
-                  </div>
-                  <div className="relative z-10 text-center text-xs font-mono text-gray-500">
-                    [ Manual Asset Placeholder — Edit in src/data/projects.ts ]
-                  </div>
-                </div>) : (<img src={project.detailImage1?.src || project.detailImage1} referrerPolicy="no-referrer" alt="Project detail 1" className="w-full h-auto"/>)}
-            </div>)}
-          {project.detailImage2 && (<div className="w-full rounded-[2rem] overflow-hidden border border-white/5 bg-zinc-900 shadow-xl">
-              {(typeof project.detailImage2 === 'string' ? project.detailImage2 : project.detailImage2?.src || '').startsWith("data:image/") ? (<div className="w-full aspect-[16/10] flex flex-col justify-between p-8 md:p-12 text-white relative overflow-hidden" style={{ background: `radial-gradient(circle at center, #0f172a 0%, #020617 100%)` }}>
-                  <div className="relative z-10 flex justify-between items-start w-full">
-                    <span className="text-xs font-mono uppercase tracking-widest text-white/50 bg-white/5 px-3 py-1 rounded-full border border-white/10">Architecture Framework</span>
-                    <span className="text-xs font-mono uppercase tracking-widest text-[#F24E1E]">[ Detail 2 ]</span>
-                  </div>
-                  <div className="relative z-10 text-center my-auto flex flex-col items-center">
-                    <h3 className="text-3xl font-heading italic tracking-tight text-white mb-2 leading-tight">{project.title}</h3>
-                    <p className="text-sm text-gray-400 font-light max-w-md">Design System and Token Hierarchy Analysis</p>
-                  </div>
-                  <div className="relative z-10 text-center text-xs font-mono text-gray-500">
-                    [ Manual Asset Placeholder — Edit in src/data/projects.ts ]
-                  </div>
-                </div>) : (<img src={project.detailImage2?.src || project.detailImage2} referrerPolicy="no-referrer" alt="Project detail 2" className="w-full h-auto"/>)}
-            </div>)}
+          {(project.detailImage1 || project.detailImage2) && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+              {project.detailImage1 && (<div className="w-full rounded-[2rem] overflow-hidden border border-white/5 bg-zinc-900 shadow-xl flex items-center justify-center">
+                  {(typeof project.detailImage1 === 'string' ? project.detailImage1 : project.detailImage1?.src || '').startsWith("data:image/") ? (<div className="w-full aspect-square flex flex-col justify-between p-8 md:p-12 text-white relative overflow-hidden" style={{ background: `radial-gradient(circle at center, #1c1917 0%, #0d0c0b 100%)` }}>
+                      <div className="relative z-10 flex justify-between items-start w-full">
+                        <span className="text-xs font-mono uppercase tracking-widest text-white/50 bg-white/5 px-3 py-1 rounded-full border border-white/10">Interface Exploration</span>
+                        <span className="text-xs font-mono uppercase tracking-widest text-[#F24E1E]">[ Detail 1 ]</span>
+                      </div>
+                      <div className="relative z-10 text-center my-auto flex flex-col items-center">
+                        <h3 className="text-3xl font-heading italic tracking-tight text-white mb-2 leading-tight">{project.title}</h3>
+                        <p className="text-sm text-gray-400 font-light max-w-md">Design Strategy & Interface Flow Demonstration</p>
+                      </div>
+                      <div className="relative z-10 text-center text-xs font-mono text-gray-500">
+                        [ Manual Asset Placeholder — Edit in src/data/projects.ts ]
+                      </div>
+                    </div>) : (<img src={project.detailImage1?.src || project.detailImage1} referrerPolicy="no-referrer" alt="Project detail 1" className="w-full h-full object-cover aspect-square"/>)}
+                </div>)}
+              {project.detailImage2 && (<div className="w-full rounded-[2rem] overflow-hidden border border-white/5 bg-zinc-900 shadow-xl flex items-center justify-center">
+                  {(typeof project.detailImage2 === 'string' ? project.detailImage2 : project.detailImage2?.src || '').startsWith("data:image/") ? (<div className="w-full aspect-square flex flex-col justify-between p-8 md:p-12 text-white relative overflow-hidden" style={{ background: `radial-gradient(circle at center, #0f172a 0%, #020617 100%)` }}>
+                      <div className="relative z-10 flex justify-between items-start w-full">
+                        <span className="text-xs font-mono uppercase tracking-widest text-white/50 bg-white/5 px-3 py-1 rounded-full border border-white/10">Architecture Framework</span>
+                        <span className="text-xs font-mono uppercase tracking-widest text-[#F24E1E]">[ Detail 2 ]</span>
+                      </div>
+                      <div className="relative z-10 text-center my-auto flex flex-col items-center">
+                        <h3 className="text-3xl font-heading italic tracking-tight text-white mb-2 leading-tight">{project.title}</h3>
+                        <p className="text-sm text-gray-400 font-light max-w-md">Design System and Token Hierarchy Analysis</p>
+                      </div>
+                      <div className="relative z-10 text-center text-xs font-mono text-gray-500">
+                        [ Manual Asset Placeholder — Edit in src/data/projects.ts ]
+                      </div>
+                    </div>) : (<img src={project.detailImage2?.src || project.detailImage2} referrerPolicy="no-referrer" alt="Project detail 2" className="w-full h-full object-cover aspect-square"/>)}
+                </div>)}
+            </div>
+          )}
           {project.bannerImage && (<div className="w-full rounded-[2rem] overflow-hidden border border-white/5 bg-zinc-900 shadow-xl">
               {(typeof project.bannerImage === 'string' ? project.bannerImage : project.bannerImage?.src || '').startsWith("data:image/") ? (<div className="w-full aspect-[16/6] flex flex-col justify-between p-8 md:p-12 text-white relative overflow-hidden bg-zinc-950">
                   <div className="absolute inset-0 bg-gradient-to-r from-[#F24E1E]/10 to-transparent pointer-events-none"/>

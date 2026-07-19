@@ -62,11 +62,11 @@ export function Hero({ onBrightnessChange }) {
             
             {/* Left Column */}
             <div className="flex flex-col">
-              <AnimatedHeading text={"Clarity, direction,\nand execution."} className="text-5xl md:text-6xl lg:text-7xl font-heading italic tracking-tight mb-4 leading-[1.05]"/>
+              <AnimatedHeading text={"Turn hesitation into\ncustomer action."} className="text-5xl md:text-6xl lg:text-7xl font-heading italic tracking-tight mb-4 leading-[1.05]"/>
               
               <FadeIn delayMs={800} durationMs={1000} className="mb-4">
                 <p className={cn("text-lg md:text-xl max-w-xl font-light leading-relaxed transition-colors duration-1000", isBright ? "text-gray-800" : "text-gray-300")}>
-                  We help founders launch and scale their digital presence. Not just design, structured execution.
+                  Conversion focused websites, UX, and AI powered visuals built around the moments that make people trust your business.
                 </p>
               </FadeIn>
 

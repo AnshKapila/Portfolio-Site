@@ -5,6 +5,8 @@
   --font-body: "Inter", sans-serif;
   --font-heading: "Instrument Serif", serif;
   --animate-marquee: marquee 30s linear infinite;
+  --tracking-tight: -0.0225em;
+  --tracking-tighter: -0.045em;
 }
 
 @keyframes marquee {
