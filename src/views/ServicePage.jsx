@@ -1,9 +1,9 @@
 "use client";
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
-import { Smartphone, Cpu, Code, Search, Layers, Compass, Figma, CheckSquare, Paintbrush, Workflow, Zap, FileText, TrendingUp, Sparkles, ChevronDown, ChevronUp, X, Maximize2 } from 'lucide-react';
+import { Smartphone, Cpu, Code, Search, Layers, Compass, Figma, CheckSquare, Paintbrush, Workflow, Zap, FileText, TrendingUp, Sparkles, ChevronDown, ChevronUp, X, Maximize2, Volume2, VolumeX } from 'lucide-react';
 import { services } from '../data/services';
 import { projects } from '../data/projects';
 import { FadeIn } from '../components/FadeIn';
@@ -117,6 +117,54 @@ const serviceDetails = {
         ]
     }
 };
+function InteractiveVideoPlayer({ src }) {
+    const videoRef = useRef(null);
+    const [isMuted, setIsMuted] = useState(true);
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video)
+            return;
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                video.play().catch(err => {
+                    console.log("Autoplay prevented:", err);
+                });
+            }
+            else {
+                video.pause();
+            }
+        }, {
+            threshold: 0.15
+        });
+        observer.observe(video);
+        return () => {
+            observer.unobserve(video);
+        };
+    }, []);
+    const handleVideoClick = (e) => {
+        const video = videoRef.current;
+        if (!video)
+            return;
+        const newMuted = !video.muted;
+        video.muted = newMuted;
+        setIsMuted(newMuted);
+        if (video.paused) {
+            video.play().catch(err => console.log(err));
+        }
+    };
+    return (<div className="relative w-full h-full cursor-pointer" onClick={handleVideoClick}>
+      <video ref={videoRef} src={src} muted={isMuted} playsInline loop className="w-full h-auto aspect-[640/360] object-cover transition-transform duration-700 group-hover:scale-105 block" id="showcase-video-player"/>
+      <div className="absolute bottom-4 right-4 z-20 px-3 py-1.5 rounded-full bg-black/75 border border-white/10 text-white text-[11px] font-mono tracking-wider backdrop-blur-md flex items-center gap-2 hover:bg-[#F24E1E] hover:border-[#F24E1E] transition-all">
+        {isMuted ? (<>
+            <VolumeX size={12} className="text-red-400"/>
+            <span>Unmute Video</span>
+          </>) : (<>
+            <Volume2 size={12} className="text-green-400 animate-pulse"/>
+            <span>Mute Sound</span>
+          </>)}
+      </div>
+    </div>);
+}
 export function ServicePage() {
     const { slug } = useParams();
     const service = services.find((s) => s.slug === slug);
@@ -379,8 +427,8 @@ export function ServicePage() {
               {/* Showcase Grid Layout */}
               <FadeIn delayMs={200} durationMs={1000}>
                 <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
-                  {service.slug === 'ai-content-growth-systems' && (<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-50px' }} transition={{ duration: 0.8 }} className="break-inside-avoid w-[80%] mx-auto mb-6 relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900 cursor-pointer" onClick={() => setActiveLightboxVideo(true)} id="video-gallery-item-first">
-                      <video src="https://assets.mixkit.co/videos/preview/mixkit-girl-holding-a-yellow-bag-of-chips-42289-large.mp4" autoPlay muted playsInline loop className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105 block" id="showcase-video-player"/>
+                  {service.slug === 'ai-content-growth-systems' && (<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-50px' }} transition={{ duration: 0.8 }} className="break-inside-avoid w-[80%] mx-auto mb-6 relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900 cursor-pointer" id="video-gallery-item-first">
+                      <InteractiveVideoPlayer src="https://res.cloudinary.com/dquynstnf/video/upload/v1784608182/Eqologiq_UGC_ckqw2k.mp4"/>
                     </motion.div>)}
 
                   {showcaseImages.map((img, i) => {
@@ -638,7 +686,7 @@ export function ServicePage() {
                 <X size={18}/>
               </button>
 
-              {activeLightboxVideo ? (<video src="https://assets.mixkit.co/videos/preview/mixkit-girl-holding-a-yellow-bag-of-chips-42289-large.mp4" autoPlay controls playsInline className="w-full h-auto max-h-[85vh] object-contain block bg-black" id="lightbox-expanded-video"/>) : (<img src={activeLightboxImg?.src || activeLightboxImg} referrerPolicy="no-referrer" alt="Enlarged Portfolio Detail" className="w-full h-auto max-h-[85vh] object-contain block" id="lightbox-expanded-img"/>)}
+              {activeLightboxVideo ? (<video src="https://res.cloudinary.com/dquynstnf/video/upload/v1784608182/Eqologiq_UGC_ckqw2k.mp4" autoPlay controls playsInline className="w-full h-auto max-h-[85vh] object-contain block bg-black" id="lightbox-expanded-video"/>) : (<img src={activeLightboxImg?.src || activeLightboxImg} referrerPolicy="no-referrer" alt="Enlarged Portfolio Detail" className="w-full h-auto max-h-[85vh] object-contain block" id="lightbox-expanded-img"/>)}
             </motion.div>
           </div>)}
       </AnimatePresence>
