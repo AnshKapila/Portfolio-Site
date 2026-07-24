@@ -5,6 +5,10 @@ import eqologiqNew1 from '../assets/images/eqologiq_new_1.jpg';
 import eqologiqNew2 from '../assets/images/eqologiq_new_2.jpg';
 import eqologiqNew3 from '../assets/images/eqologiq_new_3.jpg';
 import eqologiqNew4 from '../assets/images/eqologiq_new_4.jpg';
+import forwardOrgCover from '../assets/images/forwardorg_cover.png';
+import forwardOrgDetail1 from '../assets/images/forwardorg_detail1.png';
+import forwardOrgDetail2 from '../assets/images/forwardorg_detail2.png';
+import forwardOrgBanner from '../assets/images/forwardorg_banner.png';
 import bergariaCover from '../assets/images/regenerated_image_1778648802440.jpg';
 import bergariaDetail1 from '../assets/images/regenerated_image_1778648472194.jpg';
 import bergariaDetail2 from '../assets/images/regenerated_image_1778648465172.png';
@@ -77,12 +81,6 @@ const damacCover = createPlaceholder("Damac Violet", "Premium Townhouse Real Est
 const damacDetail1 = createPlaceholder("Damac Violet", "Opulent Arabian Luxury Living Amenities", "#1e1b4b", "#ec4899");
 const damacDetail2 = createPlaceholder("Damac Violet", "Exclusive Real Estate Campaign Landscape", "#0f172a", "#d946ef");
 const damacBanner = createPlaceholder("Damac Violet", "Dubai Residential Project Presentation", "#1e1b4b", "#f43f5e");
-
-// 8. THE FORWARD ORG (Institutional AI Strategy & Leadership Advisory)
-const forwardOrgCover = createPlaceholder("The Forward Org", "Institutional AI Strategy & Leadership Advisory - Cover", "#0B2B1E", "#D4AF37");
-const forwardOrgDetail1 = createPlaceholder("The Forward Org", "AI Alignment Index Scorecard System", "#0B2B1E", "#D4AF37");
-const forwardOrgDetail2 = createPlaceholder("The Forward Org", "Pre-Qualification Booking & Lead Engine", "#061A12", "#D4AF37");
-const forwardOrgBanner = createPlaceholder("The Forward Org", "Institutional AI Advisory Platform", "#0B2B1E", "#D4AF37");
 
 export { damacBanner, damacDetail1, damacDetail2, damacCover, forwardOrgCover, forwardOrgDetail1, forwardOrgDetail2, forwardOrgBanner, bergariaBanner, 
 // Export new manual SVG placeholders to make them easily referenceable/replaceable
