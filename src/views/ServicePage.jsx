@@ -117,7 +117,7 @@ const serviceDetails = {
         ]
     }
 };
-function InteractiveVideoPlayer({ src }) {
+function InteractiveVideoPlayer({ src, activeLightboxVideo, onOpenLightbox }) {
     const videoRef = useRef(null);
     const [isMuted, setIsMuted] = useState(true);
     useEffect(() => {
@@ -125,7 +125,7 @@ function InteractiveVideoPlayer({ src }) {
         if (!video)
             return;
         const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting && !activeLightboxVideo) {
                 video.play().catch(err => {
                     console.log("Autoplay prevented:", err);
                 });
@@ -140,8 +140,28 @@ function InteractiveVideoPlayer({ src }) {
         return () => {
             observer.unobserve(video);
         };
-    }, []);
+    }, [activeLightboxVideo]);
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video)
+            return;
+        if (activeLightboxVideo) {
+            video.pause();
+        }
+        else {
+            video.play().catch(e => console.log(e));
+        }
+    }, [activeLightboxVideo]);
     const handleVideoClick = (e) => {
+        const video = videoRef.current;
+        if (!video)
+            return;
+        video.muted = false;
+        setIsMuted(false);
+        onOpenLightbox();
+    };
+    const handleToggleMute = (e) => {
+        e.stopPropagation();
         const video = videoRef.current;
         if (!video)
             return;
@@ -152,9 +172,9 @@ function InteractiveVideoPlayer({ src }) {
             video.play().catch(err => console.log(err));
         }
     };
-    return (<div className="relative w-full h-full cursor-pointer" onClick={handleVideoClick}>
-      <video ref={videoRef} src={src} muted={isMuted} playsInline loop className="w-full h-auto aspect-[640/360] object-cover transition-transform duration-700 group-hover:scale-105 block" id="showcase-video-player"/>
-      <div className="absolute bottom-4 right-4 z-20 px-3 py-1.5 rounded-full bg-black/75 border border-white/10 text-white text-[11px] font-mono tracking-wider backdrop-blur-md flex items-center gap-2 hover:bg-[#F24E1E] hover:border-[#F24E1E] transition-all">
+    return (<div className="relative w-full h-full cursor-pointer animate-fade-in" onClick={handleVideoClick}>
+      <video ref={videoRef} src={src} muted={isMuted} playsInline loop className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105 block" id="showcase-video-player"/>
+      <div onClick={handleToggleMute} className="absolute bottom-4 right-4 z-20 px-3 py-1.5 rounded-full bg-black/75 border border-white/10 text-white text-[11px] font-mono tracking-wider backdrop-blur-md flex items-center gap-2 hover:bg-[#F24E1E] hover:border-[#F24E1E] transition-all">
         {isMuted ? (<>
             <VolumeX size={12} className="text-red-400"/>
             <span>Unmute Video</span>
@@ -185,7 +205,7 @@ export function ServicePage() {
     // Filter projects dynamically based on whitelists for a true bespoke feel
     const serviceProjects = useMemo(() => {
         if (service.slug === 'websites-platforms') {
-            const allowedSlugs = ["sulipsa-choudhury-personal-website", "fityard", "metline", "spatialdigest", "ezinore", "eqologiq"];
+            const allowedSlugs = ["theforwardorg", "sulipsa-choudhury-personal-website", "fityard", "metline", "spatialdigest", "ezinore", "eqologiq"];
             return projects.filter(p => allowedSlugs.includes(p.slug));
         }
         if (service.slug === 'product-ux-design') {
@@ -193,11 +213,11 @@ export function ServicePage() {
             return projects.filter(p => allowedSlugs.includes(p.slug));
         }
         if (service.slug === 'brand-visual-identity') {
-            const allowedSlugs = ["bergaria-luxury", "sulipsa-choudhury-personal-website", "eqologiq"];
+            const allowedSlugs = ["theforwardorg", "bergaria-luxury", "sulipsa-choudhury-personal-website", "eqologiq"];
             return projects.filter(p => allowedSlugs.includes(p.slug));
         }
         if (service.slug === 'ai-content-growth-systems') {
-            const allowedSlugs = ["bergaria-luxury", "fityard", "metline"];
+            const allowedSlugs = ["theforwardorg", "bergaria-luxury", "fityard", "metline"];
             return projects.filter(p => allowedSlugs.includes(p.slug));
         }
         return [];
@@ -371,64 +391,13 @@ export function ServicePage() {
             </div>
           </div>
 
-          {/* Process Timeline Pipeline */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 mb-32" id="process-pipeline-section">
-            <div className="lg:col-span-4">
-              <FadeIn delayMs={100} durationMs={800}>
-                <span className="text-xs uppercase font-mono tracking-widest text-[#F24E1E] block mb-4">PRODUCTION CODE</span>
-                <h2 className="text-4xl font-heading italic tracking-tight text-white mb-6">
-                  {details.processTitle}
-                </h2>
-                <p className="text-gray-400 font-light leading-relaxed text-base">
-                  {details.processDescription}
-                </p>
-                <div className="mt-8 p-6 rounded-2xl bg-[#111] border border-white/5 text-xs text-gray-500 font-mono space-y-2">
-                  <div className="flex justify-between">
-                    <span>AGILE SPRINT PHASE:</span>
-                    <span className="text-white">WEEKLY METRICS</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>QUALITY AUDIT:</span>
-                    <span className="text-[#F24E1E]">100% SUCCESS RATE</span>
-                  </div>
-                </div>
-              </FadeIn>
-            </div>
-            
-            <div className="lg:col-span-8">
-              <div className="relative border-l border-white/10 ml-4 pl-8 md:pl-12 space-y-12">
-                {details.processSteps.map((step, idx) => (<motion.div key={idx} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: '-50px' }} transition={{ delay: idx * 0.1, duration: 0.6 }} className="relative group" id={`pipeline-step-${idx}`}>
-                    {/* Number Node with dynamic glow */}
-                    <div className="absolute -left-[45px] md:-left-[61px] top-1.5 w-8 h-8 rounded-full bg-black border border-white/20 flex items-center justify-center font-mono text-xs text-gray-400 group-hover:border-[#F24E1E] group-hover:text-white group-hover:bg-[#F24E1E]/5 transition-all">
-                      {String(idx + 1).padStart(2, '0')}
-                    </div>
-                    
-                    {/* Step description detail */}
-                    <div>
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-2">
-                        <h3 className="text-xl font-heading text-white font-medium group-hover:text-[#F24E1E] transition-colors">
-                          {step.title}
-                        </h3>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-gray-500 w-max">
-                          {step.duration}
-                        </span>
-                      </div>
-                      <p className="text-gray-400 font-light leading-relaxed max-w-2xl text-base">
-                        {step.desc}
-                      </p>
-                    </div>
-                  </motion.div>))}
-              </div>
-            </div>
-          </div>
-
           {/* Visual Showcase Section */}
           {showcaseImages.length > 0 ? (<div className="mb-32 animate-fade-in" id="visual-showcase-section">
               {/* Showcase Grid Layout */}
               <FadeIn delayMs={200} durationMs={1000}>
                 <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
                   {service.slug === 'ai-content-growth-systems' && (<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-50px' }} transition={{ duration: 0.8 }} className="break-inside-avoid w-[80%] mx-auto mb-6 relative rounded-2xl overflow-hidden group border border-white/5 bg-zinc-900 cursor-pointer" id="video-gallery-item-first">
-                      <InteractiveVideoPlayer src="https://res.cloudinary.com/dquynstnf/video/upload/v1784608182/Eqologiq_UGC_ckqw2k.mp4"/>
+                      <InteractiveVideoPlayer src="https://res.cloudinary.com/dquynstnf/video/upload/v1784608182/Eqologiq_UGC_ckqw2k.mp4" activeLightboxVideo={activeLightboxVideo} onOpenLightbox={() => setActiveLightboxVideo(true)}/>
                     </motion.div>)}
 
                   {showcaseImages.map((img, i) => {
